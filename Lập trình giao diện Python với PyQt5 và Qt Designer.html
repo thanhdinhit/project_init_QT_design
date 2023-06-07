@@ -1,0 +1,1054 @@
+<!DOCTYPE html>
+<!-- saved from url=(0088)https://www.vniteach.com/2022/01/24/lap-trinh-giao-dien-python-voi-pyqt5-va-qt-designer/ -->
+<html dir="ltr" lang="vi" prefix="og: https://ogp.me/ns#" style="transform: none;" data-lt-installed="true"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+			
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+			<link rel="profile" href="http://gmpg.org/xfn/11">
+			<title>Lập trình giao diện Python với PyQt5 và Qt Designer - VniTeach - Giáo viên 4.0</title>
+
+		<!-- All in One SEO 4.3.8 - aioseo.com -->
+		<meta name="description" content="Trong quá trình học lập trình với ngôn ngữ Python, rất nhiều người quan tâm tới việc tạo các ứng dụng có giao diện như Windows Form. Hôm nay VniTeach sẽ hướng dẫn các bạn cách đơn giản và nhanh chóng để tạo ra các ứng dụng có giao diện với PyQt5 và Qt Designer">
+		<meta name="robots" content="max-image-preview:large">
+		<link rel="canonical" href="https://www.vniteach.com/2022/01/24/lap-trinh-giao-dien-python-voi-pyqt5-va-qt-designer/">
+		<meta name="generator" content="All in One SEO (AIOSEO) 4.3.8">
+		<meta property="og:locale" content="vi_VN">
+		<meta property="og:site_name" content="VniTeach - Giáo viên 4.0 - Let&#39;s share to be shared">
+		<meta property="og:type" content="article">
+		<meta property="og:title" content="Lập trình giao diện Python với PyQt5 và Qt Designer - VniTeach - Giáo viên 4.0">
+		<meta property="og:description" content="Trong quá trình học lập trình với ngôn ngữ Python, rất nhiều người quan tâm tới việc tạo các ứng dụng có giao diện như Windows Form. Hôm nay VniTeach sẽ hướng dẫn các bạn cách đơn giản và nhanh chóng để tạo ra các ứng dụng có giao diện với PyQt5 và Qt Designer">
+		<meta property="og:url" content="https://www.vniteach.com/2022/01/24/lap-trinh-giao-dien-python-voi-pyqt5-va-qt-designer/">
+		<meta property="article:published_time" content="2022-01-23T23:08:00+00:00">
+		<meta property="article:modified_time" content="2022-08-08T17:09:31+00:00">
+		<meta property="article:publisher" content="https://www.facebook.com/groups/vniteach/">
+		<meta name="twitter:card" content="summary">
+		<meta name="twitter:site" content="@vniteach">
+		<meta name="twitter:title" content="Lập trình giao diện Python với PyQt5 và Qt Designer - VniTeach - Giáo viên 4.0">
+		<meta name="twitter:description" content="Trong quá trình học lập trình với ngôn ngữ Python, rất nhiều người quan tâm tới việc tạo các ứng dụng có giao diện như Windows Form. Hôm nay VniTeach sẽ hướng dẫn các bạn cách đơn giản và nhanh chóng để tạo ra các ứng dụng có giao diện với PyQt5 và Qt Designer">
+		<meta name="twitter:creator" content="@vniteach">
+		<script type="text/javascript" id="www-widgetapi-script" src="./Lập trình giao diện Python với PyQt5 và Qt Designer_files/www-widgetapi.js.download" async=""></script><script src="./Lập trình giao diện Python với PyQt5 và Qt Designer_files/f.txt"></script><script src="./Lập trình giao diện Python với PyQt5 và Qt Designer_files/f(1).txt" id="google_shimpl"></script><script type="application/ld+json" class="aioseo-schema">
+			{"@context":"https:\/\/schema.org","@graph":[{"@type":"BlogPosting","@id":"https:\/\/www.vniteach.com\/2022\/01\/24\/lap-trinh-giao-dien-python-voi-pyqt5-va-qt-designer\/#blogposting","name":"L\u1eadp tr\u00ecnh giao di\u1ec7n Python v\u1edbi PyQt5 v\u00e0 Qt Designer - VniTeach - Gi\u00e1o vi\u00ean 4.0","headline":"L\u1eadp tr\u00ecnh giao di\u1ec7n Python v\u1edbi PyQt5 v\u00e0 Qt Designer","author":{"@id":"https:\/\/www.vniteach.com\/author\/quantri_vniteach\/#author"},"publisher":{"@id":"https:\/\/www.vniteach.com\/#organization"},"image":{"@type":"ImageObject","url":"https:\/\/www.vniteach.com\/wp-content\/uploads\/2022\/01\/qt-designer-windows-min.png","@id":"https:\/\/www.vniteach.com\/#articleImage","width":823,"height":507},"datePublished":"2022-01-23T23:08:00+07:00","dateModified":"2022-08-08T17:09:31+07:00","inLanguage":"vi","mainEntityOfPage":{"@id":"https:\/\/www.vniteach.com\/2022\/01\/24\/lap-trinh-giao-dien-python-voi-pyqt5-va-qt-designer\/#webpage"},"isPartOf":{"@id":"https:\/\/www.vniteach.com\/2022\/01\/24\/lap-trinh-giao-dien-python-voi-pyqt5-va-qt-designer\/#webpage"},"articleSection":"L\u1eadp tr\u00ecnh Python, python"},{"@type":"BreadcrumbList","@id":"https:\/\/www.vniteach.com\/2022\/01\/24\/lap-trinh-giao-dien-python-voi-pyqt5-va-qt-designer\/#breadcrumblist","itemListElement":[{"@type":"ListItem","@id":"https:\/\/www.vniteach.com\/#listItem","position":1,"item":{"@type":"WebPage","@id":"https:\/\/www.vniteach.com\/","name":"Home","description":"Let's share to be sharedVniTeach - Gi\u00e1o vi\u00ean 4.0L\u1eadp tr\u00ecnh giao di\u1ec7n Python v\u1edbi PyQt5 v\u00e0 Qt Designer","url":"https:\/\/www.vniteach.com\/"},"nextItem":"https:\/\/www.vniteach.com\/2022\/#listItem"},{"@type":"ListItem","@id":"https:\/\/www.vniteach.com\/2022\/#listItem","position":2,"item":{"@type":"WebPage","@id":"https:\/\/www.vniteach.com\/2022\/","name":"2022","url":"https:\/\/www.vniteach.com\/2022\/"},"nextItem":"https:\/\/www.vniteach.com\/2022\/01\/#listItem","previousItem":"https:\/\/www.vniteach.com\/#listItem"},{"@type":"ListItem","@id":"https:\/\/www.vniteach.com\/2022\/01\/#listItem","position":3,"item":{"@type":"WebPage","@id":"https:\/\/www.vniteach.com\/2022\/01\/","name":"January","url":"https:\/\/www.vniteach.com\/2022\/01\/"},"nextItem":"https:\/\/www.vniteach.com\/2022\/01\/24\/#listItem","previousItem":"https:\/\/www.vniteach.com\/2022\/#listItem"},{"@type":"ListItem","@id":"https:\/\/www.vniteach.com\/2022\/01\/24\/#listItem","position":4,"item":{"@type":"WebPage","@id":"https:\/\/www.vniteach.com\/2022\/01\/24\/","name":"23","url":"https:\/\/www.vniteach.com\/2022\/01\/24\/"},"nextItem":"https:\/\/www.vniteach.com\/2022\/01\/24\/lap-trinh-giao-dien-python-voi-pyqt5-va-qt-designer\/#listItem","previousItem":"https:\/\/www.vniteach.com\/2022\/01\/#listItem"},{"@type":"ListItem","@id":"https:\/\/www.vniteach.com\/2022\/01\/24\/lap-trinh-giao-dien-python-voi-pyqt5-va-qt-designer\/#listItem","position":5,"item":{"@type":"WebPage","@id":"https:\/\/www.vniteach.com\/2022\/01\/24\/lap-trinh-giao-dien-python-voi-pyqt5-va-qt-designer\/","name":"L\u1eadp tr\u00ecnh giao di\u1ec7n Python v\u1edbi PyQt5 v\u00e0 Qt Designer","description":"Trong qu\u00e1 tr\u00ecnh h\u1ecdc l\u1eadp tr\u00ecnh v\u1edbi ng\u00f4n ng\u1eef Python, r\u1ea5t nhi\u1ec1u ng\u01b0\u1eddi quan t\u00e2m t\u1edbi vi\u1ec7c t\u1ea1o c\u00e1c \u1ee9ng d\u1ee5ng c\u00f3 giao di\u1ec7n nh\u01b0 Windows Form. H\u00f4m nay VniTeach s\u1ebd h\u01b0\u1edbng d\u1eabn c\u00e1c b\u1ea1n c\u00e1ch \u0111\u01a1n gi\u1ea3n v\u00e0 nhanh ch\u00f3ng \u0111\u1ec3 t\u1ea1o ra c\u00e1c \u1ee9ng d\u1ee5ng c\u00f3 giao di\u1ec7n v\u1edbi PyQt5 v\u00e0 Qt Designer","url":"https:\/\/www.vniteach.com\/2022\/01\/24\/lap-trinh-giao-dien-python-voi-pyqt5-va-qt-designer\/"},"previousItem":"https:\/\/www.vniteach.com\/2022\/01\/24\/#listItem"}]},{"@type":"Organization","@id":"https:\/\/www.vniteach.com\/#organization","name":"VniTeach - Gi\u00e1o vi\u00ean 4.0","url":"https:\/\/www.vniteach.com\/","logo":{"@type":"ImageObject","url":"https:\/\/www.vniteach.com\/wp-content\/uploads\/2021\/09\/cropped-cropped-logo_channel.png","@id":"https:\/\/www.vniteach.com\/#organizationLogo","width":512,"height":512},"image":{"@id":"https:\/\/www.vniteach.com\/#organizationLogo"},"sameAs":["https:\/\/www.facebook.com\/groups\/vniteach\/","https:\/\/twitter.com\/vniteach","https:\/\/www.youtube.com\/vniteach"],"contactPoint":{"@type":"ContactPoint","telephone":"+84972215079","contactType":"Package Tracking"}},{"@type":"Person","@id":"https:\/\/www.vniteach.com\/author\/quantri_vniteach\/#author","url":"https:\/\/www.vniteach.com\/author\/quantri_vniteach\/","name":"admin","image":{"@type":"ImageObject","@id":"https:\/\/www.vniteach.com\/2022\/01\/24\/lap-trinh-giao-dien-python-voi-pyqt5-va-qt-designer\/#authorImage","url":"https:\/\/secure.gravatar.com\/avatar\/e8055576dcef4e72dbf5bde623c8df07?s=96&d=mm&r=g","width":96,"height":96,"caption":"admin"}},{"@type":"WebPage","@id":"https:\/\/www.vniteach.com\/2022\/01\/24\/lap-trinh-giao-dien-python-voi-pyqt5-va-qt-designer\/#webpage","url":"https:\/\/www.vniteach.com\/2022\/01\/24\/lap-trinh-giao-dien-python-voi-pyqt5-va-qt-designer\/","name":"L\u1eadp tr\u00ecnh giao di\u1ec7n Python v\u1edbi PyQt5 v\u00e0 Qt Designer - VniTeach - Gi\u00e1o vi\u00ean 4.0","description":"Trong qu\u00e1 tr\u00ecnh h\u1ecdc l\u1eadp tr\u00ecnh v\u1edbi ng\u00f4n ng\u1eef Python, r\u1ea5t nhi\u1ec1u ng\u01b0\u1eddi quan t\u00e2m t\u1edbi vi\u1ec7c t\u1ea1o c\u00e1c \u1ee9ng d\u1ee5ng c\u00f3 giao di\u1ec7n nh\u01b0 Windows Form. H\u00f4m nay VniTeach s\u1ebd h\u01b0\u1edbng d\u1eabn c\u00e1c b\u1ea1n c\u00e1ch \u0111\u01a1n gi\u1ea3n v\u00e0 nhanh ch\u00f3ng \u0111\u1ec3 t\u1ea1o ra c\u00e1c \u1ee9ng d\u1ee5ng c\u00f3 giao di\u1ec7n v\u1edbi PyQt5 v\u00e0 Qt Designer","inLanguage":"vi","isPartOf":{"@id":"https:\/\/www.vniteach.com\/#website"},"breadcrumb":{"@id":"https:\/\/www.vniteach.com\/2022\/01\/24\/lap-trinh-giao-dien-python-voi-pyqt5-va-qt-designer\/#breadcrumblist"},"author":{"@id":"https:\/\/www.vniteach.com\/author\/quantri_vniteach\/#author"},"creator":{"@id":"https:\/\/www.vniteach.com\/author\/quantri_vniteach\/#author"},"datePublished":"2022-01-23T23:08:00+07:00","dateModified":"2022-08-08T17:09:31+07:00"},{"@type":"WebSite","@id":"https:\/\/www.vniteach.com\/#website","url":"https:\/\/www.vniteach.com\/","name":"VniTeach - Gi\u00e1o vi\u00ean 4.0","description":"Let's share to be shared","inLanguage":"vi","publisher":{"@id":"https:\/\/www.vniteach.com\/#organization"}}]}
+		</script>
+		<!-- All in One SEO -->
+
+
+<script>MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],processEscapes:true},options:{ignoreHtmlClass:'tex2jax_ignore|editor-rich-text'}};</script>
+<link rel="dns-prefetch" href="https://static.addtoany.com/">
+<link rel="dns-prefetch" href="https://cdn.jsdelivr.net/">
+<link rel="alternate" type="application/rss+xml" title="Dòng thông tin VniTeach - Giáo viên 4.0 »" href="https://www.vniteach.com/feed/">
+<link rel="alternate" type="application/rss+xml" title="Dòng phản hồi VniTeach - Giáo viên 4.0 »" href="https://www.vniteach.com/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title="VniTeach - Giáo viên 4.0 » Lập trình giao diện Python với PyQt5 và Qt Designer Dòng phản hồi" href="https://www.vniteach.com/2022/01/24/lap-trinh-giao-dien-python-voi-pyqt5-va-qt-designer/feed/">
+		<!-- This site uses the Google Analytics by MonsterInsights plugin v8.15 - Using Analytics tracking - https://www.monsterinsights.com/ -->
+		<!-- Note: MonsterInsights is not currently configured on this site. The site owner needs to authenticate with Google Analytics in the MonsterInsights settings panel. -->
+					<!-- No UA code set -->
+				<!-- / Google Analytics by MonsterInsights -->
+		<script type="text/javascript">window._wpemojiSettings={"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.vniteach.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.2.2"}};!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){p.clearRect(0,0,i.width,i.height),p.fillText(e,0,0);e=i.toDataURL();return p.clearRect(0,0,i.width,i.height),p.fillText(t,0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(p&&p.fillText)switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s("\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!s("\ud83c\uddfa\ud83c\uddf3","\ud83c\uddfa\u200b\ud83c\uddf3")&&!s("\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!s("\ud83e\udef1\ud83c\udffb\u200d\ud83e\udef2\ud83c\udfff","\ud83e\udef1\ud83c\udffb\u200b\ud83e\udef2\ud83c\udfff")}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(e=t.source||{}).concatemoji?c(e.concatemoji):e.wpemoji&&e.twemoji&&(c(e.twemoji),c(e.wpemoji)))}(window,document,window._wpemojiSettings);</script><script src="./Lập trình giao diện Python với PyQt5 và Qt Designer_files/wp-emoji-release.min.js.download" type="text/javascript" defer=""></script>
+<style type="text/css">img.wp-smiley,img.emoji{display:inline!important;border:none!important;box-shadow:none!important;height:1em!important;width:1em!important;margin:0 .07em!important;vertical-align:-.1em!important;background:none!important;padding:0!important}</style>
+	<link rel="stylesheet" id="wp-block-library-css" href="./Lập trình giao diện Python với PyQt5 và Qt Designer_files/style.min.css,qver=6.2.2.pagespeed.ce.R82w6B6jQa.css" type="text/css" media="all">
+<style id="wp-block-library-theme-inline-css" type="text/css">.wp-block-audio figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-audio figcaption{color:hsla(0,0%,100%,.65)}.wp-block-audio{margin:0 0 1em}.wp-block-code{border:1px solid #ccc;border-radius:4px;font-family:Menlo,Consolas,monaco,monospace;padding:.8em 1em}.wp-block-embed figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-embed figcaption{color:hsla(0,0%,100%,.65)}.wp-block-embed{margin:0 0 1em}.blocks-gallery-caption{color:#555;font-size:13px;text-align:center}.is-dark-theme .blocks-gallery-caption{color:hsla(0,0%,100%,.65)}.wp-block-image figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-image figcaption{color:hsla(0,0%,100%,.65)}.wp-block-image{margin:0 0 1em}.wp-block-pullquote{border-bottom:4px solid;border-top:4px solid;color:currentColor;margin-bottom:1.75em}.wp-block-pullquote cite,.wp-block-pullquote footer,.wp-block-pullquote__citation{color:currentColor;font-size:.8125em;font-style:normal;text-transform:uppercase}.wp-block-quote{border-left:.25em solid;margin:0 0 1.75em;padding-left:1em}.wp-block-quote cite,.wp-block-quote footer{color:currentColor;font-size:.8125em;font-style:normal;position:relative}.wp-block-quote.has-text-align-right{border-left:none;border-right:.25em solid;padding-left:0;padding-right:1em}.wp-block-quote.has-text-align-center{border:none;padding-left:0}.wp-block-quote.is-large,.wp-block-quote.is-style-large,.wp-block-quote.is-style-plain{border:none}.wp-block-search .wp-block-search__label{font-weight:700}.wp-block-search__button{border:1px solid #ccc;padding:.375em .625em}:where(.wp-block-group.has-background){padding:1.25em 2.375em}.wp-block-separator.has-css-opacity{opacity:.4}.wp-block-separator{border:none;border-bottom:2px solid;margin-left:auto;margin-right:auto}.wp-block-separator.has-alpha-channel-opacity{opacity:1}.wp-block-separator:not(.is-style-wide):not(.is-style-dots){width:100px}.wp-block-separator.has-background:not(.is-style-dots){border-bottom:none;height:1px}.wp-block-separator.has-background:not(.is-style-wide):not(.is-style-dots){height:2px}.wp-block-table{margin:0 0 1em}.wp-block-table td,.wp-block-table th{word-break:normal}.wp-block-table figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-table figcaption{color:hsla(0,0%,100%,.65)}.wp-block-video figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-video figcaption{color:hsla(0,0%,100%,.65)}.wp-block-video{margin:0 0 1em}.wp-block-template-part.has-background{margin-bottom:0;margin-top:0;padding:1.25em 2.375em}</style>
+<link rel="stylesheet" id="classic-theme-styles-css" href="./Lập trình giao diện Python với PyQt5 và Qt Designer_files/classic-themes.min.css" type="text/css" media="all">
+<style id="global-styles-inline-css" type="text/css">body{--wp--preset--color--black:#000;--wp--preset--color--cyan-bluish-gray:#abb8c3;--wp--preset--color--white:#fff;--wp--preset--color--pale-pink:#f78da7;--wp--preset--color--vivid-red:#cf2e2e;--wp--preset--color--luminous-vivid-orange:#ff6900;--wp--preset--color--luminous-vivid-amber:#fcb900;--wp--preset--color--light-green-cyan:#7bdcb5;--wp--preset--color--vivid-green-cyan:#00d084;--wp--preset--color--pale-cyan-blue:#8ed1fc;--wp--preset--color--vivid-cyan-blue:#0693e3;--wp--preset--color--vivid-purple:#9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple:linear-gradient(135deg,rgba(6,147,227,1) 0%,#9b51e0 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan:linear-gradient(135deg,#7adcb4 0%,#00d082 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange:linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red:linear-gradient(135deg,rgba(255,105,0,1) 0%,#cf2e2e 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray:linear-gradient(135deg,#eee 0%,#a9b8c3 100%);--wp--preset--gradient--cool-to-warm-spectrum:linear-gradient(135deg,#4aeadc 0%,#9778d1 20%,#cf2aba 40%,#ee2c82 60%,#fb6962 80%,#fef84c 100%);--wp--preset--gradient--blush-light-purple:linear-gradient(135deg,#ffceec 0%,#9896f0 100%);--wp--preset--gradient--blush-bordeaux:linear-gradient(135deg,#fecda5 0%,#fe2d2d 50%,#6b003e 100%);--wp--preset--gradient--luminous-dusk:linear-gradient(135deg,#ffcb70 0%,#c751c0 50%,#4158d0 100%);--wp--preset--gradient--pale-ocean:linear-gradient(135deg,#fff5cb 0%,#b6e3d4 50%,#33a7b5 100%);--wp--preset--gradient--electric-grass:linear-gradient(135deg,#caf880 0%,#71ce7e 100%);--wp--preset--gradient--midnight:linear-gradient(135deg,#020381 0%,#2874fc 100%);--wp--preset--duotone--dark-grayscale:url(#wp-duotone-dark-grayscale);--wp--preset--duotone--grayscale:url(#wp-duotone-grayscale);--wp--preset--duotone--purple-yellow:url(#wp-duotone-purple-yellow);--wp--preset--duotone--blue-red:url(#wp-duotone-blue-red);--wp--preset--duotone--midnight:url(#wp-duotone-midnight);--wp--preset--duotone--magenta-yellow:url(#wp-duotone-magenta-yellow);--wp--preset--duotone--purple-green:url(#wp-duotone-purple-green);--wp--preset--duotone--blue-orange:url(#wp-duotone-blue-orange);--wp--preset--font-size--small:16px;--wp--preset--font-size--medium:28px;--wp--preset--font-size--large:32px;--wp--preset--font-size--x-large:42px;--wp--preset--font-size--larger:38px;--wp--preset--spacing--20:.44rem;--wp--preset--spacing--30:.67rem;--wp--preset--spacing--40:1rem;--wp--preset--spacing--50:1.5rem;--wp--preset--spacing--60:2.25rem;--wp--preset--spacing--70:3.38rem;--wp--preset--spacing--80:5.06rem;--wp--preset--shadow--natural:6px 6px 9px rgba(0,0,0,.2);--wp--preset--shadow--deep:12px 12px 50px rgba(0,0,0,.4);--wp--preset--shadow--sharp:6px 6px 0 rgba(0,0,0,.2);--wp--preset--shadow--outlined:6px 6px 0 -3px rgba(255,255,255,1) , 6px 6px rgba(0,0,0,1);--wp--preset--shadow--crisp:6px 6px 0 rgba(0,0,0,1)}:where(.is-layout-flex){gap:.5em}body .is-layout-flow>.alignleft{float:left;margin-inline-start:0;margin-inline-end:2em}body .is-layout-flow>.alignright{float:right;margin-inline-start:2em;margin-inline-end:0}body .is-layout-flow>.aligncenter{margin-left:auto!important;margin-right:auto!important}body .is-layout-constrained>.alignleft{float:left;margin-inline-start:0;margin-inline-end:2em}body .is-layout-constrained>.alignright{float:right;margin-inline-start:2em;margin-inline-end:0}body .is-layout-constrained>.aligncenter{margin-left:auto!important;margin-right:auto!important}body .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width:var(--wp--style--global--content-size);margin-left:auto!important;margin-right:auto!important}body .is-layout-constrained>.alignwide{max-width:var(--wp--style--global--wide-size)}body .is-layout-flex{display:flex}body .is-layout-flex{flex-wrap:wrap;align-items:center}body .is-layout-flex>*{margin:0}:where(.wp-block-columns.is-layout-flex){gap:2em}.has-black-color{color:var(--wp--preset--color--black)!important}.has-cyan-bluish-gray-color{color:var(--wp--preset--color--cyan-bluish-gray)!important}.has-white-color{color:var(--wp--preset--color--white)!important}.has-pale-pink-color{color:var(--wp--preset--color--pale-pink)!important}.has-vivid-red-color{color:var(--wp--preset--color--vivid-red)!important}.has-luminous-vivid-orange-color{color:var(--wp--preset--color--luminous-vivid-orange)!important}.has-luminous-vivid-amber-color{color:var(--wp--preset--color--luminous-vivid-amber)!important}.has-light-green-cyan-color{color:var(--wp--preset--color--light-green-cyan)!important}.has-vivid-green-cyan-color{color:var(--wp--preset--color--vivid-green-cyan)!important}.has-pale-cyan-blue-color{color:var(--wp--preset--color--pale-cyan-blue)!important}.has-vivid-cyan-blue-color{color:var(--wp--preset--color--vivid-cyan-blue)!important}.has-vivid-purple-color{color:var(--wp--preset--color--vivid-purple)!important}.has-black-background-color{background-color:var(--wp--preset--color--black)!important}.has-cyan-bluish-gray-background-color{background-color:var(--wp--preset--color--cyan-bluish-gray)!important}.has-white-background-color{background-color:var(--wp--preset--color--white)!important}.has-pale-pink-background-color{background-color:var(--wp--preset--color--pale-pink)!important}.has-vivid-red-background-color{background-color:var(--wp--preset--color--vivid-red)!important}.has-luminous-vivid-orange-background-color{background-color:var(--wp--preset--color--luminous-vivid-orange)!important}.has-luminous-vivid-amber-background-color{background-color:var(--wp--preset--color--luminous-vivid-amber)!important}.has-light-green-cyan-background-color{background-color:var(--wp--preset--color--light-green-cyan)!important}.has-vivid-green-cyan-background-color{background-color:var(--wp--preset--color--vivid-green-cyan)!important}.has-pale-cyan-blue-background-color{background-color:var(--wp--preset--color--pale-cyan-blue)!important}.has-vivid-cyan-blue-background-color{background-color:var(--wp--preset--color--vivid-cyan-blue)!important}.has-vivid-purple-background-color{background-color:var(--wp--preset--color--vivid-purple)!important}.has-black-border-color{border-color:var(--wp--preset--color--black)!important}.has-cyan-bluish-gray-border-color{border-color:var(--wp--preset--color--cyan-bluish-gray)!important}.has-white-border-color{border-color:var(--wp--preset--color--white)!important}.has-pale-pink-border-color{border-color:var(--wp--preset--color--pale-pink)!important}.has-vivid-red-border-color{border-color:var(--wp--preset--color--vivid-red)!important}.has-luminous-vivid-orange-border-color{border-color:var(--wp--preset--color--luminous-vivid-orange)!important}.has-luminous-vivid-amber-border-color{border-color:var(--wp--preset--color--luminous-vivid-amber)!important}.has-light-green-cyan-border-color{border-color:var(--wp--preset--color--light-green-cyan)!important}.has-vivid-green-cyan-border-color{border-color:var(--wp--preset--color--vivid-green-cyan)!important}.has-pale-cyan-blue-border-color{border-color:var(--wp--preset--color--pale-cyan-blue)!important}.has-vivid-cyan-blue-border-color{border-color:var(--wp--preset--color--vivid-cyan-blue)!important}.has-vivid-purple-border-color{border-color:var(--wp--preset--color--vivid-purple)!important}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background:var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple)!important}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background:var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan)!important}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background:var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange)!important}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background:var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red)!important}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background:var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray)!important}.has-cool-to-warm-spectrum-gradient-background{background:var(--wp--preset--gradient--cool-to-warm-spectrum)!important}.has-blush-light-purple-gradient-background{background:var(--wp--preset--gradient--blush-light-purple)!important}.has-blush-bordeaux-gradient-background{background:var(--wp--preset--gradient--blush-bordeaux)!important}.has-luminous-dusk-gradient-background{background:var(--wp--preset--gradient--luminous-dusk)!important}.has-pale-ocean-gradient-background{background:var(--wp--preset--gradient--pale-ocean)!important}.has-electric-grass-gradient-background{background:var(--wp--preset--gradient--electric-grass)!important}.has-midnight-gradient-background{background:var(--wp--preset--gradient--midnight)!important}.has-small-font-size{font-size:var(--wp--preset--font-size--small)!important}.has-medium-font-size{font-size:var(--wp--preset--font-size--medium)!important}.has-large-font-size{font-size:var(--wp--preset--font-size--large)!important}.has-x-large-font-size{font-size:var(--wp--preset--font-size--x-large)!important}.wp-block-navigation a:where(:not(.wp-element-button)){color:inherit}:where(.wp-block-columns.is-layout-flex){gap:2em}.wp-block-pullquote{font-size:1.5em;line-height:1.6}</style>
+<link rel="stylesheet" id="cream-magazine-style-css" href="./Lập trình giao diện Python với PyQt5 và Qt Designer_files/style.css" type="text/css" media="all">
+<link rel="stylesheet" id="fontAwesome-4-css" href="./Lập trình giao diện Python với PyQt5 và Qt Designer_files/fontAwesome.min.css,qver=2.1.5.pagespeed.ce.1KwaHwYvRU.css" type="text/css" media="all">
+<link rel="stylesheet" id="feather-icons-css" href="./Lập trình giao diện Python với PyQt5 và Qt Designer_files/feather.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="cream-magazine-main-css" href="./Lập trình giao diện Python với PyQt5 và Qt Designer_files/main.css" type="text/css" media="all">
+<style id="addtoany-css" media="all">.addtoany_content{clear:both;margin:16px auto}.addtoany_header{margin:0 0 16px}.addtoany_list{display:inline;line-height:16px}.addtoany_list a,.widget .addtoany_list a{border:0;box-shadow:none;display:inline-block;font-size:16px;padding:0 4px;vertical-align:middle}.addtoany_list a img{border:0;display:inline-block;opacity:1;overflow:hidden;vertical-align:baseline}.addtoany_list a span{display:inline-block;float:none}.addtoany_list.a2a_kit_size_32 a{font-size:32px}.addtoany_list.a2a_kit_size_32 a:not(.addtoany_special_service)>span{height:32px;line-height:32px;width:32px}.addtoany_list a:not(.addtoany_special_service)>span{border-radius:4px;display:inline-block;opacity:1}.addtoany_list a .a2a_count{position:relative;vertical-align:top}.site .a2a_kit.addtoany_list a:focus,.addtoany_list a:hover,.widget .addtoany_list a:hover{background:none;border:0;box-shadow:none}.addtoany_list a:hover img,.addtoany_list a:hover span{opacity:.7}.addtoany_list a.addtoany_special_service:hover img,.addtoany_list a.addtoany_special_service:hover span{opacity:1}.addtoany_special_service{display:inline-block;vertical-align:middle}.addtoany_special_service a,.addtoany_special_service div,.addtoany_special_service div.fb_iframe_widget,.addtoany_special_service iframe,.addtoany_special_service span{margin:0;vertical-align:baseline!important}.addtoany_special_service iframe{display:inline;max-width:none}a.addtoany_share.addtoany_no_icon span.a2a_img_text{display:none}a.addtoany_share img{border:0;width:auto;height:auto}</style>
+<style id="addtoany-inline-css" type="text/css">@media screen and (max-width:980px){.a2a_floating_style.a2a_vertical_style{display:none}}</style>
+<link rel="stylesheet" id="universal-google-adsense-and-ads-manager-css" href="./Lập trình giao diện Python với PyQt5 và Qt Designer_files/ugaam-public.css" type="text/css" media="all">
+<link rel="stylesheet" id="hcb-style-css" href="./Lập trình giao diện Python với PyQt5 và Qt Designer_files/hcb--light.css" type="text/css" media="all">
+<style id="hcb-style-inline-css" type="text/css">
+:root{--hcb-font-size: 14px}:root{--hcb-font-size--mobile: 13px}:root{--hcb-font-family:Menlo, Consolas, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;}
+</style>
+<script type="text/javascript" id="addtoany-core-js-before">window.a2a_config=window.a2a_config||{};a2a_config.callbacks=[];a2a_config.overlays=[];a2a_config.templates={};a2a_localize={Share:"Share",Save:"Save",Subscribe:"Subscribe",Email:"Email",Bookmark:"Bookmark",ShowAll:"Show all",ShowLess:"Show less",FindServices:"Find service(s)",FindAnyServiceToAddTo:"Instantly find any service to add to",PoweredBy:"Powered by",ShareViaEmail:"Share via email",SubscribeViaEmail:"Subscribe via email",BookmarkInYourBrowser:"Bookmark in your browser",BookmarkInstructions:"Press Ctrl+D or \u2318+D to bookmark this page",AddToYourFavorites:"Add to your favorites",SendFromWebOrProgram:"Send from any email address or email program",EmailProgram:"Email program",More:"More&#8230;",ThanksForSharing:"Thanks for sharing!",ThanksForFollowing:"Thanks for following!"};</script>
+<script type="text/javascript" async="" src="./Lập trình giao diện Python với PyQt5 và Qt Designer_files/page.js.download" id="addtoany-core-js"></script>
+<script type="text/javascript" src="./Lập trình giao diện Python với PyQt5 và Qt Designer_files/jquery.min.js.download" id="jquery-core-js"></script>
+<script type="text/javascript" src="./Lập trình giao diện Python với PyQt5 và Qt Designer_files/jquery-migrate.min.js,qver=3.4.0.pagespeed.jm.0-q49MfDi2.js.download" id="jquery-migrate-js"></script>
+<script type="text/javascript" async="" src="./Lập trình giao diện Python với PyQt5 và Qt Designer_files/addtoany.min.js.download" id="addtoany-jquery-js"></script>
+<script type="text/javascript" src="./Lập trình giao diện Python với PyQt5 và Qt Designer_files/ugaam-public.js.download" id="universal-google-adsense-and-ads-manager-js"></script>
+<link rel="https://api.w.org/" href="https://www.vniteach.com/wp-json/"><link rel="alternate" type="application/json" href="https://www.vniteach.com/wp-json/wp/v2/posts/2375"><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.vniteach.com/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://www.vniteach.com/wp-includes/wlwmanifest.xml">
+<meta name="generator" content="WordPress 6.2.2">
+<link rel="shortlink" href="https://www.vniteach.com/?p=2375">
+<link rel="alternate" type="application/json+oembed" href="https://www.vniteach.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.vniteach.com%2F2022%2F01%2F24%2Flap-trinh-giao-dien-python-voi-pyqt5-va-qt-designer%2F">
+<link rel="alternate" type="text/xml+oembed" href="https://www.vniteach.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.vniteach.com%2F2022%2F01%2F24%2Flap-trinh-giao-dien-python-voi-pyqt5-va-qt-designer%2F&amp;format=xml">
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async="" src="./Lập trình giao diện Python với PyQt5 và Qt Designer_files/js"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-6PENSKTD4L');</script>
+
+<!-- Google Adsense --->
+<script async="" src="./Lập trình giao diện Python với PyQt5 và Qt Designer_files/f(2).txt" crossorigin="anonymous" data-checked-head="true"></script>			<style></style>
+			<link rel="pingback" href="https://www.vniteach.com/xmlrpc.php"><style>a:hover{text-decoration:none!important}button,input[type="button"],input[type="reset"],input[type="submit"],.primary-navigation>ul>li.home-btn,.cm_header_lay_three .primary-navigation>ul>li.home-btn,.news_ticker_wrap .ticker_head,#toTop,.section-title h2::after,.sidebar-widget-area .widget .widget-title h2::after,.footer-widget-container .widget .widget-title h2::after,#comments div#respond h3#reply-title::after,#comments h2.comments-title:after,.post_tags a,.owl-carousel .owl-nav button.owl-prev,.owl-carousel .owl-nav button.owl-next,.cm_author_widget .author-detail-link a,.error_foot form input[type="submit"],.widget_search form input[type="submit"],.header-search-container input[type="submit"],.trending_widget_carousel .owl-dots button.owl-dot,.pagination .page-numbers.current,.post-navigation .nav-links .nav-previous a,.post-navigation .nav-links .nav-next a,#comments form input[type="submit"],footer .widget.widget_search form input[type="submit"]:hover,.widget_product_search .woocommerce-product-search button[type="submit"],.woocommerce ul.products li.product .button,.woocommerce .woocommerce-pagination ul.page-numbers li span.current,.woocommerce .product div.summary .cart button.single_add_to_cart_button,.woocommerce .product div.woocommerce-tabs div.panel #reviews #review_form_wrapper .comment-form p.form-submit .submit,.woocommerce .product section.related>h2::after,.woocommerce .cart .button:hover,.woocommerce .cart .button:focus,.woocommerce .cart input.button:hover,.woocommerce .cart input.button:focus,.woocommerce #respond input#submit:hover,.woocommerce #respond input#submit:focus,.woocommerce button.button:hover,.woocommerce button.button:focus,.woocommerce input.button:hover,.woocommerce input.button:focus,.woocommerce #respond input#submit.alt:hover,.woocommerce a.button.alt:hover,.woocommerce button.button.alt:hover,.woocommerce input.button.alt:hover,.woocommerce a.remove:hover,.woocommerce-account .woocommerce-MyAccount-navigation ul li.is-active a,.woocommerce a.button:hover,.woocommerce a.button:focus,.widget_product_tag_cloud .tagcloud a:hover,.widget_product_tag_cloud .tagcloud a:focus,.woocommerce .widget_price_filter .price_slider_wrapper .ui-slider .ui-slider-handle,.error_page_top_portion,.primary-navigation ul li a span.menu-item-description{background-color:#ff3d00}a:hover,.post_title h2 a:hover,.post_title h2 a:focus,.post_meta li a:hover,.post_meta li a:focus,ul.social-icons li a[href*=".com"]:hover::before,.ticker_carousel .owl-nav button.owl-prev i,.ticker_carousel .owl-nav button.owl-next i,.news_ticker_wrap .ticker_items .item a:hover,.news_ticker_wrap .ticker_items .item a:focus,.cm_banner .post_title h2 a:hover,.cm_banner .post_meta li a:hover,.cm_middle_post_widget_one .post_title h2 a:hover,.cm_middle_post_widget_one .post_meta li a:hover,.cm_middle_post_widget_three .post_thumb .post-holder a:hover,.cm_middle_post_widget_three .post_thumb .post-holder a:focus,.cm_middle_post_widget_six .middle_widget_six_carousel .item .card .card_content a:hover,.cm_middle_post_widget_six .middle_widget_six_carousel .item .card .card_content a:focus,.cm_post_widget_twelve .card .post-holder a:hover,.cm_post_widget_twelve .card .post-holder a:focus,.cm_post_widget_seven .card .card_content a:hover,.cm_post_widget_seven .card .card_content a:focus,.copyright_section a:hover,.footer_nav ul li a:hover,.breadcrumb ul li:last-child span,.pagination .page-numbers:hover,#comments ol.comment-list li article footer.comment-meta .comment-metadata span.edit-link a:hover,#comments ol.comment-list li article .reply a:hover,.social-share ul li a:hover,ul.social-icons li a:hover,ul.social-icons li a:focus,.woocommerce ul.products li.product a:hover,.woocommerce ul.products li.product .price,.woocommerce .woocommerce-pagination ul.page-numbers li a.page-numbers:hover,.woocommerce div.product p.price,.woocommerce div.product span.price,.video_section .video_details .post_title h2 a:hover,.primary-navigation.dark li a:hover,footer .footer_inner a:hover,.footer-widget-container ul.post_meta li:hover span,.footer-widget-container ul.post_meta li:hover a,ul.post_meta li a:hover,.cm-post-widget-two .big-card .post-holder .post_title h2 a:hover,.cm-post-widget-two .big-card .post_meta li a:hover,.copyright_section .copyrights a,.breadcrumb ul li a:hover,.breadcrumb ul li a:hover span{color:#ff3d00}.ticker_carousel .owl-nav button.owl-prev,.ticker_carousel .owl-nav button.owl-next,.error_foot form input[type="submit"],.widget_search form input[type="submit"],.pagination .page-numbers:hover,#comments form input[type="submit"],.social-share ul li a:hover,.header-search-container .search-form-entry,.widget_product_search .woocommerce-product-search button[type="submit"],.woocommerce .woocommerce-pagination ul.page-numbers li span.current,.woocommerce .woocommerce-pagination ul.page-numbers li a.page-numbers:hover,.woocommerce a.remove:hover,.ticker_carousel .owl-nav button.owl-prev:hover,.ticker_carousel .owl-nav button.owl-next:hover,footer .widget.widget_search form input[type="submit"]:hover,.trending_widget_carousel .owl-dots button.owl-dot,.the_content blockquote,.widget_tag_cloud .tagcloud a:hover{border-color:#ff3d00}header .mask{background-color:rgba(0,0,0,.2)}.site-description{color:#1e73be}body{font-family:Arial,sans-serif;font-weight:inherit}h1,h2,h3,h4,h5,h6,.site-title{font-family:Arial,sans-serif;font-weight:inherit}.entry_cats ul.post-categories li a{background-color:#ff3d00;color:#fff}.entry_cats ul.post-categories li a:hover{background-color:#81d742;color:#fff}.the_content a{color:#ff3d00}.the_content a:hover{color:#81d742}.post-display-grid .card_content .cm-post-excerpt{margin-top:15px}</style>		<style type="text/css">.site-title a{color:#d33}.site-description{color:#1e73be}</style>
+		<link rel="icon" href="https://www.vniteach.com/wp-content/uploads/2021/09/cropped-logo_channel-32x32.png" sizes="32x32">
+<link rel="icon" href="https://www.vniteach.com/wp-content/uploads/2021/09/cropped-logo_channel-192x192.png" sizes="192x192">
+<link rel="apple-touch-icon" href="https://www.vniteach.com/wp-content/uploads/2021/09/cropped-logo_channel-180x180.png">
+<meta name="msapplication-TileImage" content="https://www.vniteach.com/wp-content/uploads/2021/09/cropped-logo_channel-270x270.png">
+		<script src="./Lập trình giao diện Python với PyQt5 và Qt Designer_files/core.4d495e6a.js.download" type="module"></script><style type="text/css">.CtxtMenu_InfoClose {  top:.2em; right:.2em;}
+.CtxtMenu_InfoContent {  overflow:auto; text-align:left; font-size:80%;  padding:.4em .6em; border:1px inset; margin:1em 0px;  max-height:20em; max-width:30em; background-color:#EEEEEE;  white-space:normal;}
+.CtxtMenu_Info.CtxtMenu_MousePost {outline:none;}
+.CtxtMenu_Info {  position:fixed; left:50%; width:auto; text-align:center;  border:3px outset; padding:1em 2em; background-color:#DDDDDD;  color:black;  cursor:default; font-family:message-box; font-size:120%;  font-style:normal; text-indent:0; text-transform:none;  line-height:normal; letter-spacing:normal; word-spacing:normal;  word-wrap:normal; white-space:nowrap; float:none; z-index:201;  border-radius: 15px;                     /* Opera 10.5 and IE9 */  -webkit-border-radius:15px;               /* Safari and Chrome */  -moz-border-radius:15px;                  /* Firefox */  -khtml-border-radius:15px;                /* Konqueror */  box-shadow:0px 10px 20px #808080;         /* Opera 10.5 and IE9 */  -webkit-box-shadow:0px 10px 20px #808080; /* Safari 3 & Chrome */  -moz-box-shadow:0px 10px 20px #808080;    /* Forefox 3.5 */  -khtml-box-shadow:0px 10px 20px #808080;  /* Konqueror */  filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color="gray", Positive="true"); /* IE */}
+</style><style type="text/css">.CtxtMenu_MenuClose {  position:absolute;  cursor:pointer;  display:inline-block;  border:2px solid #AAA;  border-radius:18px;  -webkit-border-radius: 18px;             /* Safari and Chrome */  -moz-border-radius: 18px;                /* Firefox */  -khtml-border-radius: 18px;              /* Konqueror */  font-family: "Courier New", Courier;  font-size:24px;  color:#F0F0F0}
+.CtxtMenu_MenuClose span {  display:block; background-color:#AAA; border:1.5px solid;  border-radius:18px;  -webkit-border-radius: 18px;             /* Safari and Chrome */  -moz-border-radius: 18px;                /* Firefox */  -khtml-border-radius: 18px;              /* Konqueror */  line-height:0;  padding:8px 0 6px     /* may need to be browser-specific */}
+.CtxtMenu_MenuClose:hover {  color:white!important;  border:2px solid #CCC!important}
+.CtxtMenu_MenuClose:hover span {  background-color:#CCC!important}
+.CtxtMenu_MenuClose:hover:focus {  outline:none}
+</style><style type="text/css">.CtxtMenu_Menu {  position:absolute;  background-color:white;  color:black;  width:auto; padding:5px 0px;  border:1px solid #CCCCCC; margin:0; cursor:default;  font: menu; text-align:left; text-indent:0; text-transform:none;  line-height:normal; letter-spacing:normal; word-spacing:normal;  word-wrap:normal; white-space:nowrap; float:none; z-index:201;  border-radius: 5px;                     /* Opera 10.5 and IE9 */  -webkit-border-radius: 5px;             /* Safari and Chrome */  -moz-border-radius: 5px;                /* Firefox */  -khtml-border-radius: 5px;              /* Konqueror */  box-shadow:0px 10px 20px #808080;         /* Opera 10.5 and IE9 */  -webkit-box-shadow:0px 10px 20px #808080; /* Safari 3 & Chrome */  -moz-box-shadow:0px 10px 20px #808080;    /* Forefox 3.5 */  -khtml-box-shadow:0px 10px 20px #808080;  /* Konqueror */}
+.CtxtMenu_MenuItem {  padding: 1px 2em;  background:transparent;}
+.CtxtMenu_MenuArrow {  position:absolute; right:.5em; padding-top:.25em; color:#666666;  font-family: null; font-size: .75em}
+.CtxtMenu_MenuActive .CtxtMenu_MenuArrow {color:white}
+.CtxtMenu_MenuArrow.CtxtMenu_RTL {left:.5em; right:auto}
+.CtxtMenu_MenuCheck {  position:absolute; left:.7em;  font-family: null}
+.CtxtMenu_MenuCheck.CtxtMenu_RTL { right:.7em; left:auto }
+.CtxtMenu_MenuRadioCheck {  position:absolute; left: .7em;}
+.CtxtMenu_MenuRadioCheck.CtxtMenu_RTL {  right: .7em; left:auto}
+.CtxtMenu_MenuInputBox {  padding-left: 1em; right:.5em; color:#666666;  font-family: null;}
+.CtxtMenu_MenuInputBox.CtxtMenu_RTL {  left: .1em;}
+.CtxtMenu_MenuComboBox {  left:.1em; padding-bottom:.5em;}
+.CtxtMenu_MenuSlider {  left: .1em;}
+.CtxtMenu_SliderValue {  position:absolute; right:.1em; padding-top:.25em; color:#333333;  font-size: .75em}
+.CtxtMenu_SliderBar {  outline: none; background: #d3d3d3}
+.CtxtMenu_MenuLabel {  padding: 1px 2em 3px 1.33em;  font-style:italic}
+.CtxtMenu_MenuRule {  border-top: 1px solid #DDDDDD;  margin: 4px 3px;}
+.CtxtMenu_MenuDisabled {  color:GrayText}
+.CtxtMenu_MenuActive {  background-color: #606872;  color: white;}
+.CtxtMenu_MenuDisabled:focus {  background-color: #E8E8E8}
+.CtxtMenu_MenuLabel:focus {  background-color: #E8E8E8}
+.CtxtMenu_ContextMenu:focus {  outline:none}
+.CtxtMenu_ContextMenu .CtxtMenu_MenuItem:focus {  outline:none}
+.CtxtMenu_SelectionMenu {  position:relative; float:left;  border-bottom: none; -webkit-box-shadow:none; -webkit-border-radius:0px; }
+.CtxtMenu_SelectionItem {  padding-right: 1em;}
+.CtxtMenu_Selection {  right: 40%; width:50%; }
+.CtxtMenu_SelectionBox {  padding: 0em; max-height:20em; max-width: none;  background-color:#FFFFFF;}
+.CtxtMenu_SelectionDivider {  clear: both; border-top: 2px solid #000000;}
+.CtxtMenu_Menu .CtxtMenu_MenuClose {  top:-10px; left:-10px}
+</style><meta http-equiv="origin-trial" content="A7CQXglZzTrThjGTBEn1rWTxHOEtkWivwzgea+NjyardrwlieSjVuyG44PkYgIPGs8Q9svD8sF3Yedn0BBBjXAkAAACFeyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjk1MTY3OTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><meta http-equiv="origin-trial" content="A3vKT9yxRPjmXN3DpIiz58f5JykcWHjUo/W7hvmtjgh9jPpQgem9VbADiNovG8NkO6mRmk70Kex8/KUqAYWVWAEAAACLeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjk1MTY3OTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><meta http-equiv="origin-trial" content="A4A26Ymj79UVY7C7JGUS4BG1s7MdcDokAQf/RP0paks+RoTYbXHxceT/5L4iKcsleFCngi75YfNRGW2+SpVv1ggAAACLeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXRhZ3NlcnZpY2VzLmNvbTo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjk1MTY3OTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><meta http-equiv="origin-trial" content="As0hBNJ8h++fNYlkq8cTye2qDLyom8NddByiVytXGGD0YVE+2CEuTCpqXMDxdhOMILKoaiaYifwEvCRlJ/9GcQ8AAAB8eyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiV2ViVmlld1hSZXF1ZXN0ZWRXaXRoRGVwcmVjYXRpb24iLCJleHBpcnkiOjE3MTk1MzI3OTksImlzU3ViZG9tYWluIjp0cnVlfQ=="><meta http-equiv="origin-trial" content="AgRYsXo24ypxC89CJanC+JgEmraCCBebKl8ZmG7Tj5oJNx0cmH0NtNRZs3NB5ubhpbX/bIt7l2zJOSyO64NGmwMAAACCeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiV2ViVmlld1hSZXF1ZXN0ZWRXaXRoRGVwcmVjYXRpb24iLCJleHBpcnkiOjE3MTk1MzI3OTksImlzU3ViZG9tYWluIjp0cnVlfQ=="><style type="text/css">.a2a_hide{display:none}.a2a_logo_color{background-color:#0166ff}.a2a_menu,.a2a_menu *{-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box;float:none;margin:0;padding:0;position:static;height:auto;width:auto}.a2a_menu{border-radius:6px;display:none;direction:ltr;background:#FFF;font:16px sans-serif-light,HelveticaNeue-Light,"Helvetica Neue Light","Helvetica Neue",Arial,Helvetica,"Liberation Sans",sans-serif;color:#000;line-height:12px;border:1px solid #CCC;vertical-align:baseline;overflow:hidden}.a2a_mini{min-width:200px;position:absolute;width:300px;z-index:9999997}.a2a_overlay{display:none;background:#616c7deb;backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);position:fixed;top:0;right:0;left:0;bottom:0;z-index:9999998;-webkit-tap-highlight-color:transparent;transition:opacity .14s,backdrop-filter .14s}.a2a_full{background:#FFF;border:1px solid #FFF;box-shadow:#2a2a2a1a 0 0 20px 10px;height:auto;height:calc(320px);top:15%;left:50%;margin-left:-320px;position:fixed;text-align:center;width:640px;z-index:9999999;transition:transform .14s,opacity .14s}.a2a_full_footer,.a2a_full_header,.a2a_full_services{border:0;margin:0;padding:12px;box-sizing:border-box}.a2a_full_header{padding-bottom:8px}.a2a_full_services{height:280px;overflow-y:scroll;padding:0 12px;-webkit-overflow-scrolling:touch}.a2a_full_services .a2a_i{display:inline-block;float:none;width:181px;width:calc(33.334% - 18px)}div.a2a_full_footer{font-size:12px;text-align:center;padding:8px 14px}div.a2a_full_footer a,div.a2a_full_footer a:visited{display:inline;font-size:12px;line-height:14px;padding:8px 14px}div.a2a_full_footer a:focus,div.a2a_full_footer a:hover{background:0 0;border:0;color:#0166FF}div.a2a_full_footer a span.a2a_s_a2a,div.a2a_full_footer a span.a2a_w_a2a{background-size:14px;border-radius:3px;display:inline-block;height:14px;line-height:14px;margin:0 3px 0 0;vertical-align:top;width:14px}.a2a_modal{height:0;left:50%;margin-left:-320px;position:fixed;text-align:center;top:15%;width:640px;z-index:9999999;transition:transform .14s,opacity .14s;-webkit-tap-highlight-color:transparent}.a2a_modal_body{background:0 0;border:0;font:24px sans-serif-light,HelveticaNeue-Light,"Helvetica Neue Light","Helvetica Neue",Arial,Helvetica,"Liberation Sans",sans-serif;position:relative;height:auto;width:auto}.a2a_thanks{color:#fff;height:auto;margin-top:20px;width:auto}.a2a_thanks>div:first-child{margin:0 0 40px 0}.a2a_thanks div *{height:inherit}#a2a_copy_link{background:#FFF;border:1px solid #FFF;cursor:pointer;margin-top:15%}span.a2a_s_link#a2a_copy_link_icon,span.a2a_w_link#a2a_copy_link_icon{background-size:48px;border-radius:0;display:inline-block;height:48px;left:0;line-height:48px;margin:0 3px 0 0;position:absolute;vertical-align:top;width:48px}#a2a_modal input#a2a_copy_link_text{background-color:transparent;border:0;color:#2A2A2A;cursor:pointer;font:inherit;height:48px;left:62px;max-width:initial;min-height:auto;padding:0;position:relative;width:564px;width:calc(100% - 76px)}#a2a_copy_link_copied{background-color:#0166ff;color:#fff;display:none;font:inherit;font-size:16px;margin-top:1px;padding:3px 8px}@media (prefers-color-scheme:dark){.a2a_menu a,.a2a_menu a.a2a_i,.a2a_menu a.a2a_i:visited,.a2a_menu a.a2a_more,i.a2a_i{border-color:#2a2a2a!important;color:#fff!important}.a2a_menu a.a2a_i:active,.a2a_menu a.a2a_i:focus,.a2a_menu a.a2a_i:hover,.a2a_menu a.a2a_more:active,.a2a_menu a.a2a_more:focus,.a2a_menu a.a2a_more:hover,.a2a_menu_find_container{border-color:#444!important;background-color:#444!important}.a2a_menu:not(.a2a_thanks){background-color:#2a2a2a;border-color:#2a2a2a}.a2a_menu_find{color:#fff!important}.a2a_menu span.a2a_s_find svg{background-color:transparent!important}.a2a_menu span.a2a_s_find svg path{fill:#fff!important}.a2a_full{box-shadow:#00000066 0 0 20px 10px}.a2a_overlay{background-color:#373737eb}}@media print{.a2a_floating_style,.a2a_menu,.a2a_overlay{visibility:hidden}}@keyframes a2aFadeIn{from{opacity:0}to{opacity:1}}.a2a_starting{opacity:0}.a2a_starting.a2a_full,.a2a_starting.a2a_modal{transform:scale(.8)}@media (max-width:639px){.a2a_full{border-radius:0;top:15%;left:0;margin-left:auto;width:100%}.a2a_modal{left:0;margin-left:10px;width:calc(100% - 20px)}}@media (min-width:318px) and (max-width:437px){.a2a_full .a2a_full_services .a2a_i{width:calc(50% - 18px)}}@media (max-width:317px){.a2a_full .a2a_full_services .a2a_i{width:calc(100% - 18px)}}@media (max-height:436px){.a2a_full{bottom:40px;height:auto;top:40px}}@media (max-height:550px){.a2a_modal{top:30px}}@media (max-height:360px){.a2a_modal{top:20px}.a2a_thanks>div:first-child{margin-bottom:20px}}.a2a_menu a{color:#0166FF;text-decoration:none;font:16px sans-serif-light,HelveticaNeue-Light,"Helvetica Neue Light","Helvetica Neue",Arial,Helvetica,"Liberation Sans",sans-serif;line-height:14px;height:auto;width:auto;outline:0}.a2a_menu a.a2a_i:visited,.a2a_menu a.a2a_more{color:#0166FF}.a2a_menu a.a2a_i:active,.a2a_menu a.a2a_i:focus,.a2a_menu a.a2a_i:hover,.a2a_menu a.a2a_more:active,.a2a_menu a.a2a_more:focus,.a2a_menu a.a2a_more:hover{color:#2A2A2A;border-color:#EEE;border-style:solid;background-color:#EEE;text-decoration:none}.a2a_menu span.a2a_s_find{background-size:24px;height:24px;left:8px;position:absolute;top:7px;width:24px}.a2a_menu span.a2a_s_find svg{background-color:#FFF}.a2a_menu span.a2a_s_find svg path{fill:#CCC}#a2a_menu_container{display:inline-block}.a2a_menu_find_container{border:1px solid #CCC;border-radius:6px;padding:2px 24px 2px 0;position:relative;text-align:left}.a2a_cols_container .a2a_col1{overflow-x:hidden;overflow-y:auto;-webkit-overflow-scrolling:touch}#a2a_modal input,#a2a_modal input[type=text],.a2a_menu input,.a2a_menu input[type=text]{display:block;background-image:none;box-shadow:none;line-height:100%;margin:0;outline:0;overflow:hidden;padding:0;-moz-box-shadow:none;-webkit-box-shadow:none;-webkit-appearance:none}#a2afeed_find_container input,#a2afeed_find_container input[type=text],#a2apage_find_container input,#a2apage_find_container input[type=text]{background-color:transparent;border:0;box-sizing:content-box;color:#2A2A2A;font:inherit;font-size:16px;height:28px;line-height:20px;left:38px;outline:0;margin:0;max-width:initial;min-height:initial;padding:2px 0;position:relative;width:99%}.a2a_clear{clear:both}.a2a_svg{background-repeat:no-repeat;display:block;overflow:hidden;height:32px;line-height:32px;padding:0;pointer-events:none;width:32px}.a2a_svg svg{background-repeat:no-repeat;background-position:50% 50%;border:none;display:block;left:0;margin:0 auto;overflow:hidden;padding:0;position:relative;top:0;width:auto;height:auto}a.a2a_i,i.a2a_i{display:block;float:left;border:1px solid #FFF;line-height:24px;padding:6px 8px;text-align:left;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;width:132px}a.a2a_i span,a.a2a_more span{display:inline-block;overflow:hidden;vertical-align:top}a.a2a_i .a2a_svg{margin:0 6px 0 0}a.a2a_i .a2a_svg,a.a2a_more .a2a_svg{background-size:24px;height:24px;line-height:24px;width:24px}a.a2a_sss:hover{border-left:1px solid #CCC}a.a2a_more{border-bottom:1px solid #FFF;border-left:0;border-right:0;line-height:24px;margin:6px 0 0;padding:6px;-webkit-touch-callout:none}a.a2a_more span{height:24px;margin:0 6px 0 0}.a2a_kit .a2a_svg{background-repeat:repeat}.a2a_default_style a:empty,.a2a_flex_style a:empty,.a2a_floating_style a:empty,.a2a_overlay_style a:empty{display:none}.a2a_color_buttons a,.a2a_floating_style a{text-decoration:none}.a2a_default_style:not(.a2a_flex_style) a{float:left;line-height:16px;padding:0 2px}.a2a_default_style a:hover .a2a_svg,.a2a_floating_style a:hover .a2a_svg,.a2a_overlay_style a:hover .a2a_svg svg{opacity:.7}.a2a_overlay_style.a2a_default_style a:hover .a2a_svg{opacity:1}.a2a_default_style .a2a_count,.a2a_default_style .a2a_svg,.a2a_floating_style .a2a_svg,.a2a_menu .a2a_svg,.a2a_vertical_style .a2a_count,.a2a_vertical_style .a2a_svg{border-radius:4px}.a2a_default_style .a2a_counter img,.a2a_default_style .a2a_dd,.a2a_default_style .a2a_svg{float:left}.a2a_default_style .a2a_img_text{margin-right:4px}.a2a_default_style .a2a_divider{border-left:1px solid #000;display:inline;float:left;height:16px;line-height:16px;margin:0 5px}.a2a_kit a{cursor:pointer;transition:none}.a2a_floating_style{background-color:#fff;border-radius:6px;position:fixed;z-index:9999995}.a2a_overlay_style{z-index:2147483647}.a2a_floating_style,.a2a_overlay_style{animation:a2aFadeIn .2s ease-in;padding:4px}.a2a_vertical_style:not(.a2a_flex_style) a{clear:left;display:block;overflow:hidden;padding:4px}.a2a_floating_style.a2a_default_style{bottom:0}.a2a_floating_style.a2a_default_style a,.a2a_overlay_style.a2a_default_style a{padding:4px}.a2a_count{background-color:#fff;border:1px solid #ccc;box-sizing:border-box;color:#2a2a2a;display:block;float:left;font:12px Arial,Helvetica,sans-serif;height:16px;margin-left:4px;position:relative;text-align:center;width:50px}.a2a_count:after,.a2a_count:before{border:solid transparent;border-width:4px 4px 4px 0;content:"";height:0;left:0;line-height:0;margin:-4px 0 0 -4px;position:absolute;top:50%;width:0}.a2a_count:before{border-right-color:#ccc}.a2a_count:after{border-right-color:#fff;margin-left:-3px}.a2a_count span{animation:a2aFadeIn .14s ease-in}.a2a_vertical_style .a2a_counter img{display:block}.a2a_vertical_style .a2a_count{float:none;margin-left:0;margin-top:6px}.a2a_vertical_style .a2a_count:after,.a2a_vertical_style .a2a_count:before{border:solid transparent;border-width:0 4px 4px 4px;content:"";height:0;left:50%;line-height:0;margin:-4px 0 0 -4px;position:absolute;top:0;width:0}.a2a_vertical_style .a2a_count:before{border-bottom-color:#ccc}.a2a_vertical_style .a2a_count:after{border-bottom-color:#fff;margin-top:-3px}.a2a_color_buttons .a2a_count,.a2a_color_buttons .a2a_count:after,.a2a_color_buttons .a2a_count:before,.a2a_color_buttons.a2a_vertical_style .a2a_count:after,.a2a_color_buttons.a2a_vertical_style .a2a_count:before{background-color:transparent;border:none;color:#fff;float:none;width:auto}.a2a_color_buttons.a2a_vertical_style .a2a_count{margin-top:0}.a2a_flex_style{display:flex;align-items:flex-start;gap:0}.a2a_default_style.a2a_flex_style{left:0;right:0;width:100%}.a2a_vertical_style.a2a_flex_style{flex-direction:column;top:0;bottom:0}.a2a_flex_style a{display:flex;justify-content:center;flex:1;padding:4px}.a2a_flex_style.a2a_vertical_style a{flex-direction:column}.a2a_floating_style.a2a_color_buttons,.a2a_floating_style.a2a_flex_style{border-radius:0;padding:0}.a2a_floating_style.a2a_default_style.a2a_flex_style{bottom:0}.a2a_kit.a2a_flex_style .a2a_counter img,.a2a_kit.a2a_flex_style .a2a_dd,.a2a_kit.a2a_flex_style .a2a_svg{float:none}.a2a_nowrap{white-space:nowrap}.a2a_note{margin:0 auto;padding:9px;font-size:12px;text-align:center}.a2a_note .a2a_note_note{margin:0;color:#2A2A2A}.a2a_wide a{display:block;margin-top:3px;border-top:1px solid #EEE;text-align:center}.a2a_label{position:absolute!important;clip-path:polygon(0px 0px,0px 0px,0px 0px);-webkit-clip-path:polygon(0px 0px,0px 0px,0px 0px);overflow:hidden;height:1px;width:1px}.a2a_kit,.a2a_menu,.a2a_modal,.a2a_overlay{-ms-touch-action:manipulation;touch-action:manipulation;outline:0}.a2a_dd{-webkit-user-drag:none}.a2a_dd img{border:0}.a2a_button_facebook_like iframe{max-width:none}</style><style id="MJX-CHTML-styles">
+mjx-container[jax="CHTML"] {
+  line-height: 0;
+}
+
+mjx-container [space="1"] {
+  margin-left: .111em;
+}
+
+mjx-container [space="2"] {
+  margin-left: .167em;
+}
+
+mjx-container [space="3"] {
+  margin-left: .222em;
+}
+
+mjx-container [space="4"] {
+  margin-left: .278em;
+}
+
+mjx-container [space="5"] {
+  margin-left: .333em;
+}
+
+mjx-container [rspace="1"] {
+  margin-right: .111em;
+}
+
+mjx-container [rspace="2"] {
+  margin-right: .167em;
+}
+
+mjx-container [rspace="3"] {
+  margin-right: .222em;
+}
+
+mjx-container [rspace="4"] {
+  margin-right: .278em;
+}
+
+mjx-container [rspace="5"] {
+  margin-right: .333em;
+}
+
+mjx-container [size="s"] {
+  font-size: 70.7%;
+}
+
+mjx-container [size="ss"] {
+  font-size: 50%;
+}
+
+mjx-container [size="Tn"] {
+  font-size: 60%;
+}
+
+mjx-container [size="sm"] {
+  font-size: 85%;
+}
+
+mjx-container [size="lg"] {
+  font-size: 120%;
+}
+
+mjx-container [size="Lg"] {
+  font-size: 144%;
+}
+
+mjx-container [size="LG"] {
+  font-size: 173%;
+}
+
+mjx-container [size="hg"] {
+  font-size: 207%;
+}
+
+mjx-container [size="HG"] {
+  font-size: 249%;
+}
+
+mjx-container [width="full"] {
+  width: 100%;
+}
+
+mjx-box {
+  display: inline-block;
+}
+
+mjx-block {
+  display: block;
+}
+
+mjx-itable {
+  display: inline-table;
+}
+
+mjx-row {
+  display: table-row;
+}
+
+mjx-row > * {
+  display: table-cell;
+}
+
+mjx-mtext {
+  display: inline-block;
+}
+
+mjx-mstyle {
+  display: inline-block;
+}
+
+mjx-merror {
+  display: inline-block;
+  color: red;
+  background-color: yellow;
+}
+
+mjx-mphantom {
+  visibility: hidden;
+}
+
+_::-webkit-full-page-media, _:future, :root mjx-container {
+  will-change: opacity;
+}
+
+mjx-assistive-mml {
+  position: absolute !important;
+  top: 0px;
+  left: 0px;
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 1px 0px 0px 0px !important;
+  border: 0px !important;
+  display: block !important;
+  width: auto !important;
+  overflow: hidden !important;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+mjx-assistive-mml[display="block"] {
+  width: 100% !important;
+}
+
+mjx-c::before {
+  display: block;
+  width: 0;
+}
+
+.MJX-TEX {
+  font-family: MJXZERO, MJXTEX;
+}
+
+.TEX-B {
+  font-family: MJXZERO, MJXTEX-B;
+}
+
+.TEX-I {
+  font-family: MJXZERO, MJXTEX-I;
+}
+
+.TEX-MI {
+  font-family: MJXZERO, MJXTEX-MI;
+}
+
+.TEX-BI {
+  font-family: MJXZERO, MJXTEX-BI;
+}
+
+.TEX-S1 {
+  font-family: MJXZERO, MJXTEX-S1;
+}
+
+.TEX-S2 {
+  font-family: MJXZERO, MJXTEX-S2;
+}
+
+.TEX-S3 {
+  font-family: MJXZERO, MJXTEX-S3;
+}
+
+.TEX-S4 {
+  font-family: MJXZERO, MJXTEX-S4;
+}
+
+.TEX-A {
+  font-family: MJXZERO, MJXTEX-A;
+}
+
+.TEX-C {
+  font-family: MJXZERO, MJXTEX-C;
+}
+
+.TEX-CB {
+  font-family: MJXZERO, MJXTEX-CB;
+}
+
+.TEX-FR {
+  font-family: MJXZERO, MJXTEX-FR;
+}
+
+.TEX-FRB {
+  font-family: MJXZERO, MJXTEX-FRB;
+}
+
+.TEX-SS {
+  font-family: MJXZERO, MJXTEX-SS;
+}
+
+.TEX-SSB {
+  font-family: MJXZERO, MJXTEX-SSB;
+}
+
+.TEX-SSI {
+  font-family: MJXZERO, MJXTEX-SSI;
+}
+
+.TEX-SC {
+  font-family: MJXZERO, MJXTEX-SC;
+}
+
+.TEX-T {
+  font-family: MJXZERO, MJXTEX-T;
+}
+
+.TEX-V {
+  font-family: MJXZERO, MJXTEX-V;
+}
+
+.TEX-VB {
+  font-family: MJXZERO, MJXTEX-VB;
+}
+
+mjx-stretchy-v mjx-c, mjx-stretchy-h mjx-c {
+  font-family: MJXZERO, MJXTEX-S1, MJXTEX-S4, MJXTEX, MJXTEX-A ! important;
+}
+
+@font-face /* 0 */ {
+  font-family: MJXZERO;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Zero.woff") format("woff");
+}
+
+@font-face /* 1 */ {
+  font-family: MJXTEX;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Main-Regular.woff") format("woff");
+}
+
+@font-face /* 2 */ {
+  font-family: MJXTEX-B;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Main-Bold.woff") format("woff");
+}
+
+@font-face /* 3 */ {
+  font-family: MJXTEX-I;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Math-Italic.woff") format("woff");
+}
+
+@font-face /* 4 */ {
+  font-family: MJXTEX-MI;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Main-Italic.woff") format("woff");
+}
+
+@font-face /* 5 */ {
+  font-family: MJXTEX-BI;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Math-BoldItalic.woff") format("woff");
+}
+
+@font-face /* 6 */ {
+  font-family: MJXTEX-S1;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Size1-Regular.woff") format("woff");
+}
+
+@font-face /* 7 */ {
+  font-family: MJXTEX-S2;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Size2-Regular.woff") format("woff");
+}
+
+@font-face /* 8 */ {
+  font-family: MJXTEX-S3;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Size3-Regular.woff") format("woff");
+}
+
+@font-face /* 9 */ {
+  font-family: MJXTEX-S4;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Size4-Regular.woff") format("woff");
+}
+
+@font-face /* 10 */ {
+  font-family: MJXTEX-A;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_AMS-Regular.woff") format("woff");
+}
+
+@font-face /* 11 */ {
+  font-family: MJXTEX-C;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Calligraphic-Regular.woff") format("woff");
+}
+
+@font-face /* 12 */ {
+  font-family: MJXTEX-CB;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Calligraphic-Bold.woff") format("woff");
+}
+
+@font-face /* 13 */ {
+  font-family: MJXTEX-FR;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Fraktur-Regular.woff") format("woff");
+}
+
+@font-face /* 14 */ {
+  font-family: MJXTEX-FRB;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Fraktur-Bold.woff") format("woff");
+}
+
+@font-face /* 15 */ {
+  font-family: MJXTEX-SS;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_SansSerif-Regular.woff") format("woff");
+}
+
+@font-face /* 16 */ {
+  font-family: MJXTEX-SSB;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_SansSerif-Bold.woff") format("woff");
+}
+
+@font-face /* 17 */ {
+  font-family: MJXTEX-SSI;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_SansSerif-Italic.woff") format("woff");
+}
+
+@font-face /* 18 */ {
+  font-family: MJXTEX-SC;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Script-Regular.woff") format("woff");
+}
+
+@font-face /* 19 */ {
+  font-family: MJXTEX-T;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Typewriter-Regular.woff") format("woff");
+}
+
+@font-face /* 20 */ {
+  font-family: MJXTEX-V;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Vector-Regular.woff") format("woff");
+}
+
+@font-face /* 21 */ {
+  font-family: MJXTEX-VB;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Vector-Bold.woff") format("woff");
+}
+</style><style id="theia-sticky-sidebar-stylesheet-TSS">.theiaStickySidebar:after {content: ""; display: table; clear: both;}</style><link rel="preload" href="./Lập trình giao diện Python với PyQt5 và Qt Designer_files/f(3).txt" as="script"><script type="text/javascript" src="./Lập trình giao diện Python với PyQt5 và Qt Designer_files/f(3).txt"></script><link rel="preload" href="./Lập trình giao diện Python với PyQt5 và Qt Designer_files/f(4).txt" as="script"><script type="text/javascript" src="./Lập trình giao diện Python với PyQt5 và Qt Designer_files/f(4).txt"></script><style>#aswift_2_host{opacity:1 !important;overflow: visible !important}#aswift_3_host{opacity:1 !important;overflow: visible !important}</style></head>
+				<body class="post-template-default single single-post postid-2375 single-format-standard wp-embed-responsive right-sidebar stellarnav-noscroll-x" style="transform: none;">
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-dark-grayscale"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tableValues="0 0.49803921568627"></fefuncr><fefuncg type="table" tableValues="0 0.49803921568627"></fefuncg><fefuncb type="table" tableValues="0 0.49803921568627"></fefuncb><fefunca type="table" tableValues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-grayscale"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tableValues="0 1"></fefuncr><fefuncg type="table" tableValues="0 1"></fefuncg><fefuncb type="table" tableValues="0 1"></fefuncb><fefunca type="table" tableValues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-purple-yellow"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tableValues="0.54901960784314 0.98823529411765"></fefuncr><fefuncg type="table" tableValues="0 1"></fefuncg><fefuncb type="table" tableValues="0.71764705882353 0.25490196078431"></fefuncb><fefunca type="table" tableValues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-blue-red"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tableValues="0 1"></fefuncr><fefuncg type="table" tableValues="0 0.27843137254902"></fefuncg><fefuncb type="table" tableValues="0.5921568627451 0.27843137254902"></fefuncb><fefunca type="table" tableValues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-midnight"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tableValues="0 0"></fefuncr><fefuncg type="table" tableValues="0 0.64705882352941"></fefuncg><fefuncb type="table" tableValues="0 1"></fefuncb><fefunca type="table" tableValues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-magenta-yellow"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tableValues="0.78039215686275 1"></fefuncr><fefuncg type="table" tableValues="0 0.94901960784314"></fefuncg><fefuncb type="table" tableValues="0.35294117647059 0.47058823529412"></fefuncb><fefunca type="table" tableValues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-purple-green"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tableValues="0.65098039215686 0.40392156862745"></fefuncr><fefuncg type="table" tableValues="0 1"></fefuncg><fefuncb type="table" tableValues="0.44705882352941 0.4"></fefuncb><fefunca type="table" tableValues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-blue-orange"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tableValues="0.098039215686275 1"></fefuncr><fefuncg type="table" tableValues="0 0.66274509803922"></fefuncg><fefuncb type="table" tableValues="0.84705882352941 0.41960784313725"></fefuncb><fefunca type="table" tableValues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg>			<a class="skip-link screen-reader-text" href="https://www.vniteach.com/2022/01/24/lap-trinh-giao-dien-python-voi-pyqt5-va-qt-designer/#content">Chuyển đến phần nội dung</a>
+				<div class="page-wrapper" style="transform: none; height: auto !important;">
+		<header class="general-header cm-header-style-one">
+			<div class="top-header">
+			<div class="cm-container">
+				<div class="row">
+					<div class="cm-col-lg-8 cm-col-md-7 cm-col-12">
+						<div class="top-header-left">
+													</div><!-- .top-header-left -->
+					</div><!-- col -->
+					<div class="cm-col-lg-4 cm-col-md-5 cm-col-12">
+						<div class="top-header-social-links">
+									<ul class="social-icons">
+							<li>
+					<a href="https://www.facebook.com/groups/vniteach" target="_blank">Facebook</a></li>
+								<li>
+					<a href="https://twitter.com/vniteach" target="_blank">Twitter</a></li>
+								<li>
+					<a href="https://www.instagram.com/vniteach" target="_blank">Instagram</a></li>
+								<li>
+					<a href="https://www.youtube.com/vniteach" target="_blank">Youtube</a></li>
+						</ul>
+								</div><!-- .top-header-social-links -->
+					</div><!-- .col -->
+				</div><!-- .row -->
+			</div><!-- .cm-container -->
+		</div><!-- .top-header -->
+		<div class="cm-container" style="height: auto !important;">
+		<div class="logo-container">
+			<div class="row align-items-center">
+				<div class="cm-col-lg-4 cm-col-12">
+							<div class="logo">
+								<span class="site-title"><a href="https://www.vniteach.com/" rel="home">VniTeach – Giáo viên 4.0</a></span>
+										<p class="site-description">Let's share to be shared</p>
+							</div><!-- .logo -->
+						</div><!-- .col -->
+							</div><!-- .row -->
+		</div><!-- .logo-container -->
+		<div class="google-auto-placed" style="width: 100%; height: auto; clear: both; text-align: center;"><ins data-ad-format="auto" class="adsbygoogle adsbygoogle-noablate" data-ad-client="ca-pub-9775521298001579" data-adsbygoogle-status="done" style="display: block; margin: 10px auto; background-color: transparent; height: 280px;" data-ad-status="unfilled"><div id="aswift_1_host" style="border: none; height: 280px; width: 1140px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-block; overflow: visible;" tabindex="0" title="Advertisement" aria-label="Advertisement"><iframe id="aswift_1" name="aswift_1" style="left:0;position:absolute;top:0;border:0;width:1140px;height:280px;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="1140" height="280" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" src="./Lập trình giao diện Python với PyQt5 và Qt Designer_files/ads.html" data-google-container-id="a!2" data-gtm-yt-inspected-4="true" data-google-query-id="CPqLqryqsf8CFe5YDwIdH5sPbg" data-load-complete="true"></iframe></div></ins></div><nav class="main-navigation">
+			<div id="main-nav" class="primary-navigation dark desktop"><a href="https://www.vniteach.com/2022/01/24/lap-trinh-giao-dien-python-voi-pyqt5-va-qt-designer/#" class="menu-toggle full"><i class="fa fa-bars"></i></a>
+				<ul id="menu-menu-chinh" class=""><li class="home-btn"><a href="https://www.vniteach.com/"><i class="feather icon-home" aria-hidden="true"></i></a></li><li id="menu-item-22" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor menu-item-has-children menu-item-22 has-sub"><a href="https://www.vniteach.com/category/ngon-ngu-lap-trinh/">Ngôn ngữ lập trình</a>
+<a class="dd-toggle" href="https://www.vniteach.com/2022/01/24/lap-trinh-giao-dien-python-voi-pyqt5-va-qt-designer/#"><i class="fa fa-plus"></i></a><ul class="sub-menu">
+	<li id="menu-item-26" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-26"><a href="https://www.vniteach.com/category/ngon-ngu-lap-trinh/lap-trinh-python/">Lập trình Python</a></li>
+	<li id="menu-item-773" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-773"><a href="https://www.vniteach.com/category/ngon-ngu-lap-trinh/lap-trinh-c/">Lập trình C</a></li>
+	<li id="menu-item-7489" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-7489"><a href="https://www.vniteach.com/category/ngon-ngu-lap-trinh/lap-trinh-c-ngon-ngu-lap-trinh-2/">Lập trình C#</a></li>
+	<li id="menu-item-947" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-947"><a href="https://www.vniteach.com/category/ngon-ngu-lap-trinh/lap-trinh-c-ngon-ngu-lap-trinh/">Lập trình C++</a></li>
+	<li id="menu-item-2470" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2470"><a href="https://www.vniteach.com/category/ngon-ngu-lap-trinh/lap-trinh-scratch/">Lập trình Scratch</a></li>
+	<li id="menu-item-2707" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2707"><a href="https://www.vniteach.com/category/ngon-ngu-lap-trinh/lap-trinh-microbit/">Lập trình Microbit</a></li>
+	<li id="menu-item-9321" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-9321"><a href="https://www.vniteach.com/category/ngon-ngu-lap-trinh/lap-trinh-web/">Lập trình Web</a></li>
+</ul>
+</li>
+<li id="menu-item-844" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-844 has-sub"><a href="https://www.vniteach.com/category/thu-thuat/">Thủ thuật</a>
+<a class="dd-toggle" href="https://www.vniteach.com/2022/01/24/lap-trinh-giao-dien-python-voi-pyqt5-va-qt-designer/#"><i class="fa fa-plus"></i></a><ul class="sub-menu">
+	<li id="menu-item-32" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-32 has-sub"><a href="https://www.vniteach.com/category/thu-thuat/ms-office/">MS Office</a>
+	<a class="dd-toggle" href="https://www.vniteach.com/2022/01/24/lap-trinh-giao-dien-python-voi-pyqt5-va-qt-designer/#"><i class="fa fa-plus"></i></a><ul class="sub-menu">
+		<li id="menu-item-30" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-30"><a href="https://www.vniteach.com/category/thu-thuat/ms-office/microsoft-word/">Microsoft Word</a></li>
+		<li id="menu-item-28" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-28"><a href="https://www.vniteach.com/category/thu-thuat/ms-office/microsoft-excel/">Microsoft Excel</a></li>
+		<li id="menu-item-29" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-29"><a href="https://www.vniteach.com/category/thu-thuat/ms-office/microsoft-powerpoint/">Microsoft PowerPoint</a></li>
+	</ul>
+</li>
+	<li id="menu-item-33" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-33"><a href="https://www.vniteach.com/category/thu-thuat/windows/">Windows</a></li>
+	<li id="menu-item-31" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-31"><a href="https://www.vniteach.com/category/thu-thuat/phan-mem/">Phần mềm</a></li>
+	<li id="menu-item-78" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-78"><a href="https://www.vniteach.com/category/thu-thuat/internet/">Internet</a></li>
+	<li id="menu-item-7827" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-7827"><a href="https://www.vniteach.com/category/thu-thuat/fonts-tieng-viet-tuyet-dep/">Fonts Tiếng Việt tuyệt đẹp</a></li>
+</ul>
+</li>
+<li id="menu-item-845" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-845 has-sub"><a href="https://www.vniteach.com/category/ma-nguon-mo/">Mã nguồn mở</a>
+<a class="dd-toggle" href="https://www.vniteach.com/2022/01/24/lap-trinh-giao-dien-python-voi-pyqt5-va-qt-designer/#"><i class="fa fa-plus"></i></a><ul class="sub-menu">
+	<li id="menu-item-846" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-846"><a href="https://www.vniteach.com/category/ma-nguon-mo/wordpress/">WordPress</a></li>
+	<li id="menu-item-8428" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-8428"><a href="https://www.vniteach.com/category/ma-nguon-mo/joomla/">Joomla</a></li>
+	<li id="menu-item-8427" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-8427"><a href="https://www.vniteach.com/category/ma-nguon-mo/nukeviet/">NukeViet</a></li>
+	<li id="menu-item-8607" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-8607"><a href="https://www.vniteach.com/category/ma-nguon-mo/eduportal/">EduPortal</a></li>
+</ul>
+</li>
+<li id="menu-item-279" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-279 has-sub"><a href="https://www.vniteach.com/category/giang-day/">Giảng dạy</a>
+<a class="dd-toggle" href="https://www.vniteach.com/2022/01/24/lap-trinh-giao-dien-python-voi-pyqt5-va-qt-designer/#"><i class="fa fa-plus"></i></a><ul class="sub-menu">
+	<li id="menu-item-838" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-838"><a href="https://www.vniteach.com/category/giang-day/tin-hoc/">Tin học</a></li>
+	<li id="menu-item-910" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-910"><a href="https://www.vniteach.com/category/giang-day/toan-hoc/">Toán học</a></li>
+	<li id="menu-item-2520" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2520"><a href="https://www.vniteach.com/category/giang-day/ngu-van/">Ngữ văn</a></li>
+	<li id="menu-item-4099" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-4099"><a href="https://www.vniteach.com/category/giang-day/tieng-viet/">Tiếng Việt</a></li>
+	<li id="menu-item-713" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-713"><a href="https://www.vniteach.com/category/giang-day/tieng-anh/">Tiếng Anh</a></li>
+	<li id="menu-item-2507" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2507"><a href="https://www.vniteach.com/category/giang-day/vat-li/">Vật lí</a></li>
+	<li id="menu-item-1037" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1037"><a href="https://www.vniteach.com/category/giang-day/hoa-hoc/">Hóa học</a></li>
+	<li id="menu-item-3545" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-3545"><a href="https://www.vniteach.com/category/giang-day/sinh-hoc/">Sinh học</a></li>
+	<li id="menu-item-3558" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-3558"><a href="https://www.vniteach.com/category/giang-day/lich-su/">Lịch sử</a></li>
+	<li id="menu-item-3568" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-3568"><a href="https://www.vniteach.com/category/giang-day/dia-li/">Địa lí</a></li>
+	<li id="menu-item-2563" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2563"><a href="https://www.vniteach.com/category/giang-day/lich-su-va-dia-li/">Lịch sử và Địa lí</a></li>
+	<li id="menu-item-2536" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2536"><a href="https://www.vniteach.com/category/giang-day/khtn/">KHTN</a></li>
+	<li id="menu-item-2547" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2547"><a href="https://www.vniteach.com/category/giang-day/am-nhac/">Âm nhạc</a></li>
+	<li id="menu-item-3668" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-3668"><a href="https://www.vniteach.com/category/giang-day/mi-thuat/">Mĩ thuật</a></li>
+	<li id="menu-item-2550" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2550"><a href="https://www.vniteach.com/category/giang-day/cong-nghe/">Công nghệ</a></li>
+	<li id="menu-item-2551" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2551"><a href="https://www.vniteach.com/category/giang-day/giao-duc-cong-dan/">Giáo dục công dân</a></li>
+	<li id="menu-item-3584" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-3584"><a href="https://www.vniteach.com/category/giang-day/giao-duc-ktpl/">Giáo dục KT&amp;PL</a></li>
+	<li id="menu-item-3576" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-3576"><a href="https://www.vniteach.com/category/giang-day/giao-duc-qpan/">Giáo dục QP&amp;AN</a></li>
+	<li id="menu-item-2554" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2554"><a href="https://www.vniteach.com/category/giang-day/giao-duc-the-chat/">Giáo dục thể chất</a></li>
+	<li id="menu-item-2557" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2557"><a href="https://www.vniteach.com/category/giang-day/hoat-dong-trai-nghiem/">Hoạt động trải nghiệm</a></li>
+	<li id="menu-item-2732" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2732"><a href="https://www.vniteach.com/category/giang-day/giao-duc-dia-phuong/">Giáo dục địa phương</a></li>
+	<li id="menu-item-4104" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-4104"><a href="https://www.vniteach.com/category/giang-day/tu-nhien-va-xa-hoi/">Tự nhiên và Xã hội</a></li>
+	<li id="menu-item-4120" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-4120"><a href="https://www.vniteach.com/category/giang-day/dao-duc/">Đạo đức</a></li>
+</ul>
+</li>
+<li id="menu-item-895" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-895 has-sub"><a href="https://www.vniteach.com/category/tai-lieu-tham-khao/">Tài liệu tham khảo</a>
+<a class="dd-toggle" href="https://www.vniteach.com/2022/01/24/lap-trinh-giao-dien-python-voi-pyqt5-va-qt-designer/#"><i class="fa fa-plus"></i></a><ul class="sub-menu">
+	<li id="menu-item-896" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-896 has-sub"><a href="https://www.vniteach.com/category/tai-lieu-tham-khao/tai-lieu-giao-trinh/">Tài liệu, giáo trình</a>
+	<a class="dd-toggle" href="https://www.vniteach.com/2022/01/24/lap-trinh-giao-dien-python-voi-pyqt5-va-qt-designer/#"><i class="fa fa-plus"></i></a><ul class="sub-menu">
+		<li id="menu-item-2777" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2777"><a href="https://www.vniteach.com/category/tai-lieu-tham-khao/tai-lieu-giao-trinh/tai-lieu-ve-giai-thuat/">Tài liệu về giải thuật</a></li>
+		<li id="menu-item-2774" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2774"><a href="https://www.vniteach.com/category/tai-lieu-tham-khao/tai-lieu-giao-trinh/tai-lieu-python/">Tài liệu Python</a></li>
+	</ul>
+</li>
+	<li id="menu-item-6843" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6843"><a href="https://www.vniteach.com/category/tai-lieu-tham-khao/tro-choi-powerpoint/">Trò chơi PowerPoint</a></li>
+	<li id="menu-item-897" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-897 has-sub"><a href="https://www.vniteach.com/category/tai-lieu-tham-khao/van-ban-phap-luat/">Văn bản pháp luật</a>
+	<a class="dd-toggle" href="https://www.vniteach.com/2022/01/24/lap-trinh-giao-dien-python-voi-pyqt5-va-qt-designer/#"><i class="fa fa-plus"></i></a><ul class="sub-menu">
+		<li id="menu-item-7559" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-7559"><a href="https://www.vniteach.com/category/tai-lieu-tham-khao/van-ban-phap-luat/van-ban-giao-duc/">Văn bản giáo dục</a></li>
+		<li id="menu-item-7558" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-7558"><a href="https://www.vniteach.com/category/tai-lieu-tham-khao/van-ban-phap-luat/quy-hoach-dao-tao/">Quy hoạch &amp; Đào tạo</a></li>
+	</ul>
+</li>
+	<li id="menu-item-323" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-323"><a href="https://www.vniteach.com/category/tai-lieu-tham-khao/bdtx/">BDTX</a></li>
+	<li id="menu-item-322" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-322"><a href="https://www.vniteach.com/category/tai-lieu-tham-khao/e-learning/">e-Learning</a></li>
+	<li id="menu-item-6905" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6905"><a href="https://www.vniteach.com/category/tai-lieu-tham-khao/tai-lieu-latex/">Tài liệu LaTeX</a></li>
+</ul>
+</li>
+<li id="menu-item-8388" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8388"><a href="https://www.youtube.com/vniteach">Youtube</a></li>
+<li id="menu-item-8373" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8373"><a href="http://radio.garden/visit/ho-chi-minh-city">Radio Online</a></li>
+<li id="menu-item-8381" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8381"><a href="https://www.photopea.com/#%7B%22files%22:%5B%22https://www.photopea.com/api/img2/pug.png%22%5D,%22environment%22:%7B%7D%7D">Photoshop</a></li>
+<li class="primarynav_search_icon"><a class="search_box" href="javascript:;"><i class="fa fa-search" aria-hidden="true"></i></a></li></ul>			</div><!-- .primary-navigation -->
+			<div class="header-search-container">
+				<div class="search-form-entry">
+					<form role="search" class="cm-search-form" method="get" action="https://www.vniteach.com/"><input type="search" name="s" placeholder="Gõ ở đây" value=""><button type="submit" class="cm-submit-btn"><i class="feather icon-search"></i></button></form>				</div><!-- .search-form-entry -->
+			</div><!-- .search-container -->
+		</nav><!-- .main-navigation -->
+	</div><!-- .cm-container -->
+</header><!-- .general-header -->
+<div id="content" class="site-content" style="transform: none; height: auto !important;">
+	<div class="cm-container" style="transform: none; height: auto !important;">
+	<div class="inner-page-wrapper" style="transform: none; height: auto !important;">
+		<div id="primary" class="content-area" style="transform: none; height: auto !important;">
+			<main id="main" class="site-main" style="transform: none; height: auto !important;">
+				<div class="cm_post_page_lay_wrap" style="transform: none; height: auto !important;">
+								<div class="breadcrumb  default-breadcrumb">
+				<nav role="navigation" aria-label="Chỉ mục" class="breadcrumb-trail breadcrumbs" itemprop="breadcrumb"><ul class="trail-items" itemscope="" itemtype="http://schema.org/BreadcrumbList"><meta name="numberOfItems" content="5"><meta name="itemListOrder" content="Ascending"><li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem" class="trail-item trail-begin"><a href="https://www.vniteach.com/" rel="home" itemprop="item"><span itemprop="name">Trang chủ</span></a><meta itemprop="position" content="1"></li><li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem" class="trail-item"><a href="https://www.vniteach.com/2022/" itemprop="item"><span itemprop="name">2022</span></a><meta itemprop="position" content="2"></li><li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem" class="trail-item"><a href="https://www.vniteach.com/2022/01/" itemprop="item"><span itemprop="name">Tháng Một</span></a><meta itemprop="position" content="3"></li><li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem" class="trail-item"><a href="https://www.vniteach.com/2022/01/24/" itemprop="item"><span itemprop="name">24</span></a><meta itemprop="position" content="4"></li><li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem" class="trail-item trail-end"><a href="https://www.vniteach.com/2022/01/24/lap-trinh-giao-dien-python-voi-pyqt5-va-qt-designer" itemprop="item"><span itemprop="name">Lập trình giao diện Python với PyQt5 và Qt Designer</span></a><meta itemprop="position" content="5"></li></ul></nav>			</div>
+								<div class="single-container" style="transform: none; height: auto !important;">
+						<div class="row" style="transform: none; height: auto !important;">  
+							<div class="cm-col-lg-8 cm-col-12 sticky_portion" style="position: relative; overflow: visible; box-sizing: border-box; min-height: 1px; height: auto !important;">
+								<!-- .content-entry -->
+
+		<!-- .cm-post-widget-three -->
+	<!-- #comments -->
+							<div class="theiaStickySidebar" style="padding-top: 0px; padding-bottom: 1px; position: static; transform: none; height: auto !important;"><div class="content-entry">
+	<article id="post-2375" class="post-detail post-2375 post type-post status-publish format-standard hentry category-lap-trinh-python tag-python">
+		<div class="the_title">
+			<h1>Lập trình giao diện Python với PyQt5 và Qt Designer</h1>
+		</div><!-- .the_title -->
+					<div class="cm-post-meta">
+				<ul class="post_meta">
+											<li class="posted_date">
+							<a href="https://www.vniteach.com/2022/01/24/lap-trinh-giao-dien-python-voi-pyqt5-va-qt-designer/"><time class="entry-date published" datetime="2022-01-24T06:08:00+07:00">24/01/2022</time></a>
+						</li><!-- .posted_date -->
+													<li class="entry_cats">
+								<a href="https://www.vniteach.com/category/ngon-ngu-lap-trinh/lap-trinh-python/" rel="category tag">Lập trình Python</a>							</li><!-- .entry_cats -->
+											</ul><!-- .post_meta -->
+			</div><!-- .meta -->
+							<div class="the_content">
+			
+<p>Trong quá trình học lập trình với ngôn ngữ Python, rất nhiều người quan tâm tới việc tạo các ứng dụng có giao diện như Windows Form. Hôm nay VniTeach sẽ hướng dẫn các bạn cách đơn giản và nhanh chóng để tạo ra các ứng dụng có giao diện với PyQt5 và Qt Designer trong Python.</p>
+
+
+
+<h2 class="wp-block-heading">Qt Designer là gì?</h2>
+
+
+
+<p>Qt Designer là một công cụ để nhanh chóng xây dựng giao diện người dùng đồ họa với các widget từ khung Qt GUI . Nó cung cấp cho bạn một giao diện kéo và thả đơn giản để bố trí các thành phần như nút, trường văn bản, hộp tổ hợp và hơn thế nữa. Đây là ảnh chụp màn hình của Qt Designer trên Windows:</p>
+
+
+<div class="wp-block-image">
+<figure class="aligncenter size-full"><img decoding="async" width="823" height="507" src="./Lập trình giao diện Python với PyQt5 và Qt Designer_files/qt-designer-windows-min.png" alt="" class="wp-image-2376" srcset="https://www.vniteach.com/wp-content/uploads/2022/01/qt-designer-windows-min.png 823w, https://www.vniteach.com/wp-content/uploads/2022/01/qt-designer-windows-min-300x185.png 300w, https://www.vniteach.com/wp-content/uploads/2022/01/qt-designer-windows-min-768x473.png 768w" sizes="(max-width: 823px) 100vw, 823px" data-pagespeed-url-hash="3987832737" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"><figcaption>Giao diện của phần mềm Qt Designer</figcaption></figure></div>
+
+
+<p>Qt Designer tạo ra <code><span class="has-inline-color has-vivid-red-color">.ui</span></code> các tệp. Đây là một định dạng dựa trên XML đặc biệt để lưu trữ các widget của bạn dưới dạng cây. Bạn có thể tải các tệp này trong thời gian chạy hoặc dịch chúng sang ngôn ngữ lập trình như C ++ hoặc Python.</p>
+
+
+
+<h2 class="wp-block-heading">Qt Designer và Python</h2>
+
+
+
+<p>Nhiều người thích sử dụng Qt Designer cùng với Python vì nó là một ngôn ngữ động có lợi cho việc tạo mẫu nhanh.</p>
+
+
+
+<p>Cách dễ nhất để kết hợp Qt Designer và Python là thông qua liên kết PyQt . Để cài đặt PyQt, chỉ cần nhập nội dung sau vào dòng lệnh:</p>
+
+
+
+<div class="hcb_wrap"><button class="hcb-clipboard" data-clipboard-target="[data-hcb-clip=&quot;1&quot;]" data-clipboard-action="copy" aria-label="Copy code to clipboard"></button><pre class="prism line-numbers  language-python" data-lang="Python"><code class=" language-python" data-hcb-clip="1">python3 <span class="token operator">-</span>m venv venv
+source venv<span class="token operator">/</span><span class="token builtin">bin</span><span class="token operator">/</span>activate <span class="token comment"># or "call venv\Scripts\activate.bat" on Windows</span>
+python3 <span class="token operator">-</span>m pip install PyQt5<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre></div>
+
+
+
+<h2 class="wp-block-heading">PyQt5 là gì</h2>
+
+
+
+<p>– Qt là một Application framework đa nền tảng viết trên ngôn ngữ C++ , được dùng để phát triển các ứng dụng trên desktop, hệ thống nhúng và mobile. Hỗ trợ cho các platform bao gồm : Linux, OS X, Windows, VxWorks, QNX, Android, iOS, BlackBerry, Sailfish OS và một số platform khác. PyQt là Python interface của Qt, kết hợp của ngôn ngữ lập trình Python và thư viện Qt, là một thư viện bao gồm các thành phần giao diện điều khiển (<strong>widgets </strong>, <strong>graphical control elements</strong>).</p>
+
+
+
+<p>– PyQt API bao gồm các module bao gồm số lượng lớn với các <strong>classes </strong>và <strong>functions </strong>hỗ trợ cho việc thiết kế ra các giao diện giao tiếp với người dùng của các phần mềm chức năng. Hỗ trợ với Python 2.x và 3.x.</p>
+
+
+
+<p>– PyQt được phát triển bởi Riverbank Computing Limited, version mới nhất của PyQt có thể download tại đường link :&nbsp; <a href="https://riverbankcomputing.com/software/pyqt/download">PyQt Riverbank Computing Limited</a></p>
+
+
+
+<p>– Các class của PyQt5 được chia thành các module, bao gồm:<br>+ QtCore : là module bao gồm phần lõi không thuộc chức năng GUI, ví dụ dùng để làm việc với thời gian, file và thư mục, các loại dữ liệu, streams, URLs, mime type, threads hoặc processes.<br>+ QtGui : bao gồm các class dùng cho việc lập trình giao diện (windowing system integration), event handling, 2D graphics, basic imaging, fonts và text.<br>+ QtWidgets : bao gồm các class cho widget, ví dụ : button, hộp thoại, … được sử dụng để tạo nên giao diện người dùng cơ bản nhất.<br>+ QtMultimedia : thư viện cho việc sử dụng âm thanh, hình ảnh, camera,…&nbsp;<br>+ QtBluetooth : bao gồm các class giúp tìm kiếm và kết nối với các thiết bị có giao tiếp với phần mềm.<br>+ QtNetwork : bao gồm các class dùng cho việc lập trình mạng, hỗ trợ lập trình TCP/IP và UDP client , server hỗ trợ việc lập trình mạng.<br>+ QtPositioning : bao gồm các class giúp việc hỗ trợ xác định vị.<br>+ Enginio : module giúp các client truy cập các Cloud Services của Qt.<br>+ QtWebSockets : cung cấp các công cụ cho WebSocket protocol.<br>+ QtWebKit : cung cấp các class dùng cho làm việc với các trình duyệt Web , dựa trên thư viện WebKit2.<br>+ QtWebKitWidgets : các widget cho WebKit.<br>+ QtXml : các class dùng cho làm việc với XML file.<br>+ QtSvg : dùng cho hiển thị các thành phần của SVG file.<br>+ QtSql : cung cấp các class dùng cho việc làm việc với dữ liệu.<br>+ QtTest : cung cấp các công cụ cho phép test các đơn vị của ứng dụng với PyQt5.</p>
+
+
+
+<p>Giả sử bạn đã lưu tệp của mình từ Qt Designer dưới dạng <code>dialog.ui</code>. Sau đó, bạn có thể tạo một tệp khác, chẳng hạn như <code>main.py</code>, với nội dung sau:</p>
+
+
+
+<p><strong>Cách 1:</strong></p>
+
+
+
+<div class="hcb_wrap"><button class="hcb-clipboard" data-clipboard-target="[data-hcb-clip=&quot;2&quot;]" data-clipboard-action="copy" aria-label="Copy code to clipboard"></button><pre class="prism line-numbers  language-python" data-lang="Python"><code class=" language-python" data-hcb-clip="2"><span class="token keyword">from</span> PyQt5 <span class="token keyword">import</span> uic
+<span class="token keyword">from</span> PyQt5<span class="token punctuation">.</span>QtWidgets <span class="token keyword">import</span> QApplication
+
+Form<span class="token punctuation">,</span> Window <span class="token operator">=</span> uic<span class="token punctuation">.</span>loadUiType<span class="token punctuation">(</span><span class="token string">"dialog.ui"</span><span class="token punctuation">)</span>
+
+app <span class="token operator">=</span> QApplication<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+window <span class="token operator">=</span> Window<span class="token punctuation">(</span><span class="token punctuation">)</span>
+form <span class="token operator">=</span> Form<span class="token punctuation">(</span><span class="token punctuation">)</span>
+form<span class="token punctuation">.</span>setupUi<span class="token punctuation">(</span>window<span class="token punctuation">)</span>
+window<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span>
+app<span class="token punctuation">.</span><span class="token keyword">exec</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div>
+
+
+
+<p><strong>Cách 2:</strong></p>
+
+
+
+<div class="hcb_wrap"><button class="hcb-clipboard" data-clipboard-target="[data-hcb-clip=&quot;3&quot;]" data-clipboard-action="copy" aria-label="Copy code to clipboard"></button><pre class="prism line-numbers  language-python" data-lang="Python"><code class=" language-python" data-hcb-clip="3"><span class="token keyword">from</span> PyQt5 <span class="token keyword">import</span> QtWidgets<span class="token punctuation">,</span> uic
+<span class="token keyword">import</span> sys
+
+<span class="token keyword def">class</span> <span class="token class-name">Ui</span><span class="token punctuation">(</span>QtWidgets<span class="token punctuation">.</span>QMainWindow<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword def">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token builtin">super</span><span class="token punctuation">(</span>Ui<span class="token punctuation">,</span> self<span class="token punctuation">)</span><span class="token punctuation">.</span>__init__<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        uic<span class="token punctuation">.</span>loadUi<span class="token punctuation">(</span><span class="token string">'dialog.ui'</span><span class="token punctuation">,</span> self<span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+app <span class="token operator">=</span> QtWidgets<span class="token punctuation">.</span>QApplication<span class="token punctuation">(</span>sys<span class="token punctuation">.</span>argv<span class="token punctuation">)</span>
+window <span class="token operator">=</span> Ui<span class="token punctuation">(</span><span class="token punctuation">)</span>
+app<span class="token punctuation">.</span>exec_<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div>
+
+
+
+<p>Sau đó, khi bạn gọi <code>python main.py</code> trên dòng lệnh, hộp thoại của bạn sẽ mở ra:</p>
+
+
+<div class="wp-block-image">
+<figure class="aligncenter size-full"><img decoding="async" loading="lazy" width="416" height="338" src="./Lập trình giao diện Python với PyQt5 và Qt Designer_files/qt-designer-dialog-screenshot-windows-min.png" alt="" class="wp-image-2377" srcset="https://www.vniteach.com/wp-content/uploads/2022/01/qt-designer-dialog-screenshot-windows-min.png 416w, https://www.vniteach.com/wp-content/uploads/2022/01/qt-designer-dialog-screenshot-windows-min-300x244.png 300w" sizes="(max-width: 416px) 100vw, 416px" data-pagespeed-url-hash="3588384555" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"><figcaption>Giao diện một cửa sổ</figcaption></figure></div>
+
+
+<p>Ngoài ra các bạn cũng có thể chuyển đổi từ tệp <strong>.ui</strong> (tệp giao diện người dùng) sang tệp <strong>.py</strong> (tệp Python) bằng câu lệnh trên Terminal như sau:</p>
+
+
+
+<div class="hcb_wrap"><button class="hcb-clipboard" data-clipboard-target="[data-hcb-clip=&quot;4&quot;]" data-clipboard-action="copy" aria-label="Copy code to clipboard"></button><pre class="prism line-numbers  language-python" data-lang="Python"><code class=" language-python" data-hcb-clip="4"><span class="token comment"># To convert .ui file to .py using pyqt5 module</span>
+<span class="token operator">&gt;&gt;</span> pyuic5 <span class="token operator">-</span>x main<span class="token punctuation">.</span>ui <span class="token operator">-</span>o main<span class="token punctuation">.</span>py <span class="token comment"># pyQt5 version</span>
+<span class="token operator">&gt;&gt;</span> pyuic4 <span class="token operator">-</span>x main<span class="token punctuation">.</span>ui <span class="token operator">-</span>o main<span class="token punctuation">.</span>py <span class="token comment"># pyQt4 version</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre></div>
+
+
+
+<p>Tải về phần mềm Qt Designer tại đường dẫn sau: <a href="https://build-system.fman.io/qt-designer-download" target="_blank" rel="noreferrer noopener">https://build-system.fman.io/qt-designer-download</a></p>
+<div class="addtoany_share_save_container addtoany_content addtoany_content_bottom"><div class="a2a_kit a2a_kit_size_32 addtoany_list" data-a2a-url="https://www.vniteach.com/2022/01/24/lap-trinh-giao-dien-python-voi-pyqt5-va-qt-designer/" data-a2a-title="Lập trình giao diện Python với PyQt5 và Qt Designer" style="line-height: 32px;"><a class="a2a_button_facebook" href="https://www.vniteach.com/#facebook" title="Facebook" rel="nofollow noopener" target="_blank"><span class="a2a_svg a2a_s__default a2a_s_facebook" style="background-color: rgb(24, 119, 242);"><svg focusable="false" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path fill="#FFF" d="M17.78 27.5V17.008h3.522l.527-4.09h-4.05v-2.61c0-1.182.33-1.99 2.023-1.99h2.166V4.66c-.375-.05-1.66-.16-3.155-.16-3.123 0-5.26 1.905-5.26 5.405v3.016h-3.53v4.09h3.53V27.5h4.223z"></path></svg></span><span class="a2a_label">Facebook</span></a><a class="a2a_button_twitter" href="https://www.vniteach.com/#twitter" title="Twitter" rel="nofollow noopener" target="_blank"><span class="a2a_svg a2a_s__default a2a_s_twitter" style="background-color: rgb(29, 155, 240);"><svg focusable="false" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path fill="#FFF" d="M28 8.557a9.913 9.913 0 0 1-2.828.775 4.93 4.93 0 0 0 2.166-2.725 9.738 9.738 0 0 1-3.13 1.194 4.92 4.92 0 0 0-3.593-1.55 4.924 4.924 0 0 0-4.794 6.049c-4.09-.21-7.72-2.17-10.15-5.15a4.942 4.942 0 0 0-.665 2.477c0 1.71.87 3.214 2.19 4.1a4.968 4.968 0 0 1-2.23-.616v.06c0 2.39 1.7 4.38 3.952 4.83-.414.115-.85.174-1.297.174-.318 0-.626-.03-.928-.086a4.935 4.935 0 0 0 4.6 3.42 9.893 9.893 0 0 1-6.114 2.107c-.398 0-.79-.023-1.175-.068a13.953 13.953 0 0 0 7.55 2.213c9.056 0 14.01-7.507 14.01-14.013 0-.213-.005-.426-.015-.637.96-.695 1.795-1.56 2.455-2.55z"></path></svg></span><span class="a2a_label">Twitter</span></a><a class="a2a_button_email" href="https://www.vniteach.com/#email" title="Email" rel="nofollow noopener" target="_blank"><span class="a2a_svg a2a_s__default a2a_s_email" style="background-color: rgb(1, 102, 255);"><svg focusable="false" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path fill="#FFF" d="M26 21.25v-9s-9.1 6.35-9.984 6.68C15.144 18.616 6 12.25 6 12.25v9c0 1.25.266 1.5 1.5 1.5h17c1.266 0 1.5-.22 1.5-1.5zm-.015-10.765c0-.91-.265-1.235-1.485-1.235h-17c-1.255 0-1.5.39-1.5 1.3l.015.14s9.035 6.22 10 6.56c1.02-.395 9.985-6.7 9.985-6.7l-.015-.065z"></path></svg></span><span class="a2a_label">Email</span></a><a class="a2a_button_facebook_messenger" href="https://www.vniteach.com/#facebook_messenger" title="Messenger" rel="nofollow noopener" target="_blank"><span class="a2a_svg a2a_s__default a2a_s_facebook_messenger" style="background-color: rgb(0, 132, 255);"><svg focusable="false" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path fill="#FFF" d="M16 5C9.986 5 5.11 9.56 5.11 15.182c0 3.2 1.58 6.054 4.046 7.92V27l3.716-2.06c.99.276 2.04.425 3.128.425 6.014 0 10.89-4.56 10.89-10.183S22.013 5 16 5zm1.147 13.655L14.33 15.73l-5.423 3 5.946-6.31 2.816 2.925 5.42-3-5.946 6.31z"></path></svg></span><span class="a2a_label">Messenger</span></a><a class="a2a_dd addtoany_share_save addtoany_share" href="https://www.addtoany.com/share#url=https%3A%2F%2Fwww.vniteach.com%2F2022%2F01%2F24%2Flap-trinh-giao-dien-python-voi-pyqt5-va-qt-designer%2F&amp;title=L%E1%BA%ADp%20tr%C3%ACnh%20giao%20di%E1%BB%87n%20Python%20v%E1%BB%9Bi%20PyQt5%20v%C3%A0%20Qt%20Designer"><span class="a2a_svg a2a_s__default a2a_s_a2a" style="background-color: rgb(1, 102, 255);"><svg focusable="false" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><g fill="#FFF"><path d="M14 7h4v18h-4z"></path><path d="M7 14h18v4H7z"></path></g></svg></span><span class="a2a_label a2a_localize" data-a2a-localize="inner,Share">Chia sẻ</span></a></div></div>		</div><!-- .the_content -->
+						<div class="post_tags">
+					<a href="https://www.vniteach.com/tag/python/" rel="tag">python</a>				</div><!-- .post_tags -->
+					</article><!-- #post-2375 -->
+</div><div class="google-auto-placed" style="width: 100%; height: auto; clear: both; text-align: center;"><ins data-ad-format="auto" class="adsbygoogle adsbygoogle-noablate" data-ad-client="ca-pub-9775521298001579" data-adsbygoogle-status="done" style="display: block; margin: 10px auto; background-color: transparent; height: 0px;" data-ad-status="unfilled"><div id="aswift_2_host" style="border: none; height: 0px; width: 750px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-block; overflow: visible; opacity: 1;" tabindex="0" title="Advertisement" aria-label="Advertisement"><iframe id="aswift_2" name="aswift_2" style="left: 0px; position: absolute; top: 0px; border: 0px; width: 750px; height: 0px;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="750" height="0" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" src="./Lập trình giao diện Python với PyQt5 và Qt Designer_files/ads(1).html" data-google-container-id="a!3" data-gtm-yt-inspected-4="true" data-google-query-id="CLehrbyqsf8CFZxfDwIdXW0FnA" data-load-complete="true"></iframe></div></ins></div><nav class="navigation post-navigation" aria-label="Bài viết">
+		<h2 class="screen-reader-text">Điều hướng bài viết</h2>
+		<div class="nav-links"><div class="nav-previous"><a href="https://www.vniteach.com/2022/01/22/huong-dan-cach-mo-nhieu-file-word-tren-cung-mot-giao-dien-dang-tab/" rel="prev">Trước</a></div><div class="nav-next"><a href="https://www.vniteach.com/2022/01/24/bai-1-cai-dat-moi-truong-mysql-cho-lap-trinh-python/" rel="next">Tiếp theo</a></div></div>
+	</nav><section class="cm_related_post_container" style="height: auto !important;">
+		<div class="section_inner" style="height: auto !important;">
+						<div class="row">
+									<div class="cm-col-lg-6 cm-col-md-6 cm-col-12">
+						<div class="card">
+														<div class="card_content">
+												<div class="entry_cats">
+					<ul class="post-categories">
+	<li><a href="https://www.vniteach.com/category/ngon-ngu-lap-trinh/lap-trinh-python/" rel="category tag">Lập trình Python</a></li></ul>				</div><!-- .entry_cats -->
+												<div class="post_title">
+									<h2><a href="https://www.vniteach.com/2023/04/13/cach-dang-nhap-goolge-va-tra-loi-google-form-tu-dong-bang-python/">Cách đăng nhập goolge và trả lời google form tự động bằng Python</a></h2>
+								</div><!-- .post_title -->
+											<div class="cm-post-meta">
+				<ul class="post_meta">
+											<li class="posted_date">
+							<a href="https://www.vniteach.com/2023/04/13/cach-dang-nhap-goolge-va-tra-loi-google-form-tu-dong-bang-python/"><time class="entry-date published" datetime="2023-04-13T05:00:00+07:00">13/04/2023</time></a>
+						</li><!-- .posted_date -->
+										</ul><!-- .post_meta -->
+			</div><!-- .meta -->
+				 
+							</div><!-- .card_content -->
+						</div><!-- .card -->
+					</div><!-- .col -->
+										<div class="cm-col-lg-6 cm-col-md-6 cm-col-12">
+						<div class="card">
+														<div class="card_content">
+												<div class="entry_cats">
+					<ul class="post-categories">
+	<li><a href="https://www.vniteach.com/category/ngon-ngu-lap-trinh/lap-trinh-python/" rel="category tag">Lập trình Python</a></li></ul>				</div><!-- .entry_cats -->
+												<div class="post_title">
+									<h2><a href="https://www.vniteach.com/2023/03/10/ung-dung-nhan-dang-chu-mau-xanh-bang-python/">Ứng dụng nhận dạng chữ màu xanh bằng python</a></h2>
+								</div><!-- .post_title -->
+											<div class="cm-post-meta">
+				<ul class="post_meta">
+											<li class="posted_date">
+							<a href="https://www.vniteach.com/2023/03/10/ung-dung-nhan-dang-chu-mau-xanh-bang-python/"><time class="entry-date published" datetime="2023-03-10T04:57:53+07:00">10/03/2023</time></a>
+						</li><!-- .posted_date -->
+										</ul><!-- .post_meta -->
+			</div><!-- .meta -->
+				 
+							</div><!-- .card_content -->
+						</div><!-- .card -->
+					</div><!-- .col -->
+										<div class="cm-col-lg-6 cm-col-md-6 cm-col-12">
+						<div class="card">
+														<div class="card_content">
+												<div class="entry_cats">
+					<ul class="post-categories">
+	<li><a href="https://www.vniteach.com/category/ngon-ngu-lap-trinh/lap-trinh-python/" rel="category tag">Lập trình Python</a></li></ul>				</div><!-- .entry_cats -->
+												<div class="post_title">
+									<h2><a href="https://www.vniteach.com/2023/02/16/cach-lay-gia-co-phieu-thoi-gian-thuc-bang-python/">Cách lấy giá cổ phiếu thời gian thực bằng Python</a></h2>
+								</div><!-- .post_title -->
+											<div class="cm-post-meta">
+				<ul class="post_meta">
+											<li class="posted_date">
+							<a href="https://www.vniteach.com/2023/02/16/cach-lay-gia-co-phieu-thoi-gian-thuc-bang-python/"><time class="entry-date published" datetime="2023-02-16T06:30:00+07:00">16/02/2023</time></a>
+						</li><!-- .posted_date -->
+										</ul><!-- .post_meta -->
+			</div><!-- .meta -->
+				 
+							</div><!-- .card_content -->
+						</div><!-- .card -->
+					</div><!-- .col -->
+										<div class="cm-col-lg-6 cm-col-md-6 cm-col-12">
+						<div class="card">
+														<div class="card_content">
+												<div class="entry_cats">
+					<ul class="post-categories">
+	<li><a href="https://www.vniteach.com/category/ngon-ngu-lap-trinh/lap-trinh-python/" rel="category tag">Lập trình Python</a></li></ul>				</div><!-- .entry_cats -->
+												<div class="post_title">
+									<h2><a href="https://www.vniteach.com/2023/02/13/viet-ung-dung-dang-video-len-kenh-youtube-bang-python/">Viết ứng dụng đăng video lên kênh Youtube bằng Python</a></h2>
+								</div><!-- .post_title -->
+											<div class="cm-post-meta">
+				<ul class="post_meta">
+											<li class="posted_date">
+							<a href="https://www.vniteach.com/2023/02/13/viet-ung-dung-dang-video-len-kenh-youtube-bang-python/"><time class="entry-date published" datetime="2023-02-13T09:28:40+07:00">13/02/2023</time></a>
+						</li><!-- .posted_date -->
+										</ul><!-- .post_meta -->
+			</div><!-- .meta -->
+				 
+							</div><!-- .card_content -->
+						</div><!-- .card -->
+					</div><!-- .col -->
+										<div class="cm-col-lg-6 cm-col-md-6 cm-col-12">
+						<div class="card">
+														<div class="card_content">
+												<div class="entry_cats">
+					<ul class="post-categories">
+	<li><a href="https://www.vniteach.com/category/ngon-ngu-lap-trinh/lap-trinh-python/" rel="category tag">Lập trình Python</a></li></ul>				</div><!-- .entry_cats -->
+												<div class="post_title">
+									<h2><a href="https://www.vniteach.com/2023/02/12/cach-lay-du-lieu-tren-website-bang-python/">Cách lấy dữ liệu trên website bằng Python</a></h2>
+								</div><!-- .post_title -->
+											<div class="cm-post-meta">
+				<ul class="post_meta">
+											<li class="posted_date">
+							<a href="https://www.vniteach.com/2023/02/12/cach-lay-du-lieu-tren-website-bang-python/"><time class="entry-date published" datetime="2023-02-12T18:54:48+07:00">12/02/2023</time></a>
+						</li><!-- .posted_date -->
+										</ul><!-- .post_meta -->
+			</div><!-- .meta -->
+				 
+							</div><!-- .card_content -->
+						</div><!-- .card -->
+					</div><!-- .col -->
+										<div class="cm-col-lg-6 cm-col-md-6 cm-col-12">
+						<div class="card">
+														<div class="card_content">
+												<div class="entry_cats">
+					<ul class="post-categories">
+	<li><a href="https://www.vniteach.com/category/ngon-ngu-lap-trinh/lap-trinh-python/" rel="category tag">Lập trình Python</a></li></ul>				</div><!-- .entry_cats -->
+												<div class="post_title">
+									<h2><a href="https://www.vniteach.com/2023/02/07/mo-phong-cac-thuat-toan-sap-xep-bang-python/">Mô phỏng các thuật toán sắp xếp bằng Python</a></h2>
+								</div><!-- .post_title -->
+											<div class="cm-post-meta">
+				<ul class="post_meta">
+											<li class="posted_date">
+							<a href="https://www.vniteach.com/2023/02/07/mo-phong-cac-thuat-toan-sap-xep-bang-python/"><time class="entry-date published" datetime="2023-02-07T05:58:35+07:00">07/02/2023</time></a>
+						</li><!-- .posted_date -->
+										</ul><!-- .post_meta -->
+			</div><!-- .meta -->
+				 
+							</div><!-- .card_content -->
+						</div><!-- .card -->
+					</div><!-- .col -->
+								</div><div class="google-auto-placed" style="width: 100%; height: auto; clear: both; text-align: center;"><ins data-ad-format="auto" class="adsbygoogle adsbygoogle-noablate" data-ad-client="ca-pub-9775521298001579" data-adsbygoogle-status="done" style="display: block; margin: 10px auto; background-color: transparent; height: 0px;" data-ad-status="unfilled"><div id="aswift_3_host" style="border: none; height: 0px; width: 750px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-block; overflow: visible; opacity: 1;" tabindex="0" title="Advertisement" aria-label="Advertisement"><iframe id="aswift_3" name="aswift_3" style="left: 0px; position: absolute; top: 0px; border: 0px; width: 750px; height: 0px;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="750" height="0" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" src="./Lập trình giao diện Python với PyQt5 và Qt Designer_files/ads(2).html" data-google-container-id="a!4" data-gtm-yt-inspected-4="true" data-google-query-id="CMirtLyqsf8CFalgDwId8xIE_g" data-load-complete="true"></iframe></div></ins></div><!-- .row -->
+		</div><!-- .section_inner -->
+	</section><div id="comments" class="comments-area">
+		<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">Trả lời <small><a rel="nofollow" id="cancel-comment-reply-link" href="https://www.vniteach.com/2022/01/24/lap-trinh-giao-dien-python-voi-pyqt5-va-qt-designer/#respond" style="display:none;">Hủy</a></small></h3><form action="https://www.vniteach.com/wp-comments-post.php" method="post" id="commentform" class="comment-form" novalidate=""><p class="comment-notes"><span id="email-notes">Email của bạn sẽ không được hiển thị công khai.</span> <span class="required-field-message">Các trường bắt buộc được đánh dấu <span class="required">*</span></span></p><p class="comment-form-comment"><label for="comment">Bình luận <span class="required">*</span></label> <textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525" required=""></textarea></p><p class="comment-form-author"><label for="author">Tên <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" maxlength="245" autocomplete="name" required=""></p>
+<p class="comment-form-email"><label for="email">Email <span class="required">*</span></label> <input id="email" name="email" type="email" value="" size="30" maxlength="100" aria-describedby="email-notes" autocomplete="email" required=""></p>
+<p class="comment-form-url"><label for="url">Trang web</label> <input id="url" name="url" type="url" value="" size="30" maxlength="200" autocomplete="url"></p>
+<p class="comment-form-cookies-consent"><input id="wp-comment-cookies-consent" name="wp-comment-cookies-consent" type="checkbox" value="yes"> <label for="wp-comment-cookies-consent">Lưu tên của tôi, email, và trang web trong trình duyệt này cho lần bình luận kế tiếp của tôi.</label></p>
+<p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Phản hồi"> <input type="hidden" name="comment_post_ID" value="2375" id="comment_post_ID">
+<input type="hidden" name="comment_parent" id="comment_parent" value="0">
+</p></form>	</div><!-- #respond -->
+	</div></div></div><!-- .col -->
+							<div class="cm-col-lg-4 cm-col-12 sticky_portion" style="position: relative; overflow: visible; box-sizing: border-box; min-height: 1px;">
+	<!-- #secondary -->
+<div class="theiaStickySidebar" style="padding-top: 0px; padding-bottom: 1px; position: static; transform: none; top: 0px; left: 1161.5px;"><aside id="secondary" class="sidebar-widget-area">
+		<div id="search-2" class="widget widget_search"><form role="search" class="cm-search-form" method="get" action="https://www.vniteach.com/"><input type="search" name="s" placeholder="Gõ ở đây" value=""><button type="submit" class="cm-submit-btn"><i class="feather icon-search"></i></button></form></div><div id="media_video-2" class="widget widget_media_video"><div class="widget-title"><h2>VniTeach Channel</h2></div><div style="width:100%;" class="wp-video"><!--[if lt IE 9]><script>document.createElement('video');</script><![endif]-->
+<span class="mejs-offscreen">Trình chơi Video</span><div id="mep_0" class="mejs-container mejs-container-keyboard-inactive wp-video-shortcode mejs-video" tabindex="0" role="application" aria-label="Trình chơi Video" style="width: 320px; height: 180px; min-width: 217px;"><div class="mejs-inner"><div class="mejs-mediaelement"><mediaelementwrapper id="video-2375-1"><div id="video-2375-1-iframe-overlay" class="mejs-iframe-overlay"></div><iframe id="video-2375-1_youtube_iframe" frameborder="0" allowfullscreen="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" title="Hướng dẫn tạo TRÒ CHƠI Ô CHỮ như ĐƯỜNG LÊN ĐỈNH OLYMPIA trong PowerPoint | VniTeach Channel" src="./Lập trình giao diện Python với PyQt5 và Qt Designer_files/kkDM1JtedXw.html" data-gtm-yt-inspected-4="true" width="320" height="180"></iframe><video class="wp-video-shortcode" id="video-2375-1_from_mejs" preload="metadata" src="https://www.youtube.com/watch?v=kkDM1JtedXw&amp;list=PLCRwo0vi_AsRR_OsNF4QlsUZPYe1-e8FS&amp;index=6&amp;_=1" style="width: 100%; height: 100%; display: none;"><source type="video/youtube" src="https://www.youtube.com/watch?v=kkDM1JtedXw&amp;list=PLCRwo0vi_AsRR_OsNF4QlsUZPYe1-e8FS&amp;index=6&amp;_=1"><a href="https://www.youtube.com/watch?v=kkDM1JtedXw&amp;list=PLCRwo0vi_AsRR_OsNF4QlsUZPYe1-e8FS&amp;index=6">https://www.youtube.com/watch?v=kkDM1JtedXw&amp;list=PLCRwo0vi_AsRR_OsNF4QlsUZPYe1-e8FS&amp;index=6</a></video></mediaelementwrapper></div><div class="mejs-layers"><div class="mejs-poster mejs-layer" style="display: none; width: 100%; height: 100%;"></div><div class="mejs-overlay mejs-layer" style="width: 100%; height: 100%; display: none;"><div class="mejs-overlay-loading"><span class="mejs-overlay-loading-bg-img"></span></div></div><div class="mejs-overlay mejs-layer" style="display: none; width: 100%; height: 100%;"><div class="mejs-overlay-error"></div></div><div class="mejs-overlay mejs-layer mejs-overlay-play" style="display: none; width: 100%; height: 100%;"><div class="mejs-overlay-button" role="button" tabindex="0" aria-label="Chạy" aria-pressed="false"></div></div></div><div class="mejs-controls"><div class="mejs-button mejs-playpause-button mejs-play"><button type="button" aria-controls="mep_0" title="Chạy" aria-label="Chạy" tabindex="0"></button></div><div class="mejs-time mejs-currenttime-container" role="timer" aria-live="off"><span class="mejs-currenttime">00:00</span></div><div class="mejs-time-rail"><span class="mejs-time-total mejs-time-slider"><span class="mejs-time-buffering" style="display: none;"></span><span class="mejs-time-loaded"></span><span class="mejs-time-current" style="transform: scaleX(0);"></span><span class="mejs-time-hovered no-hover"></span><span class="mejs-time-handle" style="transform: translateX(0px);"><span class="mejs-time-handle-content"></span></span><span class="mejs-time-float"><span class="mejs-time-float-current">00:00</span><span class="mejs-time-float-corner"></span></span></span></div><div class="mejs-time mejs-duration-container"><span class="mejs-duration">15:51</span></div><div class="mejs-button mejs-volume-button mejs-mute"><button type="button" aria-controls="mep_0" title="Tắt tiếng" aria-label="Tắt tiếng" tabindex="0"></button><a href="javascript:void(0);" class="mejs-volume-slider" aria-label="Âm lượng Trình chiếu" aria-valuemin="0" aria-valuemax="100" role="slider" aria-orientation="vertical" aria-valuenow="80" aria-valuetext="80%"><span class="mejs-offscreen">Sử dụng các phím mũi tên Lên/Xuống để tăng hoặc giảm âm lượng.</span><div class="mejs-volume-total"><div class="mejs-volume-current" style="bottom: 0px; height: 80%;"></div><div class="mejs-volume-handle" style="bottom: 80%; margin-bottom: -3px;"></div></div></a></div><div class="mejs-button mejs-fullscreen-button"><button type="button" aria-controls="mep_0" title="Toàn màn hình" aria-label="Toàn màn hình" tabindex="0"></button></div></div></div></div></div></div><div id="pages-2" class="widget widget_pages"><div class="widget-title"><h2>Công cụ</h2></div>
+			<ul>
+				<li class="page_item page-item-122"><a href="https://www.vniteach.com/bo-sach-gdpt-2018/">Bộ sách GDPT 2018</a></li>
+<li class="page_item page-item-7953"><a href="https://www.vniteach.com/may-tinh-online/">Máy tính online</a></li>
+<li class="page_item page-item-6658"><a href="https://www.vniteach.com/python-ide-online/">Python IDE Online</a></li>
+<li class="page_item page-item-4370"><a href="https://www.vniteach.com/sach-dien-tu-canh-dieu/">Sách điện tử Cánh Diều</a></li>
+<li class="page_item page-item-4005"><a href="https://www.vniteach.com/sach-dien-tu-chan-troi-sang-tao/">Sách điện tử Chân trời sáng tạo</a></li>
+<li class="page_item page-item-3477"><a href="https://www.vniteach.com/sach-dien-tu-ket-noi-tri-thuc-voi-cuoc-song/">Sách điện tử Kết nối tri thức với cuộc sống</a></li>
+			</ul>
+
+			</div>
+		<div id="recent-posts-2" class="widget widget_recent_entries">
+		<div class="widget-title"><h2>Bài viết mới</h2></div>
+		<ul>
+											<li>
+					<a href="https://www.vniteach.com/2023/06/05/videopad-phan-mem-chinh-sua-video-mien-phi/">VideoPad – Phần mềm chỉnh sửa video miễn phí</a>
+									</li>
+											<li>
+					<a href="https://www.vniteach.com/2023/06/04/alison-kho-chia-se-khoa-hoc-mien-phi/">Alison – Kho chia sẻ khóa học miễn phí</a>
+									</li>
+											<li>
+					<a href="https://www.vniteach.com/2023/06/03/magic-studio-xoa-moi-thu-tren-anh-chi-5-giay/">Magic Studio – Xóa mọi thứ trên ảnh chỉ 5 giây</a>
+									</li>
+											<li>
+					<a href="https://www.vniteach.com/2023/05/31/flair-ai-tao-anh-quang-cao-sieu-nhanh/">Flair AI – Tạo ảnh quảng cáo siêu nhanh</a>
+									</li>
+											<li>
+					<a href="https://www.vniteach.com/2023/05/27/blackbox-ai-tro-ly-lap-trinh-tuyet-voi/">BLACKBOX AI – Trợ lý lập trình tuyệt vời</a>
+									</li>
+											<li>
+					<a href="https://www.vniteach.com/2023/05/25/cai-dat-phan-mem-abbyy-finereader-15-full/">Cài đặt phần mềm ABBYY Finereader 15 Full</a>
+									</li>
+											<li>
+					<a href="https://www.vniteach.com/2023/05/18/visualgo-net-trang-web-ho-tro-hoc-va-hieu-thuat-toan/">Visualgo.net – Trang web hỗ trợ học và hiểu thuật toán</a>
+									</li>
+											<li>
+					<a href="https://www.vniteach.com/2023/05/17/ve-so-do-tu-duy-voi-edraw-mindmaster-pro-8-5-1/">Vẽ sơ đồ tư duy với Edraw MindMaster Pro 8.5.1</a>
+									</li>
+											<li>
+					<a href="https://www.vniteach.com/2023/05/13/cach-tinh-tong-cac-o-bi-gop-sieu-nhanh-trong-excel/">Cách tính tổng các ô bị gộp siêu nhanh trong Excel</a>
+									</li>
+											<li>
+					<a href="https://www.vniteach.com/2023/05/12/sgk-khoa-hoc-tu-nhien-8-ctst/">SGK Khoa học tự nhiên 8 – CTST</a>
+									</li>
+					</ul>
+
+		</div>	</aside></div></div><!-- .col.sticky_portion -->
+						</div><!-- .row -->
+					</div><!-- .single-container -->
+				</div><!-- .cm_post_page_lay_wrap -->
+			</main><!-- #main.site-main -->
+		</div><!-- #primary.content-area -->
+	</div><!-- .inner-page-wrapper -->
+</div><!-- .cm-container -->
+</div><!-- #content.site-content -->
+		<div class="google-auto-placed" style="width: 100%; height: auto; clear: both; text-align: center;"><ins data-ad-format="auto" class="adsbygoogle adsbygoogle-noablate" data-ad-client="ca-pub-9775521298001579" data-adsbygoogle-status="done" style="display: block; margin: 10px auto; background-color: transparent; height: 0px;" data-ad-status="unfilled"><div id="aswift_4_host" style="border: none; height: 0px; width: 1200px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-block; overflow: hidden; opacity: 0;" tabindex="0" title="Advertisement" aria-label="Advertisement"><iframe id="aswift_4" name="aswift_4" style="left: 0px; position: absolute; top: 0px; border: 0px; width: 1200px; height: 0px;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="1200" height="0" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" src="./Lập trình giao diện Python với PyQt5 và Qt Designer_files/ads(3).html" data-google-container-id="a!5" data-gtm-yt-inspected-4="true" data-google-query-id="COzcus2qsf8CFRxVDwIdnr0Kvw" data-load-complete="true"></iframe></div></ins></div><footer class="footer">
+			<div class="footer_inner">
+				<div class="cm-container">
+				<div class="row footer-widget-container">
+				<div class="cm-col-lg-4 cm-col-12">
+			<div class="blocks">
+				<div id="media_video-3" class="widget widget_media_video"><div class="widget-title"><h2>Thủ thuật internet hữu ích</h2></div><div style="width:100%;" class="wp-video"><span class="mejs-offscreen">Trình chơi Video</span><div id="mep_1" class="mejs-container mejs-container-keyboard-inactive wp-video-shortcode mejs-video" tabindex="0" role="application" aria-label="Trình chơi Video" style="width: 360px; height: 202.5px; min-width: 217px;"><div class="mejs-inner"><div class="mejs-mediaelement"><mediaelementwrapper id="video-2375-2"><div id="video-2375-2-iframe-overlay" class="mejs-iframe-overlay"></div><iframe id="video-2375-2_youtube_iframe" frameborder="0" allowfullscreen="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" title="Cách vẽ sơ đồ tư duy trực tuyến nhanh chóng miễn phí | How to draw MindMap Free" src="./Lập trình giao diện Python với PyQt5 và Qt Designer_files/tcjqLRGpTaQ.html" data-gtm-yt-inspected-4="true" width="360" height="202.5"></iframe><video class="wp-video-shortcode" id="video-2375-2_from_mejs" preload="metadata" src="https://www.youtube.com/watch?v=tcjqLRGpTaQ&amp;list=PLCRwo0vi_AsSg2xY0DEW98q7DQM2g2bTi&amp;index=3&amp;_=2" style="width: 100%; height: 100%; display: none;"><source type="video/youtube" src="https://www.youtube.com/watch?v=tcjqLRGpTaQ&amp;list=PLCRwo0vi_AsSg2xY0DEW98q7DQM2g2bTi&amp;index=3&amp;_=2"><a href="https://www.youtube.com/watch?v=tcjqLRGpTaQ&amp;list=PLCRwo0vi_AsSg2xY0DEW98q7DQM2g2bTi&amp;index=3">https://www.youtube.com/watch?v=tcjqLRGpTaQ&amp;list=PLCRwo0vi_AsSg2xY0DEW98q7DQM2g2bTi&amp;index=3</a></video></mediaelementwrapper></div><div class="mejs-layers"><div class="mejs-poster mejs-layer" style="display: none; width: 100%; height: 100%;"></div><div class="mejs-overlay mejs-layer" style="width: 100%; height: 100%; display: none;"><div class="mejs-overlay-loading"><span class="mejs-overlay-loading-bg-img"></span></div></div><div class="mejs-overlay mejs-layer" style="display: none; width: 100%; height: 100%;"><div class="mejs-overlay-error"></div></div><div class="mejs-overlay mejs-layer mejs-overlay-play" style="display: none; width: 100%; height: 100%;"><div class="mejs-overlay-button" role="button" tabindex="0" aria-label="Chạy" aria-pressed="false"></div></div></div><div class="mejs-controls"><div class="mejs-button mejs-playpause-button mejs-play"><button type="button" aria-controls="mep_1" title="Chạy" aria-label="Chạy" tabindex="0"></button></div><div class="mejs-time mejs-currenttime-container" role="timer" aria-live="off"><span class="mejs-currenttime">00:00</span></div><div class="mejs-time-rail"><span class="mejs-time-total mejs-time-slider"><span class="mejs-time-buffering" style="display: none;"></span><span class="mejs-time-loaded"></span><span class="mejs-time-current" style="transform: scaleX(0);"></span><span class="mejs-time-hovered no-hover"></span><span class="mejs-time-handle" style="transform: translateX(0px);"><span class="mejs-time-handle-content"></span></span><span class="mejs-time-float"><span class="mejs-time-float-current">00:00</span><span class="mejs-time-float-corner"></span></span></span></div><div class="mejs-time mejs-duration-container"><span class="mejs-duration">09:06</span></div><div class="mejs-button mejs-volume-button mejs-mute"><button type="button" aria-controls="mep_1" title="Tắt tiếng" aria-label="Tắt tiếng" tabindex="0"></button><a href="javascript:void(0);" class="mejs-volume-slider" aria-label="Âm lượng Trình chiếu" aria-valuemin="0" aria-valuemax="100" role="slider" aria-orientation="vertical" aria-valuenow="80" aria-valuetext="80%"><span class="mejs-offscreen">Sử dụng các phím mũi tên Lên/Xuống để tăng hoặc giảm âm lượng.</span><div class="mejs-volume-total"><div class="mejs-volume-current" style="bottom: 0px; height: 80%;"></div><div class="mejs-volume-handle" style="bottom: 80%; margin-bottom: -3px;"></div></div></a></div><div class="mejs-button mejs-fullscreen-button"><button type="button" aria-controls="mep_1" title="Toàn màn hình" aria-label="Toàn màn hình" tabindex="0"></button></div></div></div></div></div></div>			</div><!-- .blocks -->
+		</div><!-- .cm-col-->
+				<div class="cm-col-lg-4 cm-col-12">
+			<div class="blocks">
+				<div id="cream-magazine-social-widget-2" class="widget social_widget_style_1"><div class="widget-title"><h2>Theo dõi tôi tại</h2></div>		<div class="widget-contents">
+			<ul>
+									<li class="fb">
+						<a href="https://www.facebook.com/groups/vniteach/" target="_blank">
+							<i class="fa fa-facebook-f"></i><span>Thích</span>
+						</a>
+					</li>
+										<li class="tw">
+						<a href="https://twitter.com/vniteach" target="_blank">
+							<i class="fa fa-twitter"></i><span>Theo dõi</span>
+						</a>
+					</li>
+										<li class="insta">
+						<a href="https://www.instagram.com/vniteach" target="_blank">
+							<i class="fa fa-instagram"></i><span>Theo dõi</span>
+						</a>
+					</li>
+										<li class="linken">
+						<a href="https://www.vniteach.com/2022/01/24/lap-trinh-giao-dien-python-voi-pyqt5-va-qt-designer/" target="_blank">
+							<i class="fa fa-linkedin"></i><span>Kết nối</span>
+						</a>
+					</li>
+										<li class="pin">
+						<a href="https://www.vniteach.com/2022/01/24/lap-trinh-giao-dien-python-voi-pyqt5-va-qt-designer/" target="_blank">
+							<i class="fa fa-pinterest"></i><span>Theo dõi</span>
+						</a>
+					</li>
+										<li class="yt">
+						<a href="https://www.youtube.com/vniteach" target="_blank">
+							<i class="fa fa-youtube-play"></i><span>Theo dõi</span>
+						</a>
+					</li>
+								</ul>
+		</div><!-- .widget-contents -->
+		</div>			</div><!-- .blocks -->
+		</div><!-- .cm-col-->
+				<div class="cm-col-lg-4 cm-col-12">
+			<div class="blocks">
+				<div id="custom_html-2" class="widget_text widget widget_custom_html"><div class="widget-title"><h2>Thiết kế website chuyên nghiệp</h2></div><div class="textwidget custom-html-widget"><img src="./Lập trình giao diện Python với PyQt5 và Qt Designer_files/thiet-ke-website.jpg" alt="Thiết kế website" data-pagespeed-url-hash="1684105203" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+<a href="https://www.dmca.com/Protection/Status.aspx?ID=a0381f69-6113-4028-871e-5f26b0012abc&amp;refurl=https://www.vniteach.com/2022/01/24/lap-trinh-giao-dien-python-voi-pyqt5-va-qt-designer/" title="DMCA.com Protection Status" class="dmca-badge"> <img src="./Lập trình giao diện Python với PyQt5 và Qt Designer_files/dmca_protected_sml_120m.png" alt="DMCA.com Protection Status" data-pagespeed-url-hash="436982443" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"></a>  <script src="./Lập trình giao diện Python với PyQt5 và Qt Designer_files/DMCABadgeHelper.min.js.download"></script></div></div>			</div><!-- .blocks -->
+		</div><!-- .cm-col-->
+				</div><!-- .row -->
+				<div class="copyright_section">
+		<div class="row">
+				<div class="cm-col-lg-7 cm-col-md-6 cm-col-12">
+			<div class="copyrights">
+				<p>
+					<span class="copyright-text">Bản quyền thuộc về VniTeach - Giáo viên 4.0</span> Cream Magazine bởi <a href="https://themebeez.com/" rel="designer noopener" target="_blank">Themebeez</a>				</p>
+			</div>
+		</div><!-- .col -->
+				<div class="cm-col-lg-5 cm-col-md-6 cm-col-12">
+			<div class="footer_nav">
+							</div><!-- .footer_nav -->
+		</div><!-- .col -->
+				</div><!-- .row -->
+		</div><!-- .copyright_section -->
+				</div><!-- .cm-container -->
+		</div><!-- .footer_inner -->
+		</footer><!-- .footer -->
+				</div><!-- .page_wrap -->
+					<div class="backtoptop">
+				<button id="toTop" class="btn btn-info" style="display: inline-block;">
+					<i class="fa fa-angle-up" aria-hidden="true"></i>
+				</button>
+			</div><!-- ./ backtoptop -->
+			<div class="a2a_kit a2a_kit_size_32 a2a_floating_style a2a_vertical_style" style="left: 0px; top: 100px; background-color: transparent; line-height: 32px;"><a class="a2a_button_facebook" href="https://www.vniteach.com/#facebook" title="Facebook" rel="nofollow noopener" target="_blank"><span class="a2a_svg a2a_s__default a2a_s_facebook" style="background-color: rgb(24, 119, 242);"><svg focusable="false" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path fill="#FFF" d="M17.78 27.5V17.008h3.522l.527-4.09h-4.05v-2.61c0-1.182.33-1.99 2.023-1.99h2.166V4.66c-.375-.05-1.66-.16-3.155-.16-3.123 0-5.26 1.905-5.26 5.405v3.016h-3.53v4.09h3.53V27.5h4.223z"></path></svg></span><span class="a2a_label">Facebook</span></a><a class="a2a_button_twitter" href="https://www.vniteach.com/#twitter" title="Twitter" rel="nofollow noopener" target="_blank"><span class="a2a_svg a2a_s__default a2a_s_twitter" style="background-color: rgb(29, 155, 240);"><svg focusable="false" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path fill="#FFF" d="M28 8.557a9.913 9.913 0 0 1-2.828.775 4.93 4.93 0 0 0 2.166-2.725 9.738 9.738 0 0 1-3.13 1.194 4.92 4.92 0 0 0-3.593-1.55 4.924 4.924 0 0 0-4.794 6.049c-4.09-.21-7.72-2.17-10.15-5.15a4.942 4.942 0 0 0-.665 2.477c0 1.71.87 3.214 2.19 4.1a4.968 4.968 0 0 1-2.23-.616v.06c0 2.39 1.7 4.38 3.952 4.83-.414.115-.85.174-1.297.174-.318 0-.626-.03-.928-.086a4.935 4.935 0 0 0 4.6 3.42 9.893 9.893 0 0 1-6.114 2.107c-.398 0-.79-.023-1.175-.068a13.953 13.953 0 0 0 7.55 2.213c9.056 0 14.01-7.507 14.01-14.013 0-.213-.005-.426-.015-.637.96-.695 1.795-1.56 2.455-2.55z"></path></svg></span><span class="a2a_label">Twitter</span></a><a class="a2a_button_email" href="https://www.vniteach.com/#email" title="Email" rel="nofollow noopener" target="_blank"><span class="a2a_svg a2a_s__default a2a_s_email" style="background-color: rgb(1, 102, 255);"><svg focusable="false" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path fill="#FFF" d="M26 21.25v-9s-9.1 6.35-9.984 6.68C15.144 18.616 6 12.25 6 12.25v9c0 1.25.266 1.5 1.5 1.5h17c1.266 0 1.5-.22 1.5-1.5zm-.015-10.765c0-.91-.265-1.235-1.485-1.235h-17c-1.255 0-1.5.39-1.5 1.3l.015.14s9.035 6.22 10 6.56c1.02-.395 9.985-6.7 9.985-6.7l-.015-.065z"></path></svg></span><span class="a2a_label">Email</span></a><a class="a2a_button_facebook_messenger" href="https://www.vniteach.com/#facebook_messenger" title="Messenger" rel="nofollow noopener" target="_blank"><span class="a2a_svg a2a_s__default a2a_s_facebook_messenger" style="background-color: rgb(0, 132, 255);"><svg focusable="false" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path fill="#FFF" d="M16 5C9.986 5 5.11 9.56 5.11 15.182c0 3.2 1.58 6.054 4.046 7.92V27l3.716-2.06c.99.276 2.04.425 3.128.425 6.014 0 10.89-4.56 10.89-10.183S22.013 5 16 5zm1.147 13.655L14.33 15.73l-5.423 3 5.946-6.31 2.816 2.925 5.42-3-5.946 6.31z"></path></svg></span><span class="a2a_label">Messenger</span></a><a class="a2a_dd addtoany_share_save addtoany_share" href="https://www.addtoany.com/share#url=https%3A%2F%2Fwww.vniteach.com%2F2022%2F01%2F24%2Flap-trinh-giao-dien-python-voi-pyqt5-va-qt-designer%2F&amp;title=L%E1%BA%ADp%20tr%C3%ACnh%20giao%20di%E1%BB%87n%20Python%20v%E1%BB%9Bi%20PyQt5%20v%C3%A0%20Qt%20Designer%20-%20VniTeach%20-%20Gi%C3%A1o%20vi%C3%AAn%204.0"><span class="a2a_svg a2a_s__default a2a_s_a2a" style="background-color: rgb(1, 102, 255);"><svg focusable="false" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><g fill="#FFF"><path d="M14 7h4v18h-4z"></path><path d="M7 14h18v4H7z"></path></g></svg></span><span class="a2a_label a2a_localize" data-a2a-localize="inner,Share">Chia sẻ</span></a></div><link rel="stylesheet" id="mediaelement-css" href="./Lập trình giao diện Python với PyQt5 và Qt Designer_files/mediaelementplayer-legacy.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="wp-mediaelement-css" href="./Lập trình giao diện Python với PyQt5 và Qt Designer_files/wp-mediaelement.min.css" type="text/css" media="all">
+<script type="text/javascript" src="./Lập trình giao diện Python với PyQt5 và Qt Designer_files/tex-chtml.js.download" id="mathjax-js"></script><div style="position: static;"><div class="a2a_overlay" id="a2a_overlay"></div><div id="a2a_modal" class="a2a_modal a2a_hide" role="dialog" tabindex="-1" aria-label=""><div class="a2a_modal_body a2a_menu a2a_hide" id="a2a_copy_link"><span id="a2a_copy_link_icon" class="a2a_svg a2a_s_link a2a_logo_color"><svg focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path fill="#FFF" d="M24.4 21.18c0-.36-.1-.67-.36-.92l-2.8-2.8a1.24 1.24 0 0 0-.92-.38c-.38 0-.7.14-.97.43.02.04.1.12.25.26l.3.3.2.24c.08.12.14.24.17.35.03.1.05.23.05.37 0 .36-.13.66-.38.92a1.25 1.25 0 0 1-.92.37 1.4 1.4 0 0 1-.37-.03 1.06 1.06 0 0 1-.35-.18 2.27 2.27 0 0 1-.25-.2 6.82 6.82 0 0 1-.3-.3l-.24-.25c-.3.28-.44.6-.44.98 0 .36.13.66.38.92l2.78 2.8c.24.23.54.35.9.35.37 0 .68-.12.93-.35l1.98-1.97c.26-.25.38-.55.38-.9zm-9.46-9.5c0-.37-.13-.67-.38-.92l-2.78-2.8a1.24 1.24 0 0 0-.9-.37c-.36 0-.67.1-.93.35L7.97 9.92c-.26.25-.38.55-.38.9 0 .36.1.67.37.92l2.8 2.8c.24.25.55.37.92.37.36 0 .7-.13.96-.4-.03-.04-.1-.12-.26-.26s-.24-.23-.3-.3a2.67 2.67 0 0 1-.2-.24 1.05 1.05 0 0 1-.17-.35 1.4 1.4 0 0 1-.04-.37c0-.36.1-.66.36-.9.26-.26.56-.4.92-.4.14 0 .26.03.37.06.12.03.23.1.35.17.1.1.2.16.25.2l.3.3.24.26c.3-.28.44-.6.44-.98zM27 21.17c0 1.07-.38 2-1.15 2.73l-1.98 1.98c-.74.75-1.66 1.12-2.73 1.12-1.1 0-2-.38-2.75-1.14l-2.8-2.8c-.74-.74-1.1-1.65-1.1-2.73 0-1.1.38-2.04 1.17-2.82l-1.18-1.17c-.8.8-1.72 1.18-2.82 1.18-1.08 0-2-.36-2.75-1.12l-2.8-2.8C5.38 12.8 5 11.9 5 10.82c0-1.08.38-2 1.15-2.74L8.13 6.1C8.87 5.37 9.78 5 10.86 5c1.1 0 2 .38 2.75 1.15l2.8 2.8c.74.73 1.1 1.65 1.1 2.72 0 1.1-.38 2.05-1.17 2.82l1.18 1.18c.8-.8 1.72-1.2 2.82-1.2 1.08 0 2 .4 2.75 1.14l2.8 2.8c.76.76 1.13 1.68 1.13 2.76z"></path></svg></span><input id="a2a_copy_link_text" type="text" title="Copy link" readonly=""><div id="a2a_copy_link_copied">✓</div></div><div class="a2a_modal_body a2a_menu a2a_thanks a2a_hide" id="a2a_thanks"><div class="a2a_localize" data-a2a-localize="inner,ThanksForSharing">Cảm ơn bạn đã chia sẻ</div></div></div><div class="a2a_menu a2a_full a2a_localize" id="a2apage_full" role="dialog" tabindex="-1" aria-label="Share" data-a2a-localize="title,Share" title="Chia sẻ"><div class="a2a_full_header"><div id="a2apage_find_container" class="a2a_menu_find_container"><input id="a2apage_find" class="a2a_menu_find a2a_localize" type="text" autocomplete="off" title="Instantly find any service to add to" data-a2a-localize="title,FindAnyServiceToAddTo"><span id="a2apage_find_icon" class="a2a_svg a2a_s_find"><svg focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="#CCC" d="M19.7 18.2l-4.5-4.5c.7-1.1 1.2-2.3 1.2-3.6 0-3.5-2.8-6.3-6.3-6.3s-6.3 2.8-6.3 6.3 2.8 6.3 6.3 6.3c1.4 0 2.6-.4 3.6-1.2l4.5 4.5c.6.6 1.3.7 1.7.2.5-.4.4-1.1-.2-1.7zm-9.6-3.6c-2.5 0-4.5-2.1-4.5-4.5 0-2.5 2.1-4.5 4.5-4.5 2.5 0 4.5 2.1 4.5 4.5s-2 4.5-4.5 4.5z"></path></svg></span></div></div><div class="a2a_full_services" id="a2apage_full_services" role="presentation"></div><div class="a2a_full_footer"><a href="https://www.addtoany.com/" title="Share Buttons" rel="noopener" target="_blank"><span class="a2a_svg a2a_s__default a2a_s_a2a a2a_logo_color"><svg focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><g fill="#FFF"><path d="M14 7h4v18h-4z"></path><path d="M7 14h18v4H7z"></path></g></svg></span>AddToAny</a></div></div><div id="a2apage_dropdown" class="a2a_menu a2a_mini a2a_localize a2a_hide" tabindex="-1" aria-label="Chia sẻ" data-a2a-localize="label,Share"><div class="a2a_mini_services" id="a2apage_mini_services"></div><div id="a2apage_cols_container" class="a2a_cols_container"><div class="a2a_col1" id="a2apage_col1"></div><div id="a2apage_2_col1" class="a2a_hide"></div><div class="a2a_clear"></div></div><div class="a2apage_wide a2a_wide"><a href="https://www.vniteach.com/2022/01/24/lap-trinh-giao-dien-python-voi-pyqt5-va-qt-designer/#addtoany" id="a2apage_show_more_less" class="a2a_more a2a_localize" title="Xem hết" data-a2a-localize="title,ShowAll"><span class="a2a_svg a2a_s__default a2a_s_a2a a2a_logo_color"><svg focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><g fill="#FFF"><path d="M14 7h4v18h-4z"></path><path d="M7 14h18v4H7z"></path></g></svg></span><span class="a2a_localize" data-a2a-localize="inner,More">Thêm…</span></a></div></div><div style="height: 1px; width: 1px; position: absolute; z-index: 100000; top: 0px; visibility: hidden;"><iframe id="a2a_sm_ifr" title="AddToAny Utility Frame" transparency="true" allowtransparency="true" frameborder="0" src="./Lập trình giao diện Python với PyQt5 và Qt Designer_files/sm.24.html" style="height: 1px; width: 1px; border: 0px; left: 0px; top: 0px; position: absolute; z-index: 100000; display: none;" data-gtm-yt-inspected-4="true"></iframe></div></div>
+<script type="text/javascript" id="cream-magazine-bundle-js-extra">//<![CDATA[
+var cream_magazine_script_obj={"show_search_icon":"1","show_news_ticker":"","show_banner_slider":"1","show_to_top_btn":"1","enable_sticky_sidebar":"1","enable_sticky_menu_section":""};
+//]]></script>
+<script type="text/javascript" src="./Lập trình giao diện Python với PyQt5 và Qt Designer_files/bundle.min.js.download" id="cream-magazine-bundle-js"></script>
+<script type="text/javascript" src="./Lập trình giao diện Python với PyQt5 và Qt Designer_files/comment-reply.min.js.download" id="comment-reply-js"></script>
+<script type="text/javascript" src="./Lập trình giao diện Python với PyQt5 và Qt Designer_files/prism.js.download" id="hcb-prism-js"></script>
+<script type="text/javascript" src="./Lập trình giao diện Python với PyQt5 và Qt Designer_files/clipboard.min.js.download" id="clipboard-js"></script>
+<script type="text/javascript" id="hcb-script-js-extra">//<![CDATA[
+var hcbVars={"showCopyBtn":"1","copyBtnLabel":"Copy code to clipboard"};
+//]]></script>
+<script type="text/javascript" src="./Lập trình giao diện Python với PyQt5 và Qt Designer_files/hcb_script.js.download" id="hcb-script-js"></script>
+<script type="text/javascript" id="mediaelement-core-js-before">var mejsL10n={"language":"vi","strings":{"mejs.download-file":"T\u1ea3i v\u1ec1 t\u1eadp tin","mejs.install-flash":"B\u1ea1n \u0111ang s\u1eed d\u1ee5ng tr\u00ecnh duy\u1ec7t kh\u00f4ng h\u1ed7 tr\u1ee3 Flash player. Vui l\u00f2ng b\u1eadt ho\u1eb7c c\u00e0i \u0111\u1eb7t \n phi\u00ean b\u1ea3n m\u1edbi nh\u1ea5t t\u1ea1i https:\/\/get.adobe.com\/flashplayer\/","mejs.fullscreen":"To\u00e0n m\u00e0n h\u00ecnh","mejs.play":"Ch\u1ea1y","mejs.pause":"T\u1ea1m d\u1eebng","mejs.time-slider":"Th\u1eddi gian tr\u00ecnh chi\u1ebfu","mejs.time-help-text":"S\u1eed d\u1ee5ng c\u00e1c ph\u00edm m\u0169i t\u00ean Tr\u00e1i\/Ph\u1ea3i \u0111\u1ec3 ti\u1ebfn m\u1ed9t gi\u00e2y, m\u0169i t\u00ean L\u00ean\/Xu\u1ed1ng \u0111\u1ec3 ti\u1ebfn m\u01b0\u1eddi gi\u00e2y.","mejs.live-broadcast":"Tr\u1ef1c ti\u1ebfp","mejs.volume-help-text":"S\u1eed d\u1ee5ng c\u00e1c ph\u00edm m\u0169i t\u00ean L\u00ean\/Xu\u1ed1ng \u0111\u1ec3 t\u0103ng ho\u1eb7c gi\u1ea3m \u00e2m l\u01b0\u1ee3ng.","mejs.unmute":"B\u1eadt ti\u1ebfng","mejs.mute":"T\u1eaft ti\u1ebfng","mejs.volume-slider":"\u00c2m l\u01b0\u1ee3ng Tr\u00ecnh chi\u1ebfu","mejs.video-player":"Tr\u00ecnh ch\u01a1i Video","mejs.audio-player":"Tr\u00ecnh ch\u01a1i Audio","mejs.captions-subtitles":"Ph\u1ee5 \u0111\u1ec1","mejs.captions-chapters":"C\u00e1c m\u1ee5c","mejs.none":"Tr\u1ed1ng","mejs.afrikaans":"Ti\u1ebfng Nam Phi","mejs.albanian":"Ti\u1ebfng Albani","mejs.arabic":"Ti\u1ebfng \u1ea2 R\u1eadp","mejs.belarusian":"Ti\u1ebfng Belarus","mejs.bulgarian":"Ti\u1ebfng Bulgari","mejs.catalan":"Ti\u1ebfng Catalan","mejs.chinese":"Ti\u1ebfng Trung Qu\u1ed1c","mejs.chinese-simplified":"Ti\u1ebfng Trung Qu\u1ed1c (gi\u1ea3n th\u1ec3)","mejs.chinese-traditional":"Ti\u1ebfng Trung ( Ph\u1ed3n th\u1ec3 )","mejs.croatian":"Ti\u1ebfng Croatia","mejs.czech":"Ti\u1ebfng S\u00e9c","mejs.danish":"Ti\u1ebfng \u0110an M\u1ea1ch","mejs.dutch":"Ti\u1ebfng H\u00e0 Lan","mejs.english":"Ti\u1ebfng Anh","mejs.estonian":"Ti\u1ebfng Estonia","mejs.filipino":"Ti\u1ebfng Philippin","mejs.finnish":"Ti\u1ebfng Ph\u1ea7n Lan","mejs.french":"Ti\u1ebfng Ph\u00e1p","mejs.galician":"Ti\u1ebfng Galicia","mejs.german":"Ti\u1ebfng \u0110\u1ee9c","mejs.greek":"Ti\u1ebfng Hy L\u1ea1p","mejs.haitian-creole":"Ti\u1ebfng Haiti","mejs.hebrew":"Ti\u1ebfng Do Th\u00e1i","mejs.hindi":"Ti\u1ebfng Hindu","mejs.hungarian":"Ti\u1ebfng Hungary","mejs.icelandic":"Ti\u1ebfng Ailen","mejs.indonesian":"Ti\u1ebfng Indonesia","mejs.irish":"Ti\u1ebfng Ailen","mejs.italian":"Ti\u1ebfng \u00dd","mejs.japanese":"Ti\u1ebfng Nh\u1eadt","mejs.korean":"Ti\u1ebfng H\u00e0n Qu\u1ed1c","mejs.latvian":"Ti\u1ebfng Latvia","mejs.lithuanian":"Ti\u1ebfng Lithuani","mejs.macedonian":"Ti\u1ebfng Macedonia","mejs.malay":"Ti\u1ebfng Malaysia","mejs.maltese":"Ti\u1ebfng Maltese","mejs.norwegian":"Ti\u1ebfng Na Uy","mejs.persian":"Ti\u1ebfng Ba T\u01b0","mejs.polish":"Ti\u1ebfng Ba Lan","mejs.portuguese":"Ti\u1ebfng B\u1ed3 \u0110\u00e0o Nha","mejs.romanian":"Ti\u1ebfng Romani","mejs.russian":"Ti\u1ebfng Nga","mejs.serbian":"Ti\u1ebfng Serbia","mejs.slovak":"Ti\u1ebfng Slovakia","mejs.slovenian":"Ti\u1ebfng Slovenia","mejs.spanish":"Ti\u1ebfng T\u00e2y Ban Nha","mejs.swahili":"Ti\u1ebfng Swahili","mejs.swedish":"Ti\u1ebfng Th\u1ee5y \u0110i\u1ec3n","mejs.tagalog":"Ti\u1ebfng Tagalog","mejs.thai":"Ti\u1ebfng Th\u00e1i","mejs.turkish":"Ti\u1ebfng Th\u1ed5 Nh\u0129 K\u00ec","mejs.ukrainian":"Ti\u1ebfng Ukraina","mejs.vietnamese":"Ti\u1ebfng Vi\u1ec7t","mejs.welsh":"Ti\u1ebfng Welsh","mejs.yiddish":"Ti\u1ebfng Yiddish"}};</script>
+<script type="text/javascript" src="./Lập trình giao diện Python với PyQt5 và Qt Designer_files/mediaelement-and-player.min.js.download" id="mediaelement-core-js"></script>
+<ins class="adsbygoogle adsbygoogle-noablate" data-adsbygoogle-status="done" style="display: none !important;" data-ad-status="unfilled"><div id="aswift_0_host" style="border: none; height: 0px; width: 0px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-block;" tabindex="0" title="Advertisement" aria-label="Advertisement"><iframe id="aswift_0" name="aswift_0" style="left:0;position:absolute;top:0;border:0;width:undefinedpx;height:undefinedpx;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" src="./Lập trình giao diện Python với PyQt5 và Qt Designer_files/ads(4).html" data-google-container-id="a!1" data-load-complete="true" data-gtm-yt-inspected-4="true"></iframe></div></ins><script type="text/javascript" src="./Lập trình giao diện Python với PyQt5 và Qt Designer_files/mediaelement-migrate.min.js.download" id="mediaelement-migrate-js"></script>
+<script type="text/javascript" id="mediaelement-js-extra">//<![CDATA[
+var _wpmejsSettings={"pluginPath":"\/wp-includes\/js\/mediaelement\/","classPrefix":"mejs-","stretching":"responsive","audioShortcodeLibrary":"mediaelement","videoShortcodeLibrary":"mediaelement"};
+//]]></script>
+<script type="text/javascript" src="./Lập trình giao diện Python với PyQt5 và Qt Designer_files/wp-mediaelement.min.js.download" id="wp-mediaelement-js"></script>
+<script type="text/javascript" src="./Lập trình giao diện Python với PyQt5 và Qt Designer_files/vimeo.min.js.download" id="mediaelement-vimeo-js"></script>
+		
+		
+		<script src="./Lập trình giao diện Python với PyQt5 và Qt Designer_files/vi-VN.js.download"></script><iframe src="./Lập trình giao diện Python với PyQt5 và Qt Designer_files/aframe.html" width="0" height="0" data-gtm-yt-inspected-4="true" style="display: none;"></iframe></body><iframe id="google_esf" name="google_esf" src="./Lập trình giao diện Python với PyQt5 và Qt Designer_files/zrt_lookup.html" style="display: none;" data-gtm-yt-inspected-4="true"></iframe></html>

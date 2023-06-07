@@ -1,0 +1,14 @@
+var EmbedComms=(function($){function EmbedComms(){this.init();}
+EmbedComms.prototype={init:function()
+{this.opts=this.setOptions();this.attachMessageListener();this.payhipCookies=Cookies.noConflict();this.handleDetectingCookieBug();},setOptions:function()
+{var options={};options.testCookieName='payhip_scbt42';options.message={cookieBugDetected:'comms:cookie:bug:detected',cookieBugNotDetected:'comms:cookie:bug:not:detected',crossSellDisplay:'comms:cross:sell:display'};options.received={detectCookieBug:'message:sent:comms:detect:cookie:bug',determineIfShouldDisplayCrossSell:'message:sent:comms:determine:if:should:display:cross:sell'};options.determineIfCrossSellShouldBeDisplayedUrl='/cross_sell/determine_if_cross_sell_should_be_displayed';return options;},handleDetectingCookieBug:function()
+{var action=this.opts.message.cookieBugNotDetected;if(this.cookieBugDetected()){action=this.opts.message.cookieBugDetected;}
+var message={action:action};this.postMessage(message);},cookieBugDetected:function()
+{this.payhipCookies.set(this.opts.testCookieName,true,{sameSite:'none',secure:true});if(this.payhipCookies.get(this.opts.testCookieName)){return false;}
+else{return true;}},sendRequest:function(type,formData,url,doneFunc,failFunc)
+{$.ajax({type:type,url:url+'?'+jQuery.now(),data:formData,cache:false,fail:failFunc}).done(doneFunc).fail(failFunc);},postMessage:function(msg)
+{window.parent.postMessage(msg,'*');},determineIfShouldDisplayCrossSellAjaxSuccess:function(data,textStatus,jqXHR)
+{var result=$.parseJSON(data);if(result.should_display){var message={action:this.opts.message.crossSellDisplay,callbackData:{triggerProductKeys:result.trigger_product_keys}};this.postMessage(message);}},determineIfShouldDisplayCrossSellAjaxFail:function(jqXHR,textStatus,errorThrown)
+{},determineIfShouldDisplayCrossSellAjax:function(triggerProductKeys){var data={trigger_product_keys:triggerProductKeys};this.sendRequest('POST',data,this.opts.determineIfCrossSellShouldBeDisplayedUrl,$.proxy(this.determineIfShouldDisplayCrossSellAjaxSuccess,this),$.proxy(this.determineIfShouldDisplayCrossSellAjaxFail,this));},attachMessageListener:function()
+{var that=this;window.addEventListener('message',(function(message){if(typeof message.data==='object'&&message.data.action){var action=message.data.action;var callbackData=typeof message.data.callbackData!=='undefined'?message.data.callbackData:{};if(action==that.opts.received.detectCookieBug){that.handleDetectingCookieBug();}
+if(action==that.opts.received.determineIfShouldDisplayCrossSell){that.determineIfShouldDisplayCrossSellAjax(callbackData.triggerProductKeys);}}}));}};return EmbedComms;})(jQuery);$(function(){var embedComms=new EmbedComms();});

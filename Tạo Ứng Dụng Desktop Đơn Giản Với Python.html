@@ -1,0 +1,1062 @@
+<!DOCTYPE html>
+<!-- saved from url=(0060)https://codelearn.io/sharing/tao-ung-dung-desktop-voi-python -->
+<html lang="en-US" class="static dir-ltr codecamp-blog" dir="ltr" data-lt-installed="true"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="description" content="Bài viết này chúng ta sẽ cùng đi xây dựng một ứng dụng Desktop trên ngôn ngữ Python và giao diện xịn xò không kém những công nghệ của C# hay Java nhé.">
+<meta name="author" content="CodeLearn">
+<link rel="shortcut icon" href="https://codelearn.io/Themes/TheCodeCampPro/Resources/Images/content/codelearn-icon.png">
+<link rel="apple-touch-icon" href="https://codelearn.io/Themes/TheCodeCampPro/Resources/Images/content/codelearn-icon.png">
+<link rel="canonical" href="https://codelearn.io/sharing/tao-ung-dung-desktop-voi-python">
+<link rel="alternate" hreflang="vi" href="https://codelearn.io/sharing/tao-ung-dung-desktop-voi-python">
+<link rel="alternate" hreflang="en-US" href="https://codelearn.io/sharing/tao-ung-dung-desktop-voi-python">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1,user-scalable=0">
+<title>Tạo Ứng Dụng Desktop Đơn Giản Với Python</title>
+
+<meta property="og:title" content="Tạo Ứng Dụng Desktop Đơn Giản Với Python">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://codelearn.io/sharing/tao-ung-dung-desktop-voi-python">
+<meta property="og:description" content="Bài viết này chúng ta sẽ cùng đi xây dựng một ứng dụng Desktop trên ngôn ngữ Python và giao diện xịn xò không kém những công nghệ của C# hay Java nhé.">
+<meta property="og:image" content="/Upload/Blog/tao-ung-dung-desktop-voi-python-63730456690.8074.jpg">
+<meta property="fb:app_id" content="540883753774783">
+
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:url" content="https://codelearn.io/sharing/tao-ung-dung-desktop-voi-python">
+<meta name="twitter:title" content="Tạo Ứng Dụng Desktop Đơn Giản Với Python">
+<meta name="twitter:description" content="Bài viết này chúng ta sẽ cùng đi xây dựng một ứng dụng Desktop trên ngôn ngữ Python và giao diện xịn xò không kém những công nghệ của C# hay Java nhé.">
+<meta name="twitter:image" content="/Upload/Blog/tao-ung-dung-desktop-voi-python-63730456690.8074.jpg">
+<meta name="twitter:site" content="@Codelearn.io">
+<meta name="twitter:creator" content="@Codelearn.io">
+
+<meta name="google-signin-client_id" content="16523143533-ovv9lj8c7i8sv36sv3lguom0msmdk8ah.apps.googleusercontent.com">
+
+<script type="text/javascript" async="" src="./Tạo Ứng Dụng Desktop Đơn Giản Với Python_files/destination"></script><script src="./Tạo Ứng Dụng Desktop Đơn Giản Với Python_files/cb=gapi.loaded_0" async=""></script><script type="text/javascript" async="" src="./Tạo Ứng Dụng Desktop Đơn Giản Với Python_files/analytics.js.download"></script><script type="text/javascript" async="" src="./Tạo Ứng Dụng Desktop Đơn Giản Với Python_files/js"></script><script type="text/javascript" async="" src="./Tạo Ứng Dụng Desktop Đơn Giản Với Python_files/recaptcha__vi.js.download" crossorigin="anonymous" integrity="sha384-zNvU6ZuJh4kf/CpT0UJP+bTmvy3FbiQ7GKK4rWYo12qapYbABrtlW3Z+ya+NEGD4"></script><script src="./Tạo Ứng Dụng Desktop Đơn Giản Với Python_files/700313553710795" async=""></script><script async="" src="./Tạo Ứng Dụng Desktop Đơn Giản Với Python_files/fbevents.js.download"></script><script id="facebook-jssdk" src="./Tạo Ứng Dụng Desktop Đơn Giản Với Python_files/xfbml.customerchat.js.download"></script><script async="" src="./Tạo Ứng Dụng Desktop Đơn Giản Với Python_files/js(1)"></script>
+<script>
+        var isGetNotification = true;
+        var isNotCountComment = false;
+
+        var s3Storage = '';
+        var resourcePath = '/Themes/TheCodeCampPro/Resources';
+        var strAuthen = '';
+        var faceId = '540883753774783';
+        var isLoadedFacebook = 'False';
+        if (strAuthen == '') {
+            var googleId = '16523143533-ovv9lj8c7i8sv36sv3lguom0msmdk8ah.apps.googleusercontent.com';
+        }
+
+        if (strAuthen == '') {
+            var LOGIN_VALIDATOR, SIGNUP_VALIDATOR;
+            function openModal(tab) {
+
+                $('#loginModal a[data-target="#' + tab + '"]').tab('show');
+                switch (tab) {
+                    case 'login':
+                        $(".btn--facebook").attr('title', 'Login with Facebook');
+                        $(".btn--google").attr('title', 'Login with Google');
+                        $("#loginModal .header-card").text('Login your account');
+                        SIGNUP_VALIDATOR && SIGNUP_VALIDATOR.resetForm();
+                        break;
+                    case 'signup':
+                        $(".btn--facebook").attr('title', 'Continue with Facebook');
+                        $(".btn--google").attr('title', 'Continue with Google');
+                        $("#loginModal .header-card").text('Register new account');
+                        LOGIN_VALIDATOR && LOGIN_VALIDATOR.resetForm();
+                        break;
+                }
+            }
+        }
+
+        if ('https://codelearn.io' == location.origin.toLocaleLowerCase()) {
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+
+            gtag('js', new Date());
+            gtag('config', 'UA-141685371-1');
+            gtag('config', 'USER_MANAGEMENT');
+            gtag('set', { 'user_id': 'CodeLearn-Anonymous' });
+
+            // Measure Google Ads conversions
+            gtag('event', 'conversion', {
+                'send_to': 'USER_MANAGEMENT/CodeLearn-Anonymous',
+            });
+
+            window['GoogleAnalyticsObject'] = 'ga';
+            window['ga'] = window['ga'] || function () {
+                (window['ga'].q = window['ga'].q || []).push(arguments)
+            };
+            ga('set', 'userId', 'CodeLearn-Anonymous' );
+        }
+
+        window.fbAsyncInit = function () {
+            FB.init({
+                appId: faceId,
+                xfbml: true,
+                version: 'v11.0'
+            });
+            FB.AppEvents.logPageView();
+            isLoadedFacebook = true;
+        };
+
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) { return; }
+            js = d.createElement(s); js.id = id;
+            js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+
+    </script>
+
+<script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '700313553710795');
+        fbq('track', 'PageView');
+    </script>
+
+<link href="./Tạo Ứng Dụng Desktop Đơn Giản Với Python_files/prism.min.css" rel="stylesheet" type="text/css">
+<link href="./Tạo Ứng Dụng Desktop Đơn Giản Với Python_files/blog.min.css" rel="stylesheet" type="text/css">
+<link href="./Tạo Ứng Dụng Desktop Đơn Giản Với Python_files/comment.min.css" rel="stylesheet" type="text/css">
+<link href="./Tạo Ứng Dụng Desktop Đơn Giản Với Python_files/bootstrap.min.css" rel="stylesheet" type="text/css">
+<link href="./Tạo Ứng Dụng Desktop Đơn Giản Với Python_files/styles.min.css" rel="stylesheet" type="text/css">
+<link href="./Tạo Ứng Dụng Desktop Đơn Giản Với Python_files/common.min.css" rel="stylesheet" type="text/css">
+<link href="./Tạo Ứng Dụng Desktop Đơn Giản Với Python_files/Site.min.css" rel="stylesheet" type="text/css">
+<link href="./Tạo Ứng Dụng Desktop Đơn Giản Với Python_files/login-modal.min.css" rel="stylesheet" type="text/css">
+<script src="./Tạo Ứng Dụng Desktop Đơn Giản Với Python_files/jquery.min.js.download" type="text/javascript"></script>
+<script src="./Tạo Ứng Dụng Desktop Đơn Giản Với Python_files/bootstrap.min.js.download" type="text/javascript"></script>
+<script src="./Tạo Ứng Dụng Desktop Đơn Giản Với Python_files/jquery-ui.min.js.download" type="text/javascript"></script>
+<script src="./Tạo Ứng Dụng Desktop Đơn Giản Với Python_files/anchor.min.js.download" type="text/javascript"></script>
+<script src="./Tạo Ứng Dụng Desktop Đơn Giản Với Python_files/moment.min.js.download" type="text/javascript"></script>
+<script src="./Tạo Ứng Dụng Desktop Đơn Giản Với Python_files/moment-with-locales.min.js.download" type="text/javascript"></script>
+<script src="./Tạo Ứng Dụng Desktop Đơn Giản Với Python_files/jquery.validate.min.js.download" type="text/javascript"></script>
+<script src="./Tạo Ứng Dụng Desktop Đơn Giản Với Python_files/additional-methods.min.js.download" type="text/javascript"></script>
+<script src="./Tạo Ứng Dụng Desktop Đơn Giản Với Python_files/api.js.download" type="text/javascript"></script>
+<script src="./Tạo Ứng Dụng Desktop Đơn Giản Với Python_files/login-form.min.js.download" type="text/javascript"></script>
+<script async="" defer="" src="./Tạo Ứng Dụng Desktop Đơn Giản Với Python_files/platform.js.download" type="text/javascript" gapi_processed="true"></script>
+<script src="./Tạo Ứng Dụng Desktop Đơn Giản Với Python_files/common.min.js.download" type="text/javascript"></script>
+<style type="text/css" data-fbcssmodules="css:fb.css.base css:fb.css.dialog css:fb.css.iframewidget css:fb.css.customer_chat_plugin_iframe">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_reposition{overflow:hidden;position:relative}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:'lucida grande', tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}@keyframes fb_transform{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}.fb_animate{animation:fb_transform .3s forwards}
+.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_reposition{overflow:hidden;position:relative}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:'lucida grande', tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}@keyframes fb_transform{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}.fb_animate{animation:fb_transform .3s forwards}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_dialog_advanced{border-radius:8px;padding:10px}.fb_dialog_content{background:#fff;color:#373737}.fb_dialog_close_icon{background:url(https://connect.facebook.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{left:5px;right:auto;top:5px}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(https://connect.facebook.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent}.fb_dialog_close_icon:active{background:url(https://connect.facebook.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #365899;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(https://connect.facebook.net/rsrc.php/v3/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{height:100%;left:0;margin:0;overflow:visible;position:absolute;top:-10000px;transform:none;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(https://connect.facebook.net/rsrc.php/v3/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{background:none;height:auto;min-height:initial;min-width:initial;width:auto}.fb_dialog.fb_dialog_mobile.loading.centered #fb_dialog_loader_spinner{width:100%}.fb_dialog.fb_dialog_mobile.loading.centered .fb_dialog_content{background:none}.loading.centered #fb_dialog_loader_close{clear:both;color:#fff;display:block;font-size:18px;padding-top:20px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .4);bottom:0;left:0;min-height:100%;position:absolute;right:0;top:0;width:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_mobile .fb_dialog_iframe{position:sticky;top:0}.fb_dialog_content .dialog_header{background:linear-gradient(from(#738aba), to(#2c4987));border-bottom:1px solid;border-color:#043b87;box-shadow:white 0 1px 1px -1px inset;color:#fff;font:bold 14px Helvetica, sans-serif;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:linear-gradient(from(#4267B2), to(#2a4887));background-clip:padding-box;border:1px solid #29487d;border-radius:3px;display:inline-block;line-height:18px;margin-top:3px;max-width:85px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{background:none;border:none;color:#fff;font:bold 12px Helvetica, sans-serif;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(https://connect.facebook.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #4a4a4a;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f5f6f7;border:1px solid #4a4a4a;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}#fb_dialog_loader_spinner{animation:rotateSpinner 1.2s linear infinite;background-color:transparent;background-image:url(https://connect.facebook.net/rsrc.php/v3/yD/r/t-wz8gw1xG1.png);background-position:50% 50%;background-repeat:no-repeat;height:24px;width:24px}@keyframes rotateSpinner{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_fluid_desktop,.fb_iframe_widget_fluid_desktop span,.fb_iframe_widget_fluid_desktop iframe{max-width:100%}.fb_iframe_widget_fluid_desktop iframe{min-width:220px;position:relative}.fb_iframe_widget_lift{z-index:1}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}
+.fb_mpn_mobile_landing_page_slide_out{animation-duration:200ms;animation-name:fb_mpn_landing_page_slide_out;transition-timing-function:ease-in}.fb_mpn_mobile_landing_page_slide_out_from_left{animation-duration:200ms;animation-name:fb_mpn_landing_page_slide_out_from_left;transition-timing-function:ease-in}.fb_mpn_mobile_landing_page_slide_up{animation-duration:500ms;animation-name:fb_mpn_landing_page_slide_up;transition-timing-function:ease-in}.fb_mpn_mobile_bounce_in{animation-duration:300ms;animation-name:fb_mpn_bounce_in;transition-timing-function:ease-in}.fb_mpn_mobile_bounce_out{animation-duration:300ms;animation-name:fb_mpn_bounce_out;transition-timing-function:ease-in}.fb_mpn_mobile_bounce_out_v2{animation-duration:300ms;animation-name:fb_mpn_fade_out;transition-timing-function:ease-in}.fb_customer_chat_bounce_in_v2{animation-duration:300ms;animation-name:fb_bounce_in_v2;transition-timing-function:ease-in}.fb_customer_chat_bounce_in_from_left{animation-duration:300ms;animation-name:fb_bounce_in_from_left;transition-timing-function:ease-in}.fb_customer_chat_bounce_out_v2{animation-duration:300ms;animation-name:fb_bounce_out_v2;transition-timing-function:ease-in}.fb_customer_chat_bounce_out_from_left{animation-duration:300ms;animation-name:fb_bounce_out_from_left;transition-timing-function:ease-in}.fb_invisible_flow{display:inherit;height:0;overflow-x:hidden;width:0}@keyframes fb_mpn_landing_page_slide_out{0%{margin:0 12px;width:100% - 24px}60%{border-radius:18px}100%{border-radius:50%;margin:0 24px;width:60px}}@keyframes fb_mpn_landing_page_slide_out_from_left{0%{left:12px;width:100% - 24px}60%{border-radius:18px}100%{border-radius:50%;left:12px;width:60px}}@keyframes fb_mpn_landing_page_slide_up{0%{bottom:0;opacity:0}100%{bottom:24px;opacity:1}}@keyframes fb_mpn_bounce_in{0%{opacity:.5;top:100%}100%{opacity:1;top:0}}@keyframes fb_mpn_fade_out{0%{bottom:30px;opacity:1}100%{bottom:0;opacity:0}}@keyframes fb_mpn_bounce_out{0%{opacity:1;top:0}100%{opacity:.5;top:100%}}@keyframes fb_bounce_in_v2{0%{opacity:0;transform:scale(0, 0);transform-origin:bottom right}50%{transform:scale(1.03, 1.03);transform-origin:bottom right}100%{opacity:1;transform:scale(1, 1);transform-origin:bottom right}}@keyframes fb_bounce_in_from_left{0%{opacity:0;transform:scale(0, 0);transform-origin:bottom left}50%{transform:scale(1.03, 1.03);transform-origin:bottom left}100%{opacity:1;transform:scale(1, 1);transform-origin:bottom left}}@keyframes fb_bounce_out_v2{0%{opacity:1;transform:scale(1, 1);transform-origin:bottom right}100%{opacity:0;transform:scale(0, 0);transform-origin:bottom right}}@keyframes fb_bounce_out_from_left{0%{opacity:1;transform:scale(1, 1);transform-origin:bottom left}100%{opacity:0;transform:scale(0, 0);transform-origin:bottom left}}@keyframes slideInFromBottom{0%{opacity:.1;transform:translateY(100%)}100%{opacity:1;transform:translateY(0)}}@keyframes slideInFromBottomDelay{0%{opacity:0;transform:translateY(100%)}97%{opacity:0;transform:translateY(100%)}100%{opacity:1;transform:translateY(0)}}</style><style>#_no-clickjacking-0{opacity:1 !important;overflow: visible !important}</style><style>#_no-clickjacking-1{opacity:1 !important;overflow: visible !important}</style></head>
+<body class="hold-transition site-body skin-sku-light layout-top-nav sharing ">
+<script>
+        //<![CDATA[
+        var LANG_CURRENT = "en";
+        const CurrentUserId = 0;
+        const NOTTIFY_USER_ACCESSKEY ='nottifyAccessKey';
+        const IS_ADMIN = false;
+        
+        PKLService.init({ strVersion: '1937254220', strLangCode: 'en', IsHasLogin: false, url: location.origin });
+        //]]>
+</script>
+<div id="layout-navigation" class="group ">
+<div class="zone zone-navigation">
+<article class="widget-navigation widget-menu-widget widget is-sticky" style="height: 70px;">
+<header class="navbar site-header">
+
+<div class="wrap-site-logo">
+<a title="CodeLearn" href="https://codelearn.io/">
+<img alt="CodeLearn nền tảng dạy lập trình trực tuyến" class="site-logo" src="./Tạo Ứng Dụng Desktop Đơn Giản Với Python_files/codelearn-logo.png">
+<img alt="CodeLearn lập trình mỗi ngày" class="site-logo-mobile" src="./Tạo Ứng Dụng Desktop Đơn Giản Với Python_files/codelearn-mobile-logo.png">
+</a>
+</div>
+<div class="wrap-right-header">
+<input type="checkbox" id="mobile-menu-cb" name="mobile-menu-cb">
+<label class="hamburger-button" for="mobile-menu-cb">
+<span class="hamburger-icon"></span>
+</label>
+<label class="hamburger-menu-mask" for="mobile-menu-cb"></label>
+<nav class="site-menu">
+<ul class="menu menu-main-menu">
+<li><a href="https://codelearn.io/learning">Learning</a>
+</li>
+<li><a href="https://codelearn.io/training">Training</a>
+</li>
+<li><a href="https://codelearn.io/fights">Fights</a>
+</li>
+<li><a href="https://codelearn.io/challenge">Challenge</a>
+</li>
+<li><a href="https://codelearn.io/evaluating">Evaluating</a>
+</li>
+<li><a href="https://codelearn.io/discussion">Discussion</a>
+</li>
+<li><a href="https://codelearn.io/game">Game</a>
+</li>
+<li class="current"><a href="https://codelearn.io/sharing">Chia sẻ</a>
+</li>
+</ul>
+<div class="dropdown dropdown-language">
+<a href="https://codelearn.io/sharing/tao-ung-dung-desktop-voi-python#" class="dropdown-toggle btn-dark btn--language " data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" title="English">
+<img alt="English" class="button-language btn-img flag" src="./Tạo Ứng Dụng Desktop Đơn Giản Với Python_files/en.png">
+</a>
+<ul class="dropdown-menu">
+<li>
+<span class="change-lang" data-link="/language/setLanguageLocal?name=en&amp;redirectUrl=">
+<img alt="en" class="icon-language" src="./Tạo Ứng Dụng Desktop Đơn Giản Với Python_files/en.png">
+English
+</span>
+</li>
+<li>
+<span class="change-lang" data-link="/language/setLanguageLocal?name=vn&amp;redirectUrl=">
+<img alt="vn" class="icon-language" src="./Tạo Ứng Dụng Desktop Đơn Giản Với Python_files/vn.png">
+Tiếng Việt
+</span>
+</li>
+</ul>
+</div>
+</nav>
+
+
+<ul class="site-user-menu">
+<li>
+<button id="login-header" class="btn btn-login" data-toggle="modal" data-target="#loginModal" onclick="openModal(&#39;login&#39;)">Login</button>
+<button class="btn" data-toggle="modal" data-target="#loginModal" onclick="openModal(&#39;signup&#39;)">Register</button>
+</li>
+</ul>
+</div>
+</header>
+</article>
+<article class="widget-navigation widget-bread-cumps-widget widget">
+<nav aria-label="breadcrumb">
+<div class="container">
+<ol class="breadcrumb">
+<li class="breadcrumb-item"><a href="https://codelearn.io/">Home</a></li>
+<li class="breadcrumb-item"><a href="https://codelearn.io/sharing/tao-ung-dung-desktop-voi-python">Sharing</a></li>
+</ol>
+</div>
+</nav>
+
+
+</article></div>
+</div>
+<main id="layout-main" class="group">
+<div id="layout-content" class="group">
+<div id="content" class="group">
+<div class="zone zone-content">
+<script>
+    var preview = true;
+    var isPublish = false;
+    var id = 2225005;
+    var blogId = 'tao-ung-dung-desktop-voi-python';
+    var userId = 0;
+    var ownerId = 148990;
+</script>
+
+<div class="container">
+<div class="blog-detail">
+<div class="row">
+<div class="col-md-9 main-blog">
+<div class="wrapper">
+<div class="row author">
+<div class="col-sm-7 text-left">
+<span>Author</span>
+<span class="author-name"><a href="https://codelearn.io/profile/148990">huytuong010101</a> </span>
+<span class="time-icon"><i class="cl-icon-circle"></i></span>
+<span id="create-time" class="time">2020-07-16</span>
+</div>
+<div class="col-sm-5 text-right">
+<span class="comment-icon"><i class="cl-icon-eye"></i></span>
+<span class="comment-text total-view">42117</span>
+<span class="comment-icon"><i class="cl-icon-share-alt"></i></span>
+<span class="comment-text">351</span>
+</div>
+</div>
+<div class="row main-content">
+<div class="col-md-12">
+<div class="main-image">
+<img src="./Tạo Ứng Dụng Desktop Đơn Giản Với Python_files/tao-ung-dung-desktop-voi-python-63730456690.8074.jpg" alt="Tạo Ứng Dụng Desktop Đơn Giản Với Python">
+</div>
+<div class="blog-content">
+<h1>Tạo Ứng Dụng Desktop Đơn Giản Với Python</h1>
+<div class="content">
+<p><strong>Nếu như bạn đã quá quen thuộc với nhưng công nghệ làm ứng dụng Desktop kinh điển như Winform, WPF (C#) hay Swing, JavaFx (Java) và nghĩ rằng Python chỉ để làm AI hay Data science thì bạn đã sai. Trong bài viết này chúng ta sẽ cùng đi xây dựng một ứng dụng Desktop trên ngôn ngữ Python và giao diện xịn xò không kém những công nghệ của C# hay Java nhé.</strong></p>
+<p>Chúng ta sẽ sử dụng <code>PyQt5</code> - một thư viện cho phép bạn sử dụng Qt GUI, một framework rất nổi tiếng của C++. Chúng ta sẽ cùng đi tìm hiểu qua các bước:</p>
+<p style="padding-left: 30px;"><strong>1. Tìm hiểu, cách cài đặt PyQt5 và công cụ Qt Designer</strong></p>
+<p style="padding-left: 30px;"><strong>2. Thực hành ngay với ví dụ "Ứng dụng tính tiền cho phòng khám"</strong></p>
+<p style="padding-left: 30px;"><strong>2.1. Xây dựng giao diện bằng Qt Designer</strong></p>
+<p style="padding-left: 30px;"><strong>2.2. Xây dựng Back-end.</strong></p>
+<p>Ok bắt đầu thôi nào&nbsp;</p>
+<h3>1.&nbsp;Cài đặt PyQt5 và công cụ Qt Designer</h3>
+<p>Như mình đã đề cập ở trên,&nbsp;PyQt là một thư viện cho phép bạn sử dụng Qt GUI, một framework rất nổi tiếng của C++. PyQt có nhiều phiên bản nhưng gần đây nhất và được hỗ trợ nhiều nhất là PyQt5. Tiến hành cài đặt nó thôi nào:</p>
+<pre class="  language-python"><code class="  language-python">python <span class="token operator">-</span>m pip install PyQt5 
+<span class="token comment"># pip install PyQt5</span></code></pre>
+<p>Đơn giản vậy thôi. Nhưng ... để thiết kế nên một giao diện mà code thủ công thì rất khó khăn nên chúng ta có một công cụ hỗ trợ kéo thả rất tuyệt vời là Qt Designer. Các bạn có thể tải về và cài đặt tại đây:&nbsp;<a href="https://build-system.fman.io/qt-designer-download" target="_blank" rel="noopener" title="just a link">DownloadQtDesigner</a></p>
+<p>Okey vậy là chúng đã đã đủ vũ khí, cùng chinh chiến ngay với một ví dụ thực tế: "<strong>Phần mềm tính tiền cho phòng khám</strong>" nhé</p>
+<h3>2. Thực hành "Xây dựng Ứng dụng tính tiền cho phòng khám"</h3>
+<h4>2.1 Xây dựng giao diện bằng Qt Designer</h4>
+<p>Đầu tiên chúng ta sẽ mở Qt Designer lên và ngắm nghía một chút nhé</p>
+<p><img width="515" height="439" alt="" src="./Tạo Ứng Dụng Desktop Đơn Giản Với Python_files/chooseTml.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
+<p>Ở giao diện này họ yêu cầu chúng ta chọn template - mọi người chọn <code>Main Window</code> nhé. Sau đó nhấn Create</p>
+<p><img width="1075" height="607" alt="" src="./Tạo Ứng Dụng Desktop Đơn Giản Với Python_files/firrstUi.PNG" style="display: block; margin-left: auto; margin-right: auto;"></p>
+<p>Chắc hẵn những bạn đã từng làm quen với Winform sẽ khá quen thuộc với giao diện này. Vẫn là 3 phần chính với bên trái là các Widget, ở giữa là giao diện xem trước và bên phải là tùy chỉnh các thuộc tính Property. Bây giờ hãy tưởng tượng ra trong đầu mình một giao diện và kéo thả theo ý mình nhé.</p>
+<p><img width="1051" height="587" alt="" src="./Tạo Ứng Dụng Desktop Đơn Giản Với Python_files/Capture.PNG" style="display: block; margin-left: auto; margin-right: auto;"></p>
+<p>Đây là giao diện mình làm qua. Giải thích một tí nhé. Những Widget mà mình sử dụng:</p>
+<ul>
+<li><code>Label</code>: Dùng để hiển thị nội dụng text đơn thuần. Double click để chỉnh sửa nội dung.</li>
+<li><code>Group Box</code>: Dùng để nhóm các Widget có cùng mục đích lại với nhau.</li>
+<li><code>Line edit</code>: Dùng để nhập dữ liệu dạng 1 dòng (tương tự thẻ &lt;input&gt; trong HTML).</li>
+<li><code>Combo Box</code>: Dùng để người dùng chọn các nội dung có sẵn. Các bạn double click vào để thêm các item lựa chọn.</li>
+<li><code>Check Box</code>: Cho phép người dụng chọn hoặc bỏ chọn 1 nội dung. Double click để chỉnh sửa label</li>
+<li><code>Spin box</code>: Tương tự như Line Edit nhưng chỉ được phép nhập số.</li>
+<li><code>Push Button</code>: Đơn giản là một cái nút nhấn. Double click để chỉnh sửa nội dung</li>
+</ul>
+<p>Trên đây là những widget cơ bản của Qt, còn rất nhiều những widget hay ho khác, các bạn có thể tự tìm hiểu nhé. Đặc biệt là các widget trong nhóm <code>Layouts</code> sẽ giúp các widget trên ứng dụng bạn co giãn tùy theo kích cỡ window.</p>
+<h4>*Lưu ý:</h4>
+<ul>
+<li>Các bạn có thể click vào Window bao ngoài và chỉnh sửa WindowTitle để thay đổi title cửa sổ</li>
+<li>Đối với các Widget chúng ta cần truy xuất ở phần Back-end để xử lí thì các bạn nên thay đổi thuộc tính objectName để dễ dàng xử lí và gọi tên.</li>
+</ul>
+<p>Cuối cùng là Ctrl + R để xem lại giao diện nhé:</p>
+<p><img width="420" height="524" alt="" src="./Tạo Ứng Dụng Desktop Đơn Giản Với Python_files/Capture2.PNG" style="display: block; margin-left: auto; margin-right: auto;"></p>
+<p>Bước cuối cùng để tạo giao diện là chuyển giao diện này sang code PyQt5. Các bạn lưu file .ui này vào ProjectFolder của mình nhé</p>
+<p>Sau đó các bạn chạy lệnh sau:</p>
+<pre class="  language-python"><code class="  language-python">python <span class="token operator">-</span>m pyuic5 <span class="token operator">-</span>x <span class="token operator">&lt;</span>duong_dan_file_giao_dien<span class="token punctuation">.</span>ui<span class="token operator">&gt;</span> <span class="token operator">-</span>o <span class="token operator">&lt;</span>duong_dan_file_ket_qua<span class="token punctuation">.</span>py<span class="token operator">&gt;</span>
+<span class="token comment">#vi du: python -m pyuic5 -x giaodien.ui -o main.py</span>
+<span class="token comment">#hoac pyuic5 -x giaodien.ui -o main.py</span></code></pre>
+<p><code>pyuic5</code> sẽ được cài đặt cùng lúc với PyQt5, là công cụ giúp chuyển file giao diện *<em>.ui sang</em>&nbsp;*.py - một chương trình hoàn chỉnh giúp render ra giao diện như ta đã thiết kế</p>
+<p>Bây giờ các bạn hãy chạy thử chương trình mà pyuic5 vừa tạo ra. Nếu gặp lỗi như thế này thì các bạn có thể fix theo cách sau&nbsp;</p>
+<p><img width="508" height="329" alt="" src="./Tạo Ứng Dụng Desktop Đơn Giản Với Python_files/loi.PNG" style="display: block; margin-left: auto; margin-right: auto;"></p>
+<ol>
+<li>Copy thư mục platforms của đường dẫn "<span>C:\Python33\Lib\site-packages\PyQt5\plugins\platforms" (Mỗi phiên bản Python sẽ có đường dẫn khác nhau)</span></li>
+<li><span>Paste thư mục đó vào thư mục chứa code của chúng ta</span></li>
+<li><span>Cuối cùng thêm 2 dòng này vào trên cùng của chương trình:</span><span></span>
+<pre class="  language-python"><code class="  language-python"><span class="token keyword">import</span> os
+os<span class="token punctuation">.</span>environ<span class="token punctuation">[</span><span class="token string">'QT_QPA_PLATFORM_PLUGIN_PATH'</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">".\\platform\\"</span></code></pre>
+<p>Bây giờ các bạn có thế chạy lại và chương trình sẽ chạy ngon :D</p>
+</li>
+</ol>
+<p><img width="424" height="528" alt="" src="./Tạo Ứng Dụng Desktop Đơn Giản Với Python_files/code.PNG" style="display: block; margin-left: auto; margin-right: auto;"></p>
+<p>Vì mặc định PyQt5 sử dụng giao diện cũ nên bạn có thể thêm lệnh setStyle() để thay đổi giao diện. Đây là full code phần giao diện</p>
+<pre class="  language-python"><code class="  language-python"><span class="token keyword">from</span> PyQt5 <span class="token keyword">import</span> QtCore<span class="token punctuation">,</span> QtGui<span class="token punctuation">,</span> QtWidgets
+<span class="token keyword">import</span> os
+os<span class="token punctuation">.</span>environ<span class="token punctuation">[</span><span class="token string">'QT_QPA_PLATFORM_PLUGIN_PATH'</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">".\\platform\\"</span>
+<span class="token keyword">class</span> <span class="token class-name">Ui_MainWindow</span><span class="token punctuation">(</span><span class="token builtin">object</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">setupUi</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> MainWindow<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        MainWindow<span class="token punctuation">.</span>setObjectName<span class="token punctuation">(</span><span class="token string">"MainWindow"</span><span class="token punctuation">)</span>
+        MainWindow<span class="token punctuation">.</span>resize<span class="token punctuation">(</span><span class="token number">403</span><span class="token punctuation">,</span> <span class="token number">483</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>centralwidget <span class="token operator">=</span> QtWidgets<span class="token punctuation">.</span>QWidget<span class="token punctuation">(</span>MainWindow<span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>centralwidget<span class="token punctuation">.</span>setObjectName<span class="token punctuation">(</span><span class="token string">"centralwidget"</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>label <span class="token operator">=</span> QtWidgets<span class="token punctuation">.</span>QLabel<span class="token punctuation">(</span>self<span class="token punctuation">.</span>centralwidget<span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>label<span class="token punctuation">.</span>setGeometry<span class="token punctuation">(</span>QtCore<span class="token punctuation">.</span>QRect<span class="token punctuation">(</span><span class="token number">40</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">371</span><span class="token punctuation">,</span> <span class="token number">41</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        font <span class="token operator">=</span> QtGui<span class="token punctuation">.</span>QFont<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        font<span class="token punctuation">.</span>setPointSize<span class="token punctuation">(</span><span class="token number">13</span><span class="token punctuation">)</span>
+        font<span class="token punctuation">.</span>setBold<span class="token punctuation">(</span><span class="token boolean">True</span><span class="token punctuation">)</span>
+        font<span class="token punctuation">.</span>setWeight<span class="token punctuation">(</span><span class="token number">75</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>label<span class="token punctuation">.</span>setFont<span class="token punctuation">(</span>font<span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>label<span class="token punctuation">.</span>setObjectName<span class="token punctuation">(</span><span class="token string">"label"</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>groupBox <span class="token operator">=</span> QtWidgets<span class="token punctuation">.</span>QGroupBox<span class="token punctuation">(</span>self<span class="token punctuation">.</span>centralwidget<span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>groupBox<span class="token punctuation">.</span>setGeometry<span class="token punctuation">(</span>QtCore<span class="token punctuation">.</span>QRect<span class="token punctuation">(</span><span class="token number">40</span><span class="token punctuation">,</span> <span class="token number">80</span><span class="token punctuation">,</span> <span class="token number">311</span><span class="token punctuation">,</span> <span class="token number">121</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>groupBox<span class="token punctuation">.</span>setObjectName<span class="token punctuation">(</span><span class="token string">"groupBox"</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>label_5 <span class="token operator">=</span> QtWidgets<span class="token punctuation">.</span>QLabel<span class="token punctuation">(</span>self<span class="token punctuation">.</span>groupBox<span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>label_5<span class="token punctuation">.</span>setGeometry<span class="token punctuation">(</span>QtCore<span class="token punctuation">.</span>QRect<span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">,</span> <span class="token number">70</span><span class="token punctuation">,</span> <span class="token number">47</span><span class="token punctuation">,</span> <span class="token number">13</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>label_5<span class="token punctuation">.</span>setObjectName<span class="token punctuation">(</span><span class="token string">"label_5"</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>sex <span class="token operator">=</span> QtWidgets<span class="token punctuation">.</span>QComboBox<span class="token punctuation">(</span>self<span class="token punctuation">.</span>groupBox<span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>sex<span class="token punctuation">.</span>setGeometry<span class="token punctuation">(</span>QtCore<span class="token punctuation">.</span>QRect<span class="token punctuation">(</span><span class="token number">80</span><span class="token punctuation">,</span> <span class="token number">70</span><span class="token punctuation">,</span> <span class="token number">69</span><span class="token punctuation">,</span> <span class="token number">22</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>sex<span class="token punctuation">.</span>setObjectName<span class="token punctuation">(</span><span class="token string">"sex"</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>sex<span class="token punctuation">.</span>addItem<span class="token punctuation">(</span><span class="token string">""</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>sex<span class="token punctuation">.</span>addItem<span class="token punctuation">(</span><span class="token string">""</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>label_4 <span class="token operator">=</span> QtWidgets<span class="token punctuation">.</span>QLabel<span class="token punctuation">(</span>self<span class="token punctuation">.</span>groupBox<span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>label_4<span class="token punctuation">.</span>setGeometry<span class="token punctuation">(</span>QtCore<span class="token punctuation">.</span>QRect<span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">,</span> <span class="token number">40</span><span class="token punctuation">,</span> <span class="token number">47</span><span class="token punctuation">,</span> <span class="token number">13</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>label_4<span class="token punctuation">.</span>setObjectName<span class="token punctuation">(</span><span class="token string">"label_4"</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>fullname <span class="token operator">=</span> QtWidgets<span class="token punctuation">.</span>QLineEdit<span class="token punctuation">(</span>self<span class="token punctuation">.</span>groupBox<span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>fullname<span class="token punctuation">.</span>setGeometry<span class="token punctuation">(</span>QtCore<span class="token punctuation">.</span>QRect<span class="token punctuation">(</span><span class="token number">80</span><span class="token punctuation">,</span> <span class="token number">40</span><span class="token punctuation">,</span> <span class="token number">211</span><span class="token punctuation">,</span> <span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>fullname<span class="token punctuation">.</span>setObjectName<span class="token punctuation">(</span><span class="token string">"fullname"</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>groupBox_2 <span class="token operator">=</span> QtWidgets<span class="token punctuation">.</span>QGroupBox<span class="token punctuation">(</span>self<span class="token punctuation">.</span>centralwidget<span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>groupBox_2<span class="token punctuation">.</span>setGeometry<span class="token punctuation">(</span>QtCore<span class="token punctuation">.</span>QRect<span class="token punctuation">(</span><span class="token number">40</span><span class="token punctuation">,</span> <span class="token number">220</span><span class="token punctuation">,</span> <span class="token number">311</span><span class="token punctuation">,</span> <span class="token number">161</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>groupBox_2<span class="token punctuation">.</span>setObjectName<span class="token punctuation">(</span><span class="token string">"groupBox_2"</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>trongRangNum <span class="token operator">=</span> QtWidgets<span class="token punctuation">.</span>QSpinBox<span class="token punctuation">(</span>self<span class="token punctuation">.</span>groupBox_2<span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>trongRangNum<span class="token punctuation">.</span>setGeometry<span class="token punctuation">(</span>QtCore<span class="token punctuation">.</span>QRect<span class="token punctuation">(</span><span class="token number">170</span><span class="token punctuation">,</span> <span class="token number">120</span><span class="token punctuation">,</span> <span class="token number">42</span><span class="token punctuation">,</span> <span class="token number">22</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>trongRangNum<span class="token punctuation">.</span>setObjectName<span class="token punctuation">(</span><span class="token string">"trongRangNum"</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>niengRangCb <span class="token operator">=</span> QtWidgets<span class="token punctuation">.</span>QCheckBox<span class="token punctuation">(</span>self<span class="token punctuation">.</span>groupBox_2<span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>niengRangCb<span class="token punctuation">.</span>setGeometry<span class="token punctuation">(</span>QtCore<span class="token punctuation">.</span>QRect<span class="token punctuation">(</span><span class="token number">190</span><span class="token punctuation">,</span> <span class="token number">30</span><span class="token punctuation">,</span> <span class="token number">70</span><span class="token punctuation">,</span> <span class="token number">17</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>niengRangCb<span class="token punctuation">.</span>setObjectName<span class="token punctuation">(</span><span class="token string">"niengRangCb"</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>label_3 <span class="token operator">=</span> QtWidgets<span class="token punctuation">.</span>QLabel<span class="token punctuation">(</span>self<span class="token punctuation">.</span>groupBox_2<span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>label_3<span class="token punctuation">.</span>setGeometry<span class="token punctuation">(</span>QtCore<span class="token punctuation">.</span>QRect<span class="token punctuation">(</span><span class="token number">80</span><span class="token punctuation">,</span> <span class="token number">120</span><span class="token punctuation">,</span> <span class="token number">61</span><span class="token punctuation">,</span> <span class="token number">16</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>label_3<span class="token punctuation">.</span>setObjectName<span class="token punctuation">(</span><span class="token string">"label_3"</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>tayTrangCb <span class="token operator">=</span> QtWidgets<span class="token punctuation">.</span>QCheckBox<span class="token punctuation">(</span>self<span class="token punctuation">.</span>groupBox_2<span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>tayTrangCb<span class="token punctuation">.</span>setGeometry<span class="token punctuation">(</span>QtCore<span class="token punctuation">.</span>QRect<span class="token punctuation">(</span><span class="token number">60</span><span class="token punctuation">,</span> <span class="token number">30</span><span class="token punctuation">,</span> <span class="token number">70</span><span class="token punctuation">,</span> <span class="token number">17</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>tayTrangCb<span class="token punctuation">.</span>setObjectName<span class="token punctuation">(</span><span class="token string">"tayTrangCb"</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>nhoRangNum <span class="token operator">=</span> QtWidgets<span class="token punctuation">.</span>QSpinBox<span class="token punctuation">(</span>self<span class="token punctuation">.</span>groupBox_2<span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>nhoRangNum<span class="token punctuation">.</span>setGeometry<span class="token punctuation">(</span>QtCore<span class="token punctuation">.</span>QRect<span class="token punctuation">(</span><span class="token number">170</span><span class="token punctuation">,</span> <span class="token number">90</span><span class="token punctuation">,</span> <span class="token number">42</span><span class="token punctuation">,</span> <span class="token number">22</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>nhoRangNum<span class="token punctuation">.</span>setObjectName<span class="token punctuation">(</span><span class="token string">"nhoRangNum"</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>label_2 <span class="token operator">=</span> QtWidgets<span class="token punctuation">.</span>QLabel<span class="token punctuation">(</span>self<span class="token punctuation">.</span>groupBox_2<span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>label_2<span class="token punctuation">.</span>setGeometry<span class="token punctuation">(</span>QtCore<span class="token punctuation">.</span>QRect<span class="token punctuation">(</span><span class="token number">80</span><span class="token punctuation">,</span> <span class="token number">90</span><span class="token punctuation">,</span> <span class="token number">47</span><span class="token punctuation">,</span> <span class="token number">13</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>label_2<span class="token punctuation">.</span>setObjectName<span class="token punctuation">(</span><span class="token string">"label_2"</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>calcBtn <span class="token operator">=</span> QtWidgets<span class="token punctuation">.</span>QPushButton<span class="token punctuation">(</span>self<span class="token punctuation">.</span>centralwidget<span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>calcBtn<span class="token punctuation">.</span>setGeometry<span class="token punctuation">(</span>QtCore<span class="token punctuation">.</span>QRect<span class="token punctuation">(</span><span class="token number">80</span><span class="token punctuation">,</span> <span class="token number">400</span><span class="token punctuation">,</span> <span class="token number">61</span><span class="token punctuation">,</span> <span class="token number">21</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>calcBtn<span class="token punctuation">.</span>setObjectName<span class="token punctuation">(</span><span class="token string">"calcBtn"</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>total <span class="token operator">=</span> QtWidgets<span class="token punctuation">.</span>QLineEdit<span class="token punctuation">(</span>self<span class="token punctuation">.</span>centralwidget<span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>total<span class="token punctuation">.</span>setGeometry<span class="token punctuation">(</span>QtCore<span class="token punctuation">.</span>QRect<span class="token punctuation">(</span><span class="token number">150</span><span class="token punctuation">,</span> <span class="token number">400</span><span class="token punctuation">,</span> <span class="token number">141</span><span class="token punctuation">,</span> <span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>total<span class="token punctuation">.</span>setObjectName<span class="token punctuation">(</span><span class="token string">"total"</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>label_6 <span class="token operator">=</span> QtWidgets<span class="token punctuation">.</span>QLabel<span class="token punctuation">(</span>self<span class="token punctuation">.</span>centralwidget<span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>label_6<span class="token punctuation">.</span>setGeometry<span class="token punctuation">(</span>QtCore<span class="token punctuation">.</span>QRect<span class="token punctuation">(</span><span class="token number">300</span><span class="token punctuation">,</span> <span class="token number">400</span><span class="token punctuation">,</span> <span class="token number">47</span><span class="token punctuation">,</span> <span class="token number">13</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>label_6<span class="token punctuation">.</span>setObjectName<span class="token punctuation">(</span><span class="token string">"label_6"</span><span class="token punctuation">)</span>
+        MainWindow<span class="token punctuation">.</span>setCentralWidget<span class="token punctuation">(</span>self<span class="token punctuation">.</span>centralwidget<span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>menubar <span class="token operator">=</span> QtWidgets<span class="token punctuation">.</span>QMenuBar<span class="token punctuation">(</span>MainWindow<span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>menubar<span class="token punctuation">.</span>setGeometry<span class="token punctuation">(</span>QtCore<span class="token punctuation">.</span>QRect<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">403</span><span class="token punctuation">,</span> <span class="token number">21</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>menubar<span class="token punctuation">.</span>setObjectName<span class="token punctuation">(</span><span class="token string">"menubar"</span><span class="token punctuation">)</span>
+        MainWindow<span class="token punctuation">.</span>setMenuBar<span class="token punctuation">(</span>self<span class="token punctuation">.</span>menubar<span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>statusbar <span class="token operator">=</span> QtWidgets<span class="token punctuation">.</span>QStatusBar<span class="token punctuation">(</span>MainWindow<span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>statusbar<span class="token punctuation">.</span>setObjectName<span class="token punctuation">(</span><span class="token string">"statusbar"</span><span class="token punctuation">)</span>
+        MainWindow<span class="token punctuation">.</span>setStatusBar<span class="token punctuation">(</span>self<span class="token punctuation">.</span>statusbar<span class="token punctuation">)</span>
+
+        self<span class="token punctuation">.</span>retranslateUi<span class="token punctuation">(</span>MainWindow<span class="token punctuation">)</span>
+        QtCore<span class="token punctuation">.</span>QMetaObject<span class="token punctuation">.</span>connectSlotsByName<span class="token punctuation">(</span>MainWindow<span class="token punctuation">)</span>
+
+    <span class="token keyword">def</span> <span class="token function">retranslateUi</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> MainWindow<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        _translate <span class="token operator">=</span> QtCore<span class="token punctuation">.</span>QCoreApplication<span class="token punctuation">.</span>translate
+        MainWindow<span class="token punctuation">.</span>setWindowTitle<span class="token punctuation">(</span>_translate<span class="token punctuation">(</span><span class="token string">"MainWindow"</span><span class="token punctuation">,</span> <span class="token string">"Ứng dụng tính tiền phòng khám"</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>label<span class="token punctuation">.</span>setText<span class="token punctuation">(</span>_translate<span class="token punctuation">(</span><span class="token string">"MainWindow"</span><span class="token punctuation">,</span> <span class="token string">"ỨNG DỤNG TÍNH TIỀN PHÒNG KHÁM"</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>groupBox<span class="token punctuation">.</span>setTitle<span class="token punctuation">(</span>_translate<span class="token punctuation">(</span><span class="token string">"MainWindow"</span><span class="token punctuation">,</span> <span class="token string">"Thông tin khách hàng"</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>label_5<span class="token punctuation">.</span>setText<span class="token punctuation">(</span>_translate<span class="token punctuation">(</span><span class="token string">"MainWindow"</span><span class="token punctuation">,</span> <span class="token string">"Giới tính"</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>sex<span class="token punctuation">.</span>setItemText<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> _translate<span class="token punctuation">(</span><span class="token string">"MainWindow"</span><span class="token punctuation">,</span> <span class="token string">"Nam"</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>sex<span class="token punctuation">.</span>setItemText<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> _translate<span class="token punctuation">(</span><span class="token string">"MainWindow"</span><span class="token punctuation">,</span> <span class="token string">"Nữ"</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>label_4<span class="token punctuation">.</span>setText<span class="token punctuation">(</span>_translate<span class="token punctuation">(</span><span class="token string">"MainWindow"</span><span class="token punctuation">,</span> <span class="token string">"Họ và tên"</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>groupBox_2<span class="token punctuation">.</span>setTitle<span class="token punctuation">(</span>_translate<span class="token punctuation">(</span><span class="token string">"MainWindow"</span><span class="token punctuation">,</span> <span class="token string">"Dịch vụ"</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>niengRangCb<span class="token punctuation">.</span>setText<span class="token punctuation">(</span>_translate<span class="token punctuation">(</span><span class="token string">"MainWindow"</span><span class="token punctuation">,</span> <span class="token string">"Niềng răng"</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>label_3<span class="token punctuation">.</span>setText<span class="token punctuation">(</span>_translate<span class="token punctuation">(</span><span class="token string">"MainWindow"</span><span class="token punctuation">,</span> <span class="token string">"Trồng răng"</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>tayTrangCb<span class="token punctuation">.</span>setText<span class="token punctuation">(</span>_translate<span class="token punctuation">(</span><span class="token string">"MainWindow"</span><span class="token punctuation">,</span> <span class="token string">"Tẩy trắng"</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>label_2<span class="token punctuation">.</span>setText<span class="token punctuation">(</span>_translate<span class="token punctuation">(</span><span class="token string">"MainWindow"</span><span class="token punctuation">,</span> <span class="token string">"Nhổ răng"</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>calcBtn<span class="token punctuation">.</span>setText<span class="token punctuation">(</span>_translate<span class="token punctuation">(</span><span class="token string">"MainWindow"</span><span class="token punctuation">,</span> <span class="token string">"Tính tổng"</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>label_6<span class="token punctuation">.</span>setText<span class="token punctuation">(</span>_translate<span class="token punctuation">(</span><span class="token string">"MainWindow"</span><span class="token punctuation">,</span> <span class="token string">"vnđ"</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+
+<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">"__main__"</span><span class="token punctuation">:</span>
+    <span class="token keyword">import</span> sys
+    app <span class="token operator">=</span> QtWidgets<span class="token punctuation">.</span>QApplication<span class="token punctuation">(</span>sys<span class="token punctuation">.</span>argv<span class="token punctuation">)</span>
+    app<span class="token punctuation">.</span>setStyle<span class="token punctuation">(</span><span class="token string">"Fusion"</span><span class="token punctuation">)</span>
+    MainWindow <span class="token operator">=</span> QtWidgets<span class="token punctuation">.</span>QMainWindow<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    ui <span class="token operator">=</span> Ui_MainWindow<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    ui<span class="token punctuation">.</span>setupUi<span class="token punctuation">(</span>MainWindow<span class="token punctuation">)</span>
+    MainWindow<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    sys<span class="token punctuation">.</span>exit<span class="token punctuation">(</span>app<span class="token punctuation">.</span>exec_<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+</code></pre>
+<h4>2.2. Xây dựng Back-End.</h4>
+<p>Tiếp theo chúng ra sẽ xây dựng phần xử lí, ở đây chúng ta sẽ xây dựng hàm tính tổng là một function thuộc lớp&nbsp;Ui_MainWindow. Cấu trúc để cài đặt một sự kiện như sau</p>
+<pre class="  language-python"><code class="  language-python"><span class="token keyword">class</span> <span class="token class-name">Ui_MainWindow</span><span class="token punctuation">(</span><span class="token builtin">object</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">setupUi</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> MainWindow<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token triple-quoted-string string">'''
+        Some setup of PyQt5
+        '''</span>
+        <span class="token comment">#Event</span>
+        self<span class="token punctuation">.</span>calcBtn<span class="token punctuation">.</span>clicked<span class="token punctuation">.</span>connect<span class="token punctuation">(</span>self<span class="token punctuation">.</span>calcTotal<span class="token punctuation">)</span>
+    
+    <span class="token keyword">def</span> <span class="token function">calcTotal</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Press button"</span><span class="token punctuation">)</span></code></pre>
+<p>Tất cả các Widget chúng ta sử dụng đều thành thuộc tính của class Ui_MainWindow với tên là objectName chúng ta đã đặt ở Qt Designer (Hoặc bạn củng có thể sửa phần code để đổi tên)</p>
+<p>Vì vậy để gán một function cho sự kiện click ta thêm dòng này cuối method setupUi:</p>
+<pre class="  language-python"><code class="  language-python">self<span class="token punctuation">.</span>calcBtn<span class="token punctuation">.</span>clicked<span class="token punctuation">.</span>connect<span class="token punctuation">(</span>self<span class="token punctuation">.</span>calcTotal<span class="token punctuation">)</span></code></pre>
+<p>Với calcBtn là tên đối tượng nút nhấn và calcTotal là tên hàm xử lí nằm cùng class</p>
+<p>Vì các Widget đều là thuộc tính của class&nbsp;Ui_MainWindow nên ta có thể dễ dàng lấy dữ liệu ra bằng cách:</p>
+<pre class="  language-python"><code class="  language-python">    <span class="token keyword">def</span> <span class="token function">calcTotal</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Press button"</span><span class="token punctuation">)</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Fullname:"</span><span class="token punctuation">,</span> self<span class="token punctuation">.</span>fullname<span class="token punctuation">.</span>text<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Sex:"</span><span class="token punctuation">,</span> self<span class="token punctuation">.</span>sex<span class="token punctuation">.</span>currentText<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Co tay rang?"</span><span class="token punctuation">,</span> self<span class="token punctuation">.</span>tayTrangCb<span class="token punctuation">.</span>checkState<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Co nieng rang?"</span><span class="token punctuation">,</span> self<span class="token punctuation">.</span>niengRangCb<span class="token punctuation">.</span>checkState<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Trong rang:"</span><span class="token punctuation">,</span> self<span class="token punctuation">.</span>trongRangNum<span class="token punctuation">.</span>text<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Nho rang:"</span><span class="token punctuation">,</span> self<span class="token punctuation">.</span>nhoRangNum<span class="token punctuation">.</span>text<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span></code></pre>
+<p>Và đây là kết quả</p>
+<p><img width="1075" height="608" alt="" src="./Tạo Ứng Dụng Desktop Đơn Giản Với Python_files/code3.PNG" style="display: block; margin-left: auto; margin-right: auto;"></p>
+<p>Công việc cuối cùng là tính chi phí và show lên giao diện, việc xử lí khá đơn giản nên mọi người tham khảo thử nhé</p>
+<pre class="  language-python"><code class="  language-python">    <span class="token keyword">def</span> <span class="token function">calcTotal</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        prices <span class="token operator">=</span> <span class="token punctuation">{</span>
+            <span class="token string">"tayTrang"</span><span class="token punctuation">:</span> <span class="token number">100000</span><span class="token punctuation">,</span>
+            <span class="token string">"niengRang"</span><span class="token punctuation">:</span> <span class="token number">200000</span><span class="token punctuation">,</span>
+            <span class="token string">"nhoRang"</span><span class="token punctuation">:</span> <span class="token number">50000</span><span class="token punctuation">,</span>
+            <span class="token string">"trongRang"</span><span class="token punctuation">:</span> <span class="token number">500000</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span>
+        <span class="token builtin">sum</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token number">0</span> <span class="token keyword">if</span> self<span class="token punctuation">.</span>tayTrangCb<span class="token punctuation">.</span>checkState<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token number">0</span> <span class="token keyword">else</span> prices<span class="token punctuation">[</span><span class="token string">"tayTrang"</span><span class="token punctuation">]</span><span class="token punctuation">)</span> \
+            <span class="token operator">+</span> <span class="token punctuation">(</span><span class="token number">0</span> <span class="token keyword">if</span> self<span class="token punctuation">.</span>niengRangCb<span class="token punctuation">.</span>checkState<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token number">0</span> <span class="token keyword">else</span> prices<span class="token punctuation">[</span><span class="token string">"niengRang"</span><span class="token punctuation">]</span><span class="token punctuation">)</span> \
+            <span class="token operator">+</span> <span class="token builtin">int</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>nhoRangNum<span class="token punctuation">.</span>text<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">*</span> prices<span class="token punctuation">[</span><span class="token string">"nhoRang"</span><span class="token punctuation">]</span> \
+            <span class="token operator">+</span> <span class="token builtin">int</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>trongRangNum<span class="token punctuation">.</span>text<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">*</span> prices<span class="token punctuation">[</span><span class="token string">"trongRang"</span><span class="token punctuation">]</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">sum</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>total<span class="token punctuation">.</span>setText<span class="token punctuation">(</span><span class="token builtin">str</span><span class="token punctuation">(</span><span class="token builtin">sum</span><span class="token punctuation">)</span><span class="token punctuation">)</span></code></pre>
+<p>Công việc của chúng ta đơn giản là lấy số lượng hoặc kiểm tra checkBox, sau đó là nhân với đơn giá</p>
+<p>Mình sẽ hiển thị nội dung lên textEdit bằng phương thức setText() như trên.</p>
+<p>Để tăng phần sinh động mình sẽ hiện lên một thông báo chi phí bằng Widget QMessageBox nhé</p>
+<pre class="  language-python"><code class="  language-python">        msg <span class="token operator">=</span> QtWidgets<span class="token punctuation">.</span>QMessageBox<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        msg<span class="token punctuation">.</span>setIcon<span class="token punctuation">(</span>QtWidgets<span class="token punctuation">.</span>QMessageBox<span class="token punctuation">.</span>Information<span class="token punctuation">)</span>
+        msg<span class="token punctuation">.</span>setText<span class="token punctuation">(</span><span class="token string">"Chào {} {}!"</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span><span class="token string">"Ông"</span> <span class="token keyword">if</span> self<span class="token punctuation">.</span>sex<span class="token punctuation">.</span>currentText<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token string">"Nam"</span> <span class="token keyword">else</span> <span class="token string">"Bà"</span><span class="token punctuation">,</span> self<span class="token punctuation">.</span>fullname<span class="token punctuation">.</span>text<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        msg<span class="token punctuation">.</span>setInformativeText<span class="token punctuation">(</span><span class="token string">" Tổng chi phí là {}vnđ"</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span><span class="token builtin">str</span><span class="token punctuation">(</span><span class="token builtin">sum</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        msg<span class="token punctuation">.</span>setWindowTitle<span class="token punctuation">(</span><span class="token string">"Chi phí"</span><span class="token punctuation">)</span>
+        msg<span class="token punctuation">.</span>exec_<span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
+<p>Cuối cùng là tận hưởng ứng dụng Desktop đầu tiên viết bằng Python nào:</p>
+<p><img width="1093" height="649" alt="" src="./Tạo Ứng Dụng Desktop Đơn Giản Với Python_files/code2.PNG" style="display: block; margin-left: auto; margin-right: auto;"></p>
+<h3>Tạm kết</h3>
+<p>Vì đây là một chương trình python nên bắt buộc bạn phải cài đặt python và vào chạy chương trình. Trong bài viết sau mình sẽ hướng dẫn các bạn chuyển một đoạn code.py sang .exe để thực thi ở mọi nơi nhé. Cảm ơn mọi người đã xem bài. See you next time &lt;3</p>
+<p>Link full code:&nbsp;<a href="https://github.com/huytuong010101/pyQt5UngDungTinhTien.git" target="_blank" rel="noopener" title="a link">source code</a></p>
+</div>
+</div>
+</div>
+</div>
+<div class="row sharing">
+<div class="col-sm-8 text-left tag-lists">
+<a href="https://codelearn.io/sharing/tags/python" class="tag-list" title="python">python</a>
+<a href="https://codelearn.io/sharing/tags/pyqt5" class="tag-list" title="pyqt5">pyqt5</a>
+<a href="https://codelearn.io/sharing/tags/tutorial" class="tag-list" title="tutorial">tutorial</a>
+<a href="https://codelearn.io/sharing/tags/hoc-lap-trinh" class="tag-list" title="hoc-lap-trinh">hoc-lap-trinh</a>
+</div>
+<div class="col-sm-4 text-right share">
+<div class="fb-share-button fb_iframe_widget" data-layout="button" data-size="small" fb-xfbml-state="rendered" fb-iframe-plugin-query="app_id=540883753774783&amp;container_width=0&amp;href=https%3A%2F%2Fcodelearn.io%2Fsharing%2Ftao-ung-dung-desktop-voi-python&amp;layout=button&amp;locale=en_US&amp;sdk=joey&amp;size=small"><span style="vertical-align: bottom; width: 67px; height: 20px;"><iframe name="f3b908cd16e050c" width="1000px" height="1000px" data-testid="fb:share_button Facebook Social Plugin" title="fb:share_button Facebook Social Plugin" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" src="./Tạo Ứng Dụng Desktop Đơn Giản Với Python_files/share_button.html" style="border: none; visibility: visible; width: 67px; height: 20px;" class=""></iframe></span></div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-12">
+<div class="comment-area">
+<div class="user-rating">
+<div id="star-rating" class="star-rating rate-block">
+<span class="avg-rate" style="width:100.0%"></span>
+<span class="vote-rate">
+<span title="Please login to rate this post." value="1" class="star"><i class="icon cl-icon-star star"></i></span>
+<span title="Please login to rate this post." value="2" class="star"><i class="icon cl-icon-star star"></i></span>
+<span title="Please login to rate this post." value="3" class="star"><i class="icon cl-icon-star star"></i></span>
+<span title="Please login to rate this post." value="4" class="star"><i class="icon cl-icon-star star"></i></span>
+<span title="Please login to rate this post." value="5" class="star"><i class="icon cl-icon-star star"></i></span>
+</span>
+</div>
+<span id="container-rate" class="">
+<span id="average-rate">5.0</span> (<span id="total-rating">6</span> votes)
+</span>
+</div>
+<a href="javascript:void(0)" data-toggle="modal" data-target="#loginModal" onclick="openModal(&#39;login&#39;)" class="not-auth">Please login to comment</a>
+<div id="container-comment">
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="related-items">
+<b class="related">Related posts</b>
+<div id="related-items" class="list">
+<div class="item">
+<div class="row">
+<div class="col-sm-3 image">
+<a href="https://codelearn.io/sharing/5-ung-dung-tuyet-voi-cua-python">
+<img src="./Tạo Ứng Dụng Desktop Đơn Giản Với Python_files/5-ung-dung-tuyet-voi-cua-python-63776970086.7931.jpg" alt="5 Ứng Dụng Tuyệt Vời Của Python Có Thể Bạn Chưa Biết">
+</a>
+</div>
+<div class="col-sm-9 info">
+<div class="top">
+<h3>
+<a title="5 Ứng Dụng Tuyệt Vời Của Python Có Thể Bạn Chưa Biết" href="https://codelearn.io/sharing/5-ung-dung-tuyet-voi-cua-python">5 Ứng Dụng Tuyệt Vời Của Python Có Thể Bạn Chưa Biết</a>
+</h3>
+<div class="user-rating pull-right">
+<div class="user-rating">
+<span class="star-rating"><span style="width:74.0%"></span></span>
+</div>
+</div>
+<p>Python không chỉ dành cho Khoa học Dữ liệu và web backends - Bạn có thể làm được nhiều hơn thế!</p>
+</div>
+<div class="bottom">
+<div class="row tag-list">
+<div class="col-md-12 tag-scroll">
+<span><a href="https://codelearn.io/sharing/tags/python">python</a></span>
+<span><a href="https://codelearn.io/sharing/tags/programminglanguage">programminglanguage</a></span>
+</div>
+</div>
+<div class="author">
+<span>Author:</span>
+<a title="Phanhtrinh" href="https://codelearn.io/profile/600133">
+<span class="author-name">Phanhtrinh</span>
+</a>
+<span class="time-icon"><i class="cl-icon-circle"></i></span>
+<span class="time">2022-01-05</span>
+<span class="time-icon"><i class="cl-icon-circle"></i></span>
+<span class="comment-icon"><i class="cl-icon-eye"></i></span>
+<span class="comment-text total-view">5957</span>
+<span class="comment-icon"><i class="cl-icon-share-alt"></i></span>
+<span class="comment-text">0</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="item">
+<div class="row">
+<div class="col-sm-3 image">
+<a href="https://codelearn.io/sharing/2022-hoc-ngon-ngu-gi">
+<img src="./Tạo Ứng Dụng Desktop Đơn Giản Với Python_files/2022-hoc-ngon-ngu-gi-63774557223.8662.jpg" alt="2022 Học Ngôn Ngữ Gì Để Thành Công - Tài Khoản Nhiều Số 0?">
+</a>
+</div>
+<div class="col-sm-9 info">
+<div class="top">
+<h3>
+<a title="2022 Học Ngôn Ngữ Gì Để Thành Công - Tài Khoản Nhiều Số 0?" href="https://codelearn.io/sharing/2022-hoc-ngon-ngu-gi">2022 Học Ngôn Ngữ Gì Để Thành Công - Tài Khoản Nhiều Số 0?</a>
+</h3>
+<div class="user-rating pull-right">
+<div class="user-rating">
+<span class="star-rating"><span style="width:98.0%"></span></span>
+</div>
+</div>
+<p>Vèo cái lại hết 1 năm, và anh em ta lại ngồi ngẫm xem sang năm làm gì y như cái tầm này năm ngoái. Năm mới thì thích hợp để bắt đầu vài ba thứ mới, mà với dân lập trình thì học ngôn ngữ mới là điều đáng để thử nhất này.</p>
+</div>
+<div class="bottom">
+<div class="row tag-list">
+<div class="col-md-12 tag-scroll">
+<span><a href="https://codelearn.io/sharing/tags/language">language</a></span>
+<span><a href="https://codelearn.io/sharing/tags/python">python</a></span>
+<span><a href="https://codelearn.io/sharing/tags/golang">golang</a></span>
+<span><a href="https://codelearn.io/sharing/tags/kotlin">kotlin</a></span>
+<span><a href="https://codelearn.io/sharing/tags/javascript">javascript</a></span>
+<span><a href="https://codelearn.io/sharing/tags/scala">scala</a></span>
+</div>
+</div>
+<div class="author">
+<span>Author:</span>
+<a title="Phanhtrinh" href="https://codelearn.io/profile/600133">
+<span class="author-name">Phanhtrinh</span>
+</a>
+<span class="time-icon"><i class="cl-icon-circle"></i></span>
+<span class="time">2021-12-08</span>
+<span class="time-icon"><i class="cl-icon-circle"></i></span>
+<span class="comment-icon"><i class="cl-icon-eye"></i></span>
+<span class="comment-text total-view">4896</span>
+<span class="comment-icon"><i class="cl-icon-share-alt"></i></span>
+<span class="comment-text">0</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="item">
+<div class="row">
+<div class="col-sm-3 image">
+<a href="https://codelearn.io/sharing/boxing-unboxing-csharp">
+<img src="./Tạo Ứng Dụng Desktop Đơn Giản Với Python_files/boxing-unboxing-csharp-63767722490.8815.jpg" alt="Hãy Hạn Chế Dùng Boxing Và Unboxing Trong C#">
+</a>
+</div>
+<div class="col-sm-9 info">
+<div class="top">
+<h3>
+<a title="Hãy Hạn Chế Dùng Boxing Và Unboxing Trong C#" href="https://codelearn.io/sharing/boxing-unboxing-csharp">Hãy Hạn Chế Dùng Boxing Và Unboxing Trong C#</a>
+</h3>
+<div class="user-rating pull-right">
+<div class="user-rating">
+<span class="star-rating"><span style="width:100.0%"></span></span>
+</div>
+</div>
+<p>Khi làm việc với C#, vấn đề sẽ xảy ra khi bạn dùng các collection này để lưu trữ kiểu dữ liệu nguyên thủy(int, double,...) vì khi đó sẽ xảy ra quá trình boxing/unboxing.</p>
+</div>
+<div class="bottom">
+<div class="row tag-list">
+<div class="col-md-12 tag-scroll">
+<span><a href="https://codelearn.io/sharing/tags/c%23">c#</a></span>
+<span><a href="https://codelearn.io/sharing/tags/oop">oop</a></span>
+<span><a href="https://codelearn.io/sharing/tags/boxing">boxing</a></span>
+<span><a href="https://codelearn.io/sharing/tags/unboxing">unboxing</a></span>
+<span><a href="https://codelearn.io/sharing/tags/tutorial">tutorial</a></span>
+</div>
+</div>
+<div class="author">
+<span>Author:</span>
+<a title="baduyflex" href="https://codelearn.io/profile/1346015">
+<span class="author-name">baduyflex</span>
+</a>
+<span class="time-icon"><i class="cl-icon-circle"></i></span>
+<span class="time">2021-09-21</span>
+<span class="time-icon"><i class="cl-icon-circle"></i></span>
+<span class="comment-icon"><i class="cl-icon-eye"></i></span>
+<span class="comment-text total-view">3140</span>
+<span class="comment-icon"><i class="cl-icon-share-alt"></i></span>
+<span class="comment-text">0</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="item">
+<div class="row">
+<div class="col-sm-3 image">
+<a href="https://codelearn.io/sharing/giai-ma-loi-goi-ham-stdsort-trong-cpp">
+<img src="./Tạo Ứng Dụng Desktop Đơn Giản Với Python_files/introsort-63764178069.3743.jpg" alt="Giải Mã Lời Gọi Hàm std::sort() Trong C++">
+</a>
+</div>
+<div class="col-sm-9 info">
+<div class="top">
+<h3>
+<a title="Giải Mã Lời Gọi Hàm std::sort() Trong C++" href="https://codelearn.io/sharing/giai-ma-loi-goi-ham-stdsort-trong-cpp">Giải Mã Lời Gọi Hàm std::sort() Trong C++</a>
+</h3>
+<div class="user-rating pull-right">
+<div class="user-rating">
+<span class="star-rating"><span style="width:100.0%"></span></span>
+</div>
+</div>
+<p>Bài viết nói về thuật toán Intro Sort - thuật toán được sử dụng trong thư viện chuẩn STL trong C++.</p>
+</div>
+<div class="bottom">
+<div class="row tag-list">
+<div class="col-md-12 tag-scroll">
+<span><a href="https://codelearn.io/sharing/tags/sort">sort</a></span>
+<span><a href="https://codelearn.io/sharing/tags/algorithm">algorithm</a></span>
+<span><a href="https://codelearn.io/sharing/tags/introsort">introsort</a></span>
+<span><a href="https://codelearn.io/sharing/tags/vector">vector</a></span>
+<span><a href="https://codelearn.io/sharing/tags/tutorial">tutorial</a></span>
+</div>
+</div>
+<div class="author">
+<span>Author:</span>
+<a title="HaiDuc0147" href="https://codelearn.io/profile/685526">
+<span class="author-name">HaiDuc0147</span>
+</a>
+<span class="time-icon"><i class="cl-icon-circle"></i></span>
+<span class="time">2021-09-07</span>
+<span class="time-icon"><i class="cl-icon-circle"></i></span>
+<span class="comment-icon"><i class="cl-icon-eye"></i></span>
+<span class="comment-text total-view">5437</span>
+<span class="comment-icon"><i class="cl-icon-share-alt"></i></span>
+<span class="comment-text">0</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="item">
+<div class="row">
+<div class="col-sm-3 image">
+<a href="https://codelearn.io/sharing/tat-tan-tat-ve-block-cipher">
+<img src="./Tạo Ứng Dụng Desktop Đơn Giản Với Python_files/block-cipher-tong-quan-63765409132.3946.jpg" alt="Tất Tần Tật Về Block Cipher">
+</a>
+</div>
+<div class="col-sm-9 info">
+<div class="top">
+<h3>
+<a title="Tất Tần Tật Về Block Cipher" href="https://codelearn.io/sharing/tat-tan-tat-ve-block-cipher">Tất Tần Tật Về Block Cipher</a>
+</h3>
+<div class="user-rating pull-right">
+<div class="user-rating">
+<span class="star-rating"><span style="width:100.0%"></span></span>
+</div>
+</div>
+<p>Sơ lược về lớp hệ thống crypto block cipher - một lớp hệ thống thông dụng hơn stream cipher ngày nay.</p>
+</div>
+<div class="bottom">
+<div class="row tag-list">
+<div class="col-md-12 tag-scroll">
+<span><a href="https://codelearn.io/sharing/tags/crypto">crypto</a></span>
+<span><a href="https://codelearn.io/sharing/tags/tutorial">tutorial</a></span>
+<span><a href="https://codelearn.io/sharing/tags/codelearn">codelearn</a></span>
+</div>
+</div>
+<div class="author">
+<span>Author:</span>
+<a title="markhermy3100" href="https://codelearn.io/profile/741957">
+<span class="author-name">markhermy3100</span>
+</a>
+<span class="time-icon"><i class="cl-icon-circle"></i></span>
+<span class="time">2021-08-26</span>
+<span class="time-icon"><i class="cl-icon-circle"></i></span>
+<span class="comment-icon"><i class="cl-icon-eye"></i></span>
+<span class="comment-text total-view">1736</span>
+<span class="comment-icon"><i class="cl-icon-share-alt"></i></span>
+<span class="comment-text">0</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-3 sidebar">
+<div class="block author-info">
+<h3>Author</h3>
+<div class="author">
+<div class="avatar">
+<img id="owner-level-avatar" class="level-avatar" src="./Tạo Ứng Dụng Desktop Đơn Giản Với Python_files/User-10.svg">
+<img id="owner-user-avatar" class="user-avatar" src="./Tạo Ứng Dụng Desktop Đơn Giản Với Python_files/ff163ba7c392419087babd0683c47ae2.jpg">
+</div>
+<div class="user-name">
+<a id="owner" href="https://codelearn.io/profile/148990" title="huytuong010101">huytuong010101</a>
+</div>
+<p id="company-owner"> - </p>
+<div>
+<a href="https://codelearn.io/sharing/post/huytuong010101" id="total-post" class="total-post">3 posts</a> |
+<span id="total-follow">6</span> <span class="follower-text">followers</span>
+</div>
+<div>
+<button id="follow" value="0" type="button" class="btn btn-info not-allowed" title="Please login to follow this author."><i class="cl-icon-rss"></i> Follow</button>
+</div>
+<ul id="achievement-owner"></ul>
+<span id="more-achievement" class="hide">See more</span>
+<div class="social-network">
+<a id="facebook" target="_blank" href="https://www.facebook.com/huytuong010101" class=""><i class="cl-icon-facebook-f"></i></a>
+<a id="twitter" href="javaScript:void(0)" class="not-allowed"><i class="cl-icon-twitter-full"></i></a>
+<a id="linkedIn" href="javaScript:void(0)" class="not-allowed"><i class="cl-icon-linkedin"></i></a>
+</div>
+</div>
+</div>
+<div class="block related-owner">
+<h3>Written by same author</h3>
+<div class="list-items">
+<div class="item">
+<a href="https://codelearn.io/sharing/thuat-toan-k-nearest-neighbors-knn" title="Thuật Toán K-Nearest Neighbors (KNN) Siêu Cơ Bản"><img src="./Tạo Ứng Dụng Desktop Đơn Giản Với Python_files/thuat-toan-knn-qua-vi-du-63732823036.1851.jpg" alt="Thuật Toán K-Nearest Neighbors (KNN) Siêu Cơ Bản"></a>
+<a title="Thuật Toán K-Nearest Neighbors (KNN) Siêu Cơ Bản" href="https://codelearn.io/sharing/thuat-toan-k-nearest-neighbors-knn">Thuật Toán K-Nearest Neighbors (KNN) Siêu Cơ Bản</a>
+</div>
+<div class="item">
+<a href="https://codelearn.io/sharing/python-crawl-du-lieu-tao-bai-bao-nhanh" title="Cùng Python Crawl Dữ Liệu Để Tạo Bài Báo Nhanh"><img src="./Tạo Ứng Dụng Desktop Đơn Giản Với Python_files/python-cao-du-lieu-tin-tuc-63727026131.4187.jpg" alt="Cùng Python Crawl Dữ Liệu Để Tạo Bài Báo Nhanh"></a>
+<a title="Cùng Python Crawl Dữ Liệu Để Tạo Bài Báo Nhanh" href="https://codelearn.io/sharing/python-crawl-du-lieu-tao-bai-bao-nhanh">Cùng Python Crawl Dữ Liệu Để Tạo Bài Báo Nhanh</a>
+</div>
+</div>
+</div>
+
+<div class="block new-posts">
+<h3>Top reads</h3>
+<div id="list-items" class="list-items">
+<div class="item">
+<a title="Kiến Thức Cơ Bản Cần Nắm Khi Bắt Đầu Học C++" href="https://codelearn.io/sharing/kien-thuc-co-ban-khi-bat-dau-hoc-cpp">Kiến Thức Cơ Bản Cần Nắm Khi Bắt Đầu Học C++</a>
+</div>
+<div class="item">
+<a title="Hướng Dẫn Cài Đặt Visual Studio Code Lập Trình C++" href="https://codelearn.io/sharing/huong-dan-cai-dat-visual-studio-code-lap-trinh-cpp">Hướng Dẫn Cài Đặt Visual Studio Code Lập Trình C++</a>
+</div>
+<div class="item">
+<a title="Độ Phức Tạp Của Thuật Toán Và Lựa Chọn Cách Giải Thuật" href="https://codelearn.io/sharing/do-phuc-tap-cua-thuat-toan-va-lua-chon-cach-giai-thuat">Độ Phức Tạp Của Thuật Toán Và Lựa Chọn Cách Giải Thuật</a>
+</div>
+<div class="item">
+<a title="Lộ Trình Học Cấu Trúc Dữ Liệu Và Giải Thuật (Phần 1)" href="https://codelearn.io/sharing/lo-trinh-hoc-cau-truc-du-lieu-va-giai-thuat-phan-1">Lộ Trình Học Cấu Trúc Dữ Liệu Và Giải Thuật (Phần 1)</a>
+</div>
+<div class="item">
+<a title="Thuật toán là gì? Học thuật toán làm quái gì?" href="https://codelearn.io/sharing/thuat-toan-la-gi-hoc-thuat-toan-lam-quai-gi">Thuật toán là gì? Học thuật toán làm quái gì?</a>
+</div>
+</div>
+</div>
+<div class="block top-authors">
+<h3>Top authors</h3>
+<div id="list-user" class="list-user">
+<div class="row item">			            <div class="col-sm-3 avatar">				            <a href="https://codelearn.io/profile/415342">					            <img class="level-avatar" src="./Tạo Ứng Dụng Desktop Đơn Giản Với Python_files/User-01.svg">					            <img class="user-avatar" src="./Tạo Ứng Dụng Desktop Đơn Giản Với Python_files/3afd508df34a4b9595e048d09d1e0306.jpg">				            </a>			            </div>			            <div class="col-sm-9 user-name">				            <a title="T_Flower" href="https://codelearn.io/profile/415342">T_Flower</a>			            </div>		             </div><div class="row item">			            <div class="col-sm-3 avatar">				            <a href="https://codelearn.io/profile/3305">					            <img class="level-avatar" src="./Tạo Ứng Dụng Desktop Đơn Giản Với Python_files/User-17.svg">					            <img class="user-avatar" src="./Tạo Ứng Dụng Desktop Đơn Giản Với Python_files/e1907b3b49a84df1927e3b686d9324f2.jpg">				            </a>			            </div>			            <div class="col-sm-9 user-name">				            <a title="3ron" href="https://codelearn.io/profile/3305">3ron</a>			            </div>		             </div><div class="row item">			            <div class="col-sm-3 avatar">				            <a href="https://codelearn.io/profile/600133">					            <img class="level-avatar" src="./Tạo Ứng Dụng Desktop Đơn Giản Với Python_files/User-02.svg">					            <img class="user-avatar" src="./Tạo Ứng Dụng Desktop Đơn Giản Với Python_files/ceb1da45691c4ea8ac68ed4e98196893.jpg">				            </a>			            </div>			            <div class="col-sm-9 user-name">				            <a title="Phanhtrinh" href="https://codelearn.io/profile/600133">Phanhtrinh</a>			            </div>		             </div><div class="row item">			            <div class="col-sm-3 avatar">				            <a href="https://codelearn.io/profile/934495">					            <img class="level-avatar" src="./Tạo Ứng Dụng Desktop Đơn Giản Với Python_files/User-02.svg">					            <img class="user-avatar" src="./Tạo Ứng Dụng Desktop Đơn Giản Với Python_files/39d1cb5bbee141b4ac5862f1013c59cf.jpg">				            </a>			            </div>			            <div class="col-sm-9 user-name">				            <a title="Quangvinh1986" href="https://codelearn.io/profile/934495">Quangvinh1986</a>			            </div>		             </div><div class="row item">			            <div class="col-sm-3 avatar">				            <a href="https://codelearn.io/profile/3410">					            <img class="level-avatar" src="./Tạo Ứng Dụng Desktop Đơn Giản Với Python_files/User-11.svg">					            <img class="user-avatar" src="./Tạo Ứng Dụng Desktop Đơn Giản Với Python_files/8c8a595891d647edacd68413999a2a94.jpg">				            </a>			            </div>			            <div class="col-sm-9 user-name">				            <a title="vietcv" href="https://codelearn.io/profile/3410">vietcv</a>			            </div>		             </div></div>
+</div>
+<div class="block hashtag">
+<h3>Hashtag</h3>
+<div id="tag-list" class="tag-list">
+<span><a href="https://codelearn.io/sharing/tags/python">python</a></span>
+<span><a href="https://codelearn.io/sharing/tags/tutorial">tutorial</a></span>
+<span><a href="https://codelearn.io/sharing/tags/hoc-lap-trinh">hoc-lap-trinh</a></span>
+<span><a href="https://codelearn.io/sharing/tags/pyqt5">pyqt5</a></span>
+</div>
+</div>
+<div class="block">
+<div class="fb-page fb_iframe_widget" data-href="https://www.facebook.com/CodeLearnFanpage" data-tabs="timeline" data-width="" data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true" fb-xfbml-state="rendered" fb-iframe-plugin-query="adapt_container_width=true&amp;app_id=540883753774783&amp;container_width=0&amp;hide_cover=false&amp;href=https%3A%2F%2Fwww.facebook.com%2FCodeLearnFanpage&amp;locale=en_US&amp;sdk=joey&amp;show_facepile=true&amp;small_header=false&amp;tabs=timeline&amp;width="><span style="vertical-align: bottom; width: 340px; height: 500px;"><iframe name="f3d18b4a842624" width="1000px" height="1000px" data-testid="fb:page Facebook Social Plugin" title="fb:page Facebook Social Plugin" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" src="./Tạo Ứng Dụng Desktop Đơn Giản Với Python_files/page.html" style="border: none; visibility: visible; width: 340px; height: 500px;" class=""></iframe></span></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</main>
+<footer id="footer" class="group codecamp-footer">
+<div class="zone zone-footer">
+<div class=" main-footer">
+<div class="container">
+<div class="row">
+<div class="col-xs-12 col-md-6 introduction footer-column">
+<div class="logo-codelearn">
+<img src="./Tạo Ứng Dụng Desktop Đơn Giản Với Python_files/codelearn-logo.svg" alt="CodeLearn">
+</div>
+<p>
+CodeLearn is an online platform that helps users to learn, practice coding skills and join the online coding contests.
+</p>
+<a href="https://www.facebook.com/CodeLearnFanpage" title="Facebook" target="_blank" class="social-button">
+<i class="cl-icon-facebook-f"></i>
+</a>
+<a href="https://www.youtube.com/channel/UCpt3dSDGk5fC7uU9OeFG5ig" title="Youtube" target="_blank" class="social-button">
+<i class="cl-icon-youtube"></i>
+</a>
+<a href="https://twitter.com/codelearn_io" title="Twitter" target="_blank" class="social-button">
+<i class="cl-icon-twitter-full"></i>
+</a>
+<a href="https://www.instagram.com/codelearn.io/" title="Instagram" target="_blank" class="social-button">
+<i class="cl-icon-instagram"></i>
+</a>
+</div>
+<div class="col-xs-12 col-sm-4 col-md-2 links footer-column">
+<h4>Links</h4>
+<p><a href="https://codelearn.io/learning" class="link-menu" title="Learning">Learning</a></p>
+<p><a href="https://codelearn.io/training" class="link-menu" title="Training">Training</a></p>
+<p><a href="https://codelearn.io/fights" class="link-menu" title="Fights">Fights</a></p>
+<p><a href="https://codelearn.io/game/index" class="link-menu" title="Game">Game</a></p>
+</div>
+<div class="col-xs-12 col-sm-4 col-md-2 about footer-column">
+<h4>Information</h4>
+<p><a href="https://codelearn.io/aboutus" title="About Us">About Us</a></p>
+<p><a href="https://codelearn.io/terms" title="Terms of Use">Terms of Use</a></p>
+</div>
+<div class="col-xs-12 col-sm-4 col-md-2 help footer-column">
+<h4>Help</h4>
+<p><a href="https://codelearn.io/help" title="Help">Help</a></p>
+<p><a href="https://codelearn.io/discussion" title="Discussion">Discussion</a></p>
+<p><a href="mailto:support@codelearn.io" title="Contact us">Contact us</a></p>
+</div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 right-reserved">
+<span class="powerby">
+<img src="./Tạo Ứng Dụng Desktop Đơn Giản Với Python_files/logo-fpt-footer.svg" alt="Fpt software" class="fpt-logo">
+Powered by <a href="https://codelearn.io/">CodeLearn</a>
+</span>
+<span class="copyright">© 2023.</span>
+<span>All Rights Reserved. rev 11/12/2022 11:15:47 AM</span>
+</div>
+</div>
+</footer>
+<script src="./Tạo Ứng Dụng Desktop Đơn Giản Với Python_files/prism.js.download" type="text/javascript"></script>
+<script src="./Tạo Ứng Dụng Desktop Đơn Giản Với Python_files/detail.min.js.download" type="text/javascript"></script>
+<script src="./Tạo Ứng Dụng Desktop Đơn Giản Với Python_files/comment.min.js.download" type="text/javascript"></script>
+<script type="text/javascript">
+        var loadCommentsTrigger = {};
+
+        $(function () {
+            if (userId > 0) {
+                $.UseCommentModule({
+                containerSelector: "#container-comment",
+                        headerCountSelector: "#total-comments-count",
+                        contentId: 2225005,
+                        loadCommentsUri: "CodeCamp/Comment/GetComments",
+                        postCommentUri: "CodeCamp/Comment/PostComment",
+                        trigger: loadCommentsTrigger,
+                        postLikeCommentUri: "/Discussion/LikeCommentUri",
+                });
+            }
+        });
+    </script>
+<script type="application/ld+json">
+            {
+            "@context": "https://schema.org/",
+            "@type": "CreativeWorkSeries",
+            "name": "Tạo Ứng Dụng Desktop Đơn Giản Với Python",
+            "image": "/Upload/Blog/tao-ung-dung-desktop-voi-python-63730456690.8074.jpg",
+            "url": "https://codelearn.io/sharing/tao-ung-dung-desktop-voi-python",
+            "description": "Bài viết này chúng ta sẽ cùng đi xây dựng một ứng dụng Desktop trên ngôn ngữ Python và giao diện xịn xò không kém những công nghệ của C# hay Java nhé.",
+            "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue" : "5.0",
+            "ratingCount" : "6",
+            "worstRating":  3,
+            "bestRating": 5
+            }
+            }
+        </script>
+<script async="" defer="" crossorigin="anonymous" src="./Tạo Ứng Dụng Desktop Đơn Giản Với Python_files/sdk.js.download"></script>
+
+<div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; width: 0px; height: 0px;"><div></div></div><div class=" fb_iframe_widget fb_invisible_flow" fb-iframe-plugin-query="app_id=540883753774783&amp;attribution=setup_tool&amp;container_width=1912&amp;current_url=https%3A%2F%2Fcodelearn.io%2Fsharing%2Ftao-ung-dung-desktop-voi-python&amp;greeting_dialog_display=hide&amp;is_loaded_by_facade=true&amp;local_state=%7B%22v%22%3A1%2C%22path%22%3A5%2C%22chatState%22%3A1%2C%22visibility%22%3A%22not-hidden%22%2C%22showUpgradePrompt%22%3A%22not_shown%22%2C%22greetingVisibility%22%3A%22hidden%22%7D&amp;locale=en_US&amp;log_id=45971dcf-ce3c-4ee1-a765-3dc0707579e7&amp;page_id=2254662768188202&amp;request_time=1686147427960&amp;sdk=joey"><span style="vertical-align: bottom; width: 1000px; height: 0px;"><iframe name="f109eb03a3b4dd4" width="1000px" height="1000px" data-testid="dialog_iframe" title="" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" src="./Tạo Ứng Dụng Desktop Đơn Giản Với Python_files/customerchat.html" style="padding: 0px; position: fixed; z-index: 2147483646; border-radius: 16px; top: auto; width: 247px; max-height: calc(100% - 80px); background: none; bottom: 96px; right: 6px; margin-right: 12px; animation: 6s ease-out 0s 1 normal none running slideInFromBottomDelay; visibility: visible; opacity: 1; overflow: visible; height: 50px;" class="" id="_no-clickjacking-0"></iframe></span></div><div class="fb_dialog  fb_dialog_advanced" alignment="right" desktop_bottom_spacing="24"><div class="fb_dialog_content"><iframe name="blank_f109eb03a3b4dd4" width="60px" tabindex="-1" data-testid="bubble_iframe" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" src="./Tạo Ứng Dụng Desktop Đơn Giản Với Python_files/bubble.html" style="background: none; border-radius: 60px; bottom: 24px; box-shadow: rgba(0, 0, 0, 0.15) 0px 4px 12px 0px; display: block; height: 60px; margin: 0px 12px; overflow: visible; padding: 0px; position: fixed; right: 12px; top: auto; width: 60px; z-index: 2147483644;"></iframe><iframe name="availabilityStatus_f109eb03a3b4dd4" tabindex="-1" data-testid="availabilityStatus_iframe" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" src="./Tạo Ứng Dụng Desktop Đơn Giản Với Python_files/bubble(1).html" style="border-radius: 50%; bottom: 21.5px; height: 15px; position: fixed; right: 24px; width: 15px; z-index: 2147483646;"></iframe><iframe name="unread_f109eb03a3b4dd4" tabindex="-1" data-testid="unread_iframe" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" src="./Tạo Ứng Dụng Desktop Đơn Giản Với Python_files/bubble(2).html" style="background: none; border-radius: 4pt; bottom: 68px; height: 24px; position: fixed; right: 22px; width: 20px; z-index: 2147483645;"></iframe><iframe name="greeting_f109eb03a3b4dd4" tabindex="-1" data-testid="greeting_iframe" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" src="./Tạo Ứng Dụng Desktop Đơn Giản Với Python_files/bubble(3).html" style="border: none; max-height: 0px; min-height: 0px;"></iframe></div></div><div class=" fb_iframe_widget fb_invisible_flow" fb-iframe-plugin-query="app_id=540883753774783&amp;attribution=setup_tool&amp;container_width=0&amp;current_url=https%3A%2F%2Fcodelearn.io%2Fsharing%2Ftao-ung-dung-desktop-voi-python&amp;greeting_dialog_display=hide&amp;is_loaded_by_facade=true&amp;local_state=%7B%22v%22%3A1%2C%22path%22%3A5%2C%22chatState%22%3A1%2C%22visibility%22%3A%22not-hidden%22%2C%22showUpgradePrompt%22%3A%22not_shown%22%2C%22greetingVisibility%22%3A%22hidden%22%7D&amp;locale=en_US&amp;log_id=06225627-115b-467a-b3fd-f266a6c16fe8&amp;page_id=2254662768188202&amp;request_time=1686147455700&amp;sdk=joey"><span style="vertical-align: bottom; width: 1000px; height: 0px;"><iframe name="f3acdc5b1e2ab9c" width="1000px" height="1000px" data-testid="dialog_iframe" title="" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" src="./Tạo Ứng Dụng Desktop Đơn Giản Với Python_files/customerchat(1).html" style="padding: 0px; position: fixed; z-index: 2147483646; border-radius: 16px; top: auto; width: 247px; max-height: calc(100% - 80px); background: none; bottom: 96px; right: 6px; margin-right: 12px; animation: 6s ease-out 0s 1 normal none running slideInFromBottomDelay; visibility: visible; height: 50px; opacity: 1; overflow: visible;" class="" id="_no-clickjacking-1"></iframe></span></div><div class="fb_dialog  fb_dialog_advanced" alignment="right" desktop_bottom_spacing="24"><div class="fb_dialog_content"><iframe name="blank_f3acdc5b1e2ab9c" width="60px" tabindex="-1" data-testid="bubble_iframe" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" src="./Tạo Ứng Dụng Desktop Đơn Giản Với Python_files/bubble(4).html" style="background: none; border-radius: 60px; bottom: 24px; box-shadow: rgba(0, 0, 0, 0.15) 0px 4px 12px 0px; display: block; height: 60px; margin: 0px 12px; overflow: visible; padding: 0px; position: fixed; right: 12px; top: auto; width: 60px; z-index: 2147483644;"></iframe><iframe name="availabilityStatus_f3acdc5b1e2ab9c" tabindex="-1" data-testid="availabilityStatus_iframe" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" src="./Tạo Ứng Dụng Desktop Đơn Giản Với Python_files/bubble(5).html" style="border-radius: 50%; bottom: 21.5px; height: 15px; position: fixed; right: 24px; width: 15px; z-index: 2147483646;"></iframe><iframe name="unread_f3acdc5b1e2ab9c" tabindex="-1" data-testid="unread_iframe" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" src="./Tạo Ứng Dụng Desktop Đơn Giản Với Python_files/bubble(6).html" style="background: none; border-radius: 4pt; bottom: 68px; height: 24px; position: fixed; right: 22px; width: 20px; z-index: 2147483645;"></iframe><iframe name="greeting_f3acdc5b1e2ab9c" tabindex="-1" data-testid="greeting_iframe" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" src="./Tạo Ứng Dụng Desktop Đơn Giản Với Python_files/bubble(7).html" style="border: none; max-height: 0px; min-height: 0px;"></iframe></div></div></div>
+
+<div class="modal fade modal-center" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModal">
+<div class="modal-dialog modal-dialog-centered" role="document">
+<div class="modal-content">
+<div class="modal-body login-modal">
+<div>
+
+<ul class="nav nav-tabs nav-fill" role="tablist">
+<li role="presentation" class="nav-item">
+<a class="nav-link" data-target="#login" aria-controls="login" role="tab" data-toggle="tab" onclick="openModal(&#39;login&#39;)">Login</a>
+</li>
+<li role="presentation" class="nav-item active">
+<a class="nav-link" data-target="#signup" aria-controls="signup" role="tab" data-toggle="tab" onclick="openModal(&#39;signup&#39;)">Register</a>
+</li>
+</ul>
+
+<div class="tab-content">
+<h4 class="header-card">with your social network</h4>
+<div class="signin-options">
+<button disabled="" class="btn btn-default btn-block btn--microsoft icon-left" onclick="window.location.replace(&#39;https://oauth.codelearn.io/Home/SignIn&#39;)" title="Login to FSoft account via Microsoft">
+<i class="cl-icon-windows" aria-hidden="true"></i>
+<span>Microsoft</span>
+</button>
+<button class="btn btn-default btn-block btn--facebook icon-left" onclick="facebookSignIn()">
+<i class="cl-icon-facebook-f" aria-hidden="true"></i>
+<span>Facebook</span>
+</button>
+<button class="btn btn-default btn-block btn--google icon-left" id="googleSignIn">
+<i class="cl-icon-google-full" aria-hidden="true"></i>
+<span>Google</span>
+</button>
+</div>
+<p class="label-or text-center">OR</p>
+<div role="tabpanel" class="tab-pane " id="login">
+<form id="frmLogin">
+<div class="form-group">
+<input name="username" type="text" class="form-control" placeholder="User name" autocomplete="username">
+<a href="https://codelearn.io/resend-email" title="Resend activation email" class="resend-email hidden">Resend activation email</a>
+</div>
+<div class="form-group" style="margin-bottom: 30px;">
+<input name="password" type="password" class="form-control" placeholder="Please enter password" autocomplete="current-password">
+</div>
+<div class="form-button">
+<button type="submit" class="btn btn-default btn-block btn-blue btn-login">Login</button>
+</div>
+<div class="col-md-12 registered-forgot" role="tablist">
+<div class="col-md-6 text-left">
+<a data-target="#signup" aria-controls="signup" role="tab" data-toggle="tab" onclick="openModal(&#39;login&#39;)">
+Not a member? Register
+</a>
+</div>
+<div class="col-md-6 text-right">
+<a href="https://codelearn.io/forgot-password">I can't rememeber my password</a>
+</div>
+</div>
+<div class="col-md-12 terms-of-use">
+This site is protected by reCAPTCHA and <a href="https://codelearn.io/terms" target="_blank">Terms of Use</a> apply.
+</div>
+</form>
+</div>
+<div role="tabpanel" class="tab-pane active" id="signup">
+<form id="frmSignup" method="POST" action="https://codelearn.io/">
+<div class="form-group">
+<input name="username" type="text" class="form-control" placeholder="User name" autocomplete="username">
+</div>
+<div class="form-group">
+<input name="email" type="email" class="form-control" placeholder="Email" autocomplete="email">
+</div>
+<div class="form-group">
+<input name="password" type="password" class="form-control" placeholder="Password" autocomplete="current-password">
+</div>
+<div class="form-check">
+<div class="checkbox-area">
+<input name="cbAgree" type="checkbox" value="1" class="form-check-input" id="cbAgree" data-error="#cbAgree-error">
+<label class="form-check-label" for="cbAgree">
+I agree to the <a href="https://codelearn.io/terms" target="_blank">Terms and Conditions</a> of CodeLearn
+</label>
+</div>
+<div id="cbAgree-error"></div>
+</div>
+<button type="submit" class="btn btn-default btn-block btn-blue btn-signup">Register</button>
+<div class="col-md-12 registered-forgot" style="margin-bottom: 0;">
+<div class="col-md-6 text-left">
+<a data-target="#login" aria-controls="login" role="tab" data-toggle="tab" onclick="openModal(&#39;login&#39;)">
+Already registered? Login
+</a>
+</div>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+
+        var siteKey = '6LcMTLMUAAAAAFLLyTIvjCj7k0bAG8ZqjnaTTrQE';
+        </script>
+
+<noscript>
+        <img height="1" width="1" style="display:none" alt=""
+             src="https://www.facebook.com/tr?id=700313553710795&ev=PageView&noscript=1" />
+    </noscript>
+
+
+<div><div class="grecaptcha-badge" data-style="bottomright" style="width: 256px; height: 60px; display: block; transition: right 0.3s ease 0s; position: fixed; bottom: 14px; right: -186px; box-shadow: gray 0px 0px 5px; border-radius: 2px; overflow: hidden;"><div class="grecaptcha-logo"><iframe title="reCAPTCHA" src="./Tạo Ứng Dụng Desktop Đơn Giản Với Python_files/anchor.html" width="818" height="191.71875" role="presentation" name="a-q9cmtjbujvbv" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"></iframe></div><div class="grecaptcha-error"></div><textarea id="g-recaptcha-response-100000" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea></div><iframe style="display: none;" width="818" height="409" src="./Tạo Ứng Dụng Desktop Đơn Giản Với Python_files/saved_resource.html"></iframe></div><iframe id="ssIFrame_google" sandbox="allow-scripts allow-same-origin" aria-hidden="true" frame-border="0" style="position: absolute; width: 1px; height: 1px; inset: -9999px; display: none;" src="./Tạo Ứng Dụng Desktop Đơn Giản Với Python_files/iframe.html" width="818" height="NaN"></iframe></body></html>

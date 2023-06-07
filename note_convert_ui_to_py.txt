@@ -1,0 +1,8 @@
+python -m pyuic5 -x "path_folder\untitled.ui" -o "path_folder\untitled.py"
+
+exec python -m PyQt5.uic.pyuic untitled.ui -o untitled.py -x
+
+python -m PyQt5.uic.pyuic untitled.ui -o untitled.py -x
+
+
+

@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<!-- saved from url=(0060)https://www.pythonguis.com/tutorials/first-steps-qt-creator/ -->
+<html lang="en" data-lt-installed="true"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+
+    <title>
+            Create your first PyQt5 app in Qt Creator
+
+    </title>
+
+    
+    <meta name="referrer" content="origin">
+    <meta http-equiv="content-language" content="en-us">
+
+<meta property="og:title" content="Create your first PyQt5 app in Qt Creator">
+<meta name="twitter:title" content="Create your first PyQt5 app in Qt Creator">
+<meta property="og:url" content="https://www.pythonguis.com/tutorials/first-steps-qt-creator/">
+<meta name="twitter:url" content="https://www.pythonguis.com/tutorials/first-steps-qt-creator/">
+
+
+
+<meta name="description" content="Use Qt Designer&#39;s drag and drop interface to design your PyQt5 GUI. So far we have been creating apps using Python code.">
+<meta property="og:description" content="Use Qt Designer&#39;s drag and drop interface to design your PyQt5 GUI. So far we have been creating apps using Python code.">
+<meta name="twitter:description" content="Use Qt Designer&#39;s drag and drop interface to design your PyQt5 GUI. So far we have been creating apps using Python code.">
+
+
+
+
+<link href="https://www.pythonguis.com/tutorials/first-steps-qt-creator/" rel="canonical">
+
+<meta property="og:site_name" content="Python GUIs">
+
+<meta itemprop="datePublished" content="2019-04-15">
+<meta property="article:published_time" content="2019-04-15T12:04:00+00:00">
+
+<meta itemprop="dateModified" content="2022-08-11">
+<meta property="article:modified_time" content="2022-08-11T12:08:03+00:00">
+
+
+<meta property="og:image" content="https://www.pythonguis.com/images/articles/qt-creator.jpg">
+<meta name="twitter:image:src" content="https://www.pythonguis.com/images/articles/qt-creator.jpg">
+<meta name="twitter:card" content="summary_large_image">
+
+<meta property="article:tag" content="qt">
+<meta property="article:tag" content="pyqt">
+<meta property="article:tag" content="pyqt5">
+<meta property="article:tag" content="qt-designer">
+<meta property="article:tag" content="qt-creator">
+<meta property="article:tag" content="pyqt5-qt-designer">
+<meta property="article:tag" content="python">
+<meta property="article:tag" content="qt5">
+
+<meta property="keywords" content="qt,pyqt,pyqt5,qt-designer,qt-creator,pyqt5-qt-designer,python,qt5">
+
+<meta property="og:type" content="article">
+
+<script type="application/ld+json">
+    {
+    "@context": "http://schema.org",
+    "@type": "TechArticle",
+    "headline": "Create your first PyQt5 app in Qt Creator",
+    "image": "https://www.pythonguis.com/images/articles/qt-creator.jpg",
+    "keywords": "qt,pyqt,pyqt5,qt-designer,qt-creator,pyqt5-qt-designer,python,qt5",
+    "url": "https://www.pythonguis.com/tutorials/first-steps-qt-creator/",
+    "author": {
+        "@type": "Person",
+        "name": "Martin Fitzpatrick",
+        "url": "https://www.mfitzp.com"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "Python GUIs",
+        "url": "https://www.pythonguis.com",
+        "logo": {
+            "@type": "Imageobj",
+            "url": "https://www.pythonguis.com/theme/images/logo-card.png",
+            "name": "Python GUIs Logo"
+        }
+    },
+    "datePublished": "2019-04-15 12:04:00+00:00",
+    "dateModified": "2022-08-11 12:08:03+00:00"
+    }
+    </script>
+
+
+<script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement":
+        [
+        {
+        "@type": "ListItem",
+        "position": 0,
+        "item":
+        {
+          "@id": "https://www.pythonguis.com/tutorials/",
+          "name": "tutorials"
+          }
+      },
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item":
+          {
+            "@id": "https://www.pythonguis.com/pyqt5-tutorial/#qt-creator",            "name": "Creating applications with Qt Designer"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "item":
+          {
+            "@id": "https://www.pythonguis.com/tutorials/first-steps-qt-creator/",
+            "name": "First steps with Qt Designer"
+            }
+        }
+        ]
+      }
+      </script>
+
+
+<link rel="author" href="https://www.pythonguis.com/">
+<link rel="publisher" href="https://www.pythonguis.com/"><meta name="flattr:id" content="gwy91w">
+<meta name="google-site-verification" content="Ogw6ZN_S7dzUc9huqkiLOeI_BH8F__4Ft8pNXQVU1Cw">
+<meta name="google-site-verification" content="tnbPDWRORDk2SjXzRhyh5HOarf2hDojT07FQS2zcMUY">
+<meta name="google-site-verification" content="2DFeXMiIAIVr20q8LLteYxffew35Pp89MXa7Hyy0_IM">
+<meta name="google-site-verification" content="aDPLnwleWQc6nHK2vIMKXY5kUBDHFUPNJ75QcdcdEss">
+<meta name="msvalidate.01" content="79DE55785B481065302BA20C0A64D33F">
+
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="cleartype" content="on">
+
+<link rel="shortcut icon" href="https://www.pythonguis.com/favicon.ico">
+<link rel="apple-touch-icon" href="https://www.pythonguis.com/apple-touch-icon.png">
+
+<link rel="preconnect" href="https://fonts.gstatic.com/">
+<link rel="preconnect" href="https://cdnjs.cloudflare.com/">
+<link rel="preconnect" href="https://ik.imagekit.io/">
+
+<!-- CSS, will be bundled -->
+<link rel="stylesheet" href="./Create your first PyQt5 app in Qt Creator_files/pure-min.css" type="text/css">
+<link rel="stylesheet" href="./Create your first PyQt5 app in Qt Creator_files/grids-responsive-min.css" type="text/css">
+<link rel="stylesheet" href="./Create your first PyQt5 app in Qt Creator_files/main.css" type="text/css">
+
+<!-- Font preload -->
+<link rel="preload" as="style" href="./Create your first PyQt5 app in Qt Creator_files/css2">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,700;1,400;1,700&amp;display=swap">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&amp;display=swap">
+<link rel="preload" as="style" href="./Create your first PyQt5 app in Qt Creator_files/css2(2)">
+
+<link rel="preload" as="style" href="./Create your first PyQt5 app in Qt Creator_files/all.min.css">
+
+<!-- Font actual load, onload swap -->
+<link rel="stylesheet" href="./Create your first PyQt5 app in Qt Creator_files/css2" media="all" onload="this.media=&#39;all&#39;">
+<link rel="stylesheet" href="./Create your first PyQt5 app in Qt Creator_files/css2(1)" media="all" onload="this.media=&#39;all&#39;">
+<link rel="stylesheet" href="./Create your first PyQt5 app in Qt Creator_files/css2(2)" media="all" onload="this.media=&#39;all&#39;">
+
+<link rel="stylesheet" href="./Create your first PyQt5 app in Qt Creator_files/all.min.css" media="all" onload="this.media=&#39;all&#39;">
+
+<!-- Apple touch icons -->
+<link rel="apple-touch-icon" href="https://www.pythonguis.com/apple-touch-icon.png">
+<link rel="apple-touch-icon-precomposed" href="https://www.pythonguis.com/apple-touch-icon-precomposed.png">
+
+<!-- <link rel="manifest" href="/manifest.json" /> -->
+
+<link href="https://www.pythonguis.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Python GUIs Full Atom Feed">
+<link href="https://www.pythonguis.com/feeds/atom.xml" type="application/atom+xml" rel="alternate" title="Python GUIs Atom Feed">
+<link href="https://www.pythonguis.com/feeds/rss.xml" type="application/rss+xml" rel="alternate" title="Python GUIs RSS Feed">
+<link href="https://www.pythonguis.com/feeds/tutorials.atom.xml" type="application/atom+xml" rel="alternate" title="Python GUIs tutorials Atom Feed">
+<link href="https://www.pythonguis.com/feeds/tutorials.rss.xml" type="application/rss+xml" rel="alternate" title="Python GUIs tutorials RSS Feed">
+
+
+<!--    <script src="https://cdn.podia.com/embeds.js" async="async"></script> -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script defer="" data-domain="pythonguis.com" src="./Create your first PyQt5 app in Qt Creator_files/plausible.manual.js.download"></script>
+<script>window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }</script>
+
+<!-- MailerLite Universal
+<script>
+  (function (m, a, i, l, e, r) {
+    m['MailerLiteObject'] = e; function f() {
+      var c = { a: arguments, q: [] }; var r = this.push(c); return "number" != typeof r ? r : f.bind(c.q);
+    }
+    f.q = f.q || []; m[e] = m[e] || f.bind(f.q); m[e].q = m[e].q || f.q; r = a.createElement(i);
+    var _ = a.getElementsByTagName(i)[0]; r.async = 1; r.src = l + '?v' + (~~(new Date().getTime() / 1000000));
+    _.parentNode.insertBefore(r, _);
+  })(window, document, 'script', 'https://static.mailerlite.com/js/universal.js', 'ml');
+
+  var ml_account = ml('accounts', '1083120', 'o8o0o8k0r4', 'load');
+</script>
+<script>
+  var ml_webform_793852 = ml_account('webforms', '793852', 'e6q5x4', 'load');
+  ml_webform_793852('animation', 'fadeIn');
+</script>
+End MailerLite Subscribe -->
+    <style>
+html{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0;font-family:"Montserrat",sans-serif}[v-cloak]{display:none !important}.logo-small{width:222px;height:32px}.navigation-collapsed,.menu-item-collapsed{display:none !important}.navigation-expanded,.menu-item-expanded{display:inline-block}@media screen and (max-width:1200px){.navigation-collapsed,.menu-item-collapsed{display:inline-block !important}.menu-item-collapsed{display:block !important}.navigation-expanded,.menu-item-expanded,.expanded{display:none !important}}#welcome{background-color:#ffd141;text-align:center;padding:.5rem 1rem;margin:0}#welcome p,#welcome a{color:#0d1f2d;font-size:.9rem;margin:0}body.wide-top #container-top{max-width:1110px}body.wide #container{max-width:1110px}body.wide-bottom #container-bottom{max-width:1110px}body.full-top #container-top{max-width:100%}body.full #container{max-width:100%}body.full-bottom #container-bottom{max-width:100%}body.article #container,body.page #container,.header-center,.article-header-center,.category-header-center,.tag-header-center{margin:0 auto}    </style>
+
+
+
+<script src="./Create your first PyQt5 app in Qt Creator_files/payhip.js.download"></script><script src="./Create your first PyQt5 app in Qt Creator_files/json2.js.download"></script><link rel="prefetch"><link rel="stylesheet" type="text/css" href="./Create your first PyQt5 app in Qt Creator_files/payhip.css" media="all"></head>
+
+<body class="article  tagged-qt  tagged-pyqt  tagged-pyqt5  tagged-qt-designer  tagged-qt-creator  tagged-pyqt5-qt-designer  tagged-python  tagged-qt5  academy " data-instant-intensity="mousedown">
+    <div id="app"><div id="layout" class=""><a href="https://www.pythonguis.com/tutorials/first-steps-qt-creator/#menu" id="menuLink" class="menu-link"><span></span></a> <div id="menu"><div class="pure-menu"><ul class="pure-menu-list"><li class="pure-menu-item menu-item-divided">Python GUIs</li> <li class="pure-menu-item"><a href="https://www.pythonguis.com/latest/" class="pure-menu-link">Latest</a></li> <li class="pure-menu-item"><a href="https://www.pythonguis.com/faq/" class="pure-menu-link">FAQ</a></li> <li class="pure-menu-item"><a href="https://forum.pythonguis.com/" target="_blank" class="pure-menu-link">Forum <i class="fas fa-comments"></i></a></li> <li class="pure-menu-item"><a href="https://www.pythonguis.com/pyqt5/" class="pure-menu-link">PyQt5 <i class="fas fa-circle library-marker-pyqt5"></i></a></li> <li class="pure-menu-item menu-item-divided">Basics</li> <li class="pure-menu-item"><a href="https://www.pythonguis.com/tutorials/creating-your-first-pyqt-window/" class="pure-menu-link">Create a PyQt5 app</a></li> <li class="pure-menu-item"><a href="https://www.pythonguis.com/tutorials/pyqt-signals-slots-events/" class="pure-menu-link">PyQt5 Signals</a></li> <li class="pure-menu-item"><a href="https://www.pythonguis.com/tutorials/pyqt-basic-widgets/" class="pure-menu-link">PyQt5 Widgets</a></li> <li class="pure-menu-item"><a href="https://www.pythonguis.com/tutorials/pyqt-layouts/" class="pure-menu-link">PyQt5 Layouts</a></li> <li class="pure-menu-item"><a href="https://www.pythonguis.com/tutorials/pyqt-actions-toolbars-menus/" class="pure-menu-link">PyQt5 Menus</a></li> <li class="pure-menu-item"><a href="https://www.pythonguis.com/tutorials/pyqt-dialogs/" class="pure-menu-link">PyQt5 Dialogs</a></li> <li class="pure-menu-item"><a href="https://www.pythonguis.com/tutorials/creating-multiple-windows/" class="pure-menu-link">Multi-window PyQt5</a></li> <li class="pure-menu-item menu-item-divided">Qt Designer</li> <li class="pure-menu-item"><a href="https://www.pythonguis.com/tutorials/first-steps-qt-creator/" class="pure-menu-link">First Qt Designer app</a></li> <li class="pure-menu-item"><a href="https://www.pythonguis.com/tutorials/qt-designer-gui-layout/" class="pure-menu-link">Qt Designer Layouts</a></li> <li class="pure-menu-item"><a href="https://www.pythonguis.com/tutorials/creating-dialogs-qt-designer/" class="pure-menu-link">Dialogs in Qt Designer</a></li> <li class="pure-menu-item"><a href="https://www.pythonguis.com/tutorials/qresource-system/" class="pure-menu-link">The QResource System</a></li> <li class="pure-menu-item menu-item-divided">Concurrency</li> <li class="pure-menu-item"><a href="https://www.pythonguis.com/tutorials/multithreading-pyqt-applications-qthreadpool/" class="pure-menu-link">Long-running tasks</a></li> <li class="pure-menu-item"><a href="https://www.pythonguis.com/tutorials/qprocess-external-programs/" class="pure-menu-link">External processes</a></li> <li class="pure-menu-item menu-item-divided">Model Views</li> <li class="pure-menu-item"><a href="https://www.pythonguis.com/tutorials/modelview-architecture/" class="pure-menu-link">Model Views</a></li> <li class="pure-menu-item"><a href="https://www.pythonguis.com/tutorials/qtableview-modelviews-numpy-pandas/" class="pure-menu-link">Pandas &amp; Numpy Views</a></li> <li class="pure-menu-item menu-item-divided">Plotting</li> <li class="pure-menu-item"><a href="https://www.pythonguis.com/tutorials/plotting-pyqtgraph/" class="pure-menu-link">Plotting with PyQtGraph</a></li> <li class="pure-menu-item"><a href="https://www.pythonguis.com/tutorials/plotting-matplotlib/" class="pure-menu-link">Plotting with Matplotlib</a></li> <li class="pure-menu-item menu-item-divided">QGraphics</li> <li class="pure-menu-item"><a href="https://www.pythonguis.com/tutorials/pyqt-qgraphics-vector-graphics/" class="pure-menu-link">Vector Graphics</a></li> <li class="pure-menu-item menu-item-divided">Custom Widgets</li> <li class="pure-menu-item"><a href="https://www.pythonguis.com/tutorials/bitmap-graphics/" class="pure-menu-link">Bitmap Graphics</a></li> <li class="pure-menu-item"><a href="https://www.pythonguis.com/tutorials/creating-your-own-custom-widgets/" class="pure-menu-link">Custom Widgets</a></li> <li class="pure-menu-item"><a href="https://www.pythonguis.com/tutorials/qpropertyanimation/" class="pure-menu-link">Animating Widgets</a></li> <li class="pure-menu-item"><a href="https://www.pythonguis.com/tutorials/embed-pyqtgraph-custom-widgets-qt-app/" class="pure-menu-link">Custom Designer Widgets</a></li> <li class="pure-menu-item menu-item-divided">Further</li> <li class="pure-menu-item"><a href="https://www.pythonguis.com/tutorials/transmitting-extra-data-qt-signals/" class="pure-menu-link">Modifying Signals</a></li> <li class="pure-menu-item"><a href="https://www.pythonguis.com/tutorials/system-tray-mac-menu-bar-applications-pyqt/" class="pure-menu-link">Taskbar apps</a></li> <li class="pure-menu-item menu-item-divided">Packaging</li> <li class="pure-menu-item"><a href="https://www.pythonguis.com/tutorials/packaging-pyqt5-pyside2-applications-windows-pyinstaller/" class="pure-menu-link">Packaging for Windows</a></li> <li class="pure-menu-item"><a href="https://www.pythonguis.com/tutorials/packaging-pyqt5-applications-pyinstaller-macos-dmg/" class="pure-menu-link">Packaging for macOS</a></li> <li class="pure-menu-item"><a href="https://www.pythonguis.com/tutorials/packaging-pyqt5-applications-linux-pyinstaller/" class="pure-menu-link">Packaging for Linux</a></li> <li class="pure-menu-item"><a href="https://www.pythonguis.com/tutorials/packaging-data-files-pyqt5-with-qresource-system/" class="pure-menu-link">Packaging QResources</a></li> <li class="pure-menu-item"><a href="https://www.pythonguis.com/tutorials/packaging-pyqt5-apps-fbs/" class="pure-menu-link">Packaging with fbs</a></li> <li class="pure-menu-item menu-item-divided">Resources</li> <li class="pure-menu-item"><a href="https://www.pythonguis.com/books/" class="pure-menu-link">Books</a></li> <li class="pure-menu-item menu-item-divided">Services</li> <li class="pure-menu-item"><a href="https://www.pythonguis.com/hire/" class="pure-menu-link">Consulting</a></li> <li class="pure-menu-item"><a href="https://www.pythonguis.com/live/" class="pure-menu-link">1:1 Coaching</a></li> <li class="pure-menu-item"><a href="https://www.pythonguis.com/contact/" class="pure-menu-link">Contact</a></li> <li class="pure-menu-item"><a href="https://www.pythonguis.com/about/" class="pure-menu-link">About</a></li> <li class="pure-menu-item menu-item-divided">Libraries</li> <li class="pure-menu-item"><a href="https://www.pythonguis.com/pyqt6/" class="pure-menu-link">PyQt6</a></li> <li class="pure-menu-item"><a href="https://www.pythonguis.com/pyside6/" class="pure-menu-link">PySide6</a></li> <li class="pure-menu-item"><a href="https://www.pythonguis.com/tkinter/" class="pure-menu-link">Tkinter</a></li> <li class="pure-menu-item"><a href="https://www.pythonguis.com/pyside2/" class="pure-menu-link">PySide2</a></li></ul></div></div> <div id="navigation" class="pure-g"><div class="pure-u-1-1"><div class="navigation-bar pure-menu pure-menu-horizontal menu-right library-selector"><ul class="pure-menu-list"><li id="searchnav" class="pure-menu-item"><form action="https://www.pythonguis.com/search" method="get"><label hidden="hidden" for="search-input">Search Python GUIs</label> <input type="text" name="q" placeholder="Search Python GUIs"> <input type="submit" value="Search"></form></li></ul></div></div></div> <div id="navigation-middle"><a href="https://www.pythonguis.com/pyqt5/" title="Python GUIs" class="logo pure-img"></a></div> <div id="searchtop"><form action="https://www.pythonguis.com/search" method="get"><label hidden="hidden" for="search-input">Search Python GUIs</label> <input type="text" name="q" placeholder="Search Python GUIs"> <input type="submit" value="Search"></form></div> <a name="top"></a> <div id="main"><div id="container-top" class="pure-g"><div id="content-upper" class="pure-u-1-1 l-box"><div id="breadcrumbs" class="pure-u-1-1"><ol><li><a href="https://www.pythonguis.com/pyqt5-tutorial/"><i class="fas fa-book"></i>
+        PyQt5 Tutorial
+      </a>/
+    </li> <li><a href="https://www.pythonguis.com/pyqt5-tutorial/#qt-creator">
+        Creating applications with Qt Designer
+      </a></li></ol></div> <div class="pure-u-1-1 article-header"><div class="article-header-image" style="background-image: url(&quot;https://www.pythonguis.com/images/articles/qt-creator.jpg&quot;);"></div> <div class="article-header-center"><h1><span>First steps with Qt Designer<br><small> Use Qt Designer's drag and drop interface to design your PyQt5 GUI</small></span></h1></div></div></div></div> <div id="container" class="pure-g"><div class="pure-u-1-1 l-box"><div class="byline"><span class="byline-part">
+    by <a href="https://www.pythonguis.com/authors/martin-fitzpatrick/">Martin Fitzpatrick</a></span> <span class="byline-part"><i class="fas fa-calendar"></i>
+  Last updated <time datetime="2022-08-11 12:08:03+00:00">11 August 2022</time></span> <span class="byline-part"><span class="library-indicator library-indicator-pyqt">PyQt5</span></span> <span class="byline-part"><i class="fas fa-folder"></i> <a href="https://www.pythonguis.com/pyqt5-tutorial/#qt-creator">
+      Creating applications with Qt Designer
+    </a></span></div> <div class="article-curriculum"><h4><a href="https://www.pythonguis.com/pyqt5-tutorial/"><i class="fas fa-book"></i>
+      PyQt5 Tutorial
+    </a>
+    —
+    <a href="https://www.pythonguis.com/pyqt5-tutorial/#qt-creator">Creating applications with Qt Designer</a></h4> <ul class="course-lessons fa-ul"><li class="lesson-row"><span class="fa-li"><i class="fas fa-hand-point-right"></i></span> <a href="https://www.pythonguis.com/tutorials/first-steps-qt-creator/">First steps with Qt Designer</a></li> <li class="lesson-row"><span class="fa-li"><i class="far fa-circle"></i></span> <a href="https://www.pythonguis.com/tutorials/qt-designer-gui-layout/">Laying Out Your PyQt5 GUIs With Qt Designer</a></li> <li class="lesson-row"><span class="fa-li"><i class="far fa-circle"></i></span> <a href="https://www.pythonguis.com/tutorials/creating-dialogs-qt-designer/">Creating Dialogs With Qt Designer</a></li> <li class="lesson-row"><span class="fa-li"><i class="far fa-circle"></i></span> <a href="https://www.pythonguis.com/tutorials/embed-pyqtgraph-custom-widgets-qt-app/">Embedding custom widgets from Qt Designer</a></li> <li class="lesson-row"><span class="fa-li"><i class="far fa-circle"></i></span> <a href="https://www.pythonguis.com/tutorials/qresource-system/">The QResource System</a></li></ul></div> <p class="crosslinks">
+    This tutorial is also available for
+    <a href="https://www.pythonguis.com/tutorials/pyqt6-first-steps-qt-designer/">PyQt6</a>
+,     <a href="https://www.pythonguis.com/tutorials/pyside6-first-steps-qt-designer/">PySide6</a>
+ and     <a href="https://www.pythonguis.com/tutorials/pyside-first-steps-qt-designer/">PySide2</a></p> <!----> <article class="post"><a name="top"></a> <div id="article-main-body" class="article-wrap article-main-body"><p>So far we have been creating apps using Python code. This works great in many cases, but as your applications get larger or interfaces more complicated, it can get a bit cumbersome to define all widgets programmatically. The good news is that Qt comes with a graphical editor — <em>Qt Designer</em> — which contains a drag-and-drop UI editor. Using <em>Qt Designer</em> you can define your UIs visually and then simply hook up the application logic later.</p> <p>In this tutorial we'll cover the basics of creating UIs with <em>Qt Designer</em>.
+The principles, layouts and widgets are identical, so you can apply
+everything you've already learnt. You'll also need your knowledge of
+the Python API to hook up your application logic later.</p> <p class="admonition admonition-tip"><span class="admonition-kind"><i class="fas fa-lightbulb"></i></span>  This tutorial requires Qt Creator to be installed — you can download it free from the Qt website. Go to <a href="https://www.qt.io/download" target="_blank" class="external-link">https://www.qt.io/download</a> and download the Qt package. You can opt to install only Creator during the installation.</p> <p>Open up Qt Creator and you will be presented with the main window. The designer is available via the tab on the left hand side. However, to activate this you first need to start creating a <code>.ui</code> file.</p> <p><img alt="The Qt Creator interface, with the Design section shown on the left." src="./Create your first PyQt5 app in Qt Creator_files/qt-creator-start.png"> <em>The Qt Creator interface, with the Design section shown on the left.</em></p> <p>To create a <code>.ui</code> file go to File -&gt; New File or Project... In the window that appears select <em>Qt</em> under <em>Files and Classes</em> on the left, then select <em>Qt Designer Form</em> on the right. You'll notice the icon has "ui" on it, showing the type of file you're creating.</p> <p><img alt="Create a new Qt .ui file." src="./Create your first PyQt5 app in Qt Creator_files/qt-creator-create-ui-file1.png"> <em>Create a new Qt .ui file.</em></p> <p>In the next step you'll be asked what type of widget you want to create. If you are starting an application then <em>Main Window</em> is the right choice. However, you can also create <code>.ui</code> files for dialog boxes, forms and custom compound widgets.</p> <p><img alt="Select the type of widget to create, for most applications this will be Main Window." src="./Create your first PyQt5 app in Qt Creator_files/qt-creator-create-ui-file2.png"> <em>Select the type of widget to create, for most applications this will be Main Window.</em></p> <p>Next choose a filename and save folder for your file. Save your <code>.ui</code> file with the same name as the class you'll be creating, just to make make subsequent commands simpler.</p> <p><img alt="Choose save name and folder your your file." src="./Create your first PyQt5 app in Qt Creator_files/qt-creator-create-ui-file3.png"> <em>Choose save name and folder your your file.</em></p> <p>Finally, you can choose to add the file to your version control system if you're using one. Feel free to skip this step —&nbsp;it doesn't affect your UI.</p> <p><img alt="Optionally add the file to your version control, e.g. Git." src="./Create your first PyQt5 app in Qt Creator_files/qt-creator-create-ui-file4.png"> <em>Optionally add the file to your version control, e.g. Git.</em></p> <h2 id="laying-out-your-main-window">Laying out your Main Window</h2> <p>You'll be presented with your newly created main window in the UI designer. There isn't much to see to begin with, just a grey working area representing the window, together with the beginnings of a window menu bar.</p> <p><img alt="The initial view of the created main window." src="./Create your first PyQt5 app in Qt Creator_files/qt-creator-main-window.png"> <em>The initial view of the created main window.</em></p> <p>You can resize the window by clicking the window and dragging the blue handles on each corner.</p> <p><img alt="The initial view of the created main window." src="./Create your first PyQt5 app in Qt Creator_files/qt-creator-layout-start.png"> <em>The initial view of the created main window.</em></p> <p>The first step in building an application is to add some widgets to your window. In our first applications we learnt that to set the central widget for a <code>QMainWindow</code> we need to use <code>.setCentralWidget()</code>. We also saw that to add multiple widgets with a layout, we need an intermediary <code>QWidget</code> to apply the layout to, rather than adding the layout to the window directly.</p> <p>Qt Creator takes care of this for you automatically, although it's not particularly obvious about it.</p> <p>To add multiple widgets to the main window with a layout, first drag your widgets onto the <code>QMainWindow</code>. Here we're dragging 3 labels. It doesn't matter where you drop them.</p> <p><img alt="Main window with 1 labels and 1 button added." src="./Create your first PyQt5 app in Qt Creator_files/qt-creator-layout1.png"> <em>Main window with 1 labels and 1 button added.</em></p> <p>We've created 2 widgets by dragging them onto the window, made them children of that window. We can now apply a layout.</p> <p>Find the <code>QMainWindow</code> in the right hand panel (it should be right at the top). Underneath you see <em>centralwidget</em> representing the window's central widget. The icon for the central widget show the current layout applied. Initially it has a red circle-cross through it, showing that there is no layout active.</p> <p>Right click on the <code>QMainWindow</code> object, and find 'Layout' in the resulting dropdown.</p> <p><img alt="Right click on the main window, and choose layout." src="./Create your first PyQt5 app in Qt Creator_files/qt-creator-layout2.png"> <em>Right click on the main window, and choose layout.</em></p> <p>Next you'll see a list of layouts which you can apply to the window. Select <em>Lay Out Horizontally</em> and the layout will be applied to the widget.</p> <p><img alt="Select layout to apply to the main window." src="./Create your first PyQt5 app in Qt Creator_files/qt-creator-layout3.png"> <em>Select layout to apply to the main window.</em></p> <p>The selected layout is applied to the the <em>centralwidget</em> of the <code>QMainWindow</code> and the widgets are added the layout, being laid out depending on the selected layout. Note that in Qt Creator you can actually drag and re-order the widgets within the layout, or select a different layout, as you like. This makes it especially nice to prototyping and trying out things.</p> <p><img alt="Vertical layout applied to widgets on the main window." src="./Create your first PyQt5 app in Qt Creator_files/qt-creator-layout4.png"> <em>Vertical layout applied to widgets on the main window.</em></p> <h2 id="using-your-generated-ui-file">Using your generated .ui file</h2> <p>We've created a very simple UI. The next step is to get this into Python and use it to construct a working application.</p> <p>First save your <code>.ui</code> file —&nbsp;by default it will save at the location you chosen while creating it, although you can choose another location if you like.</p> <p>The <code>.ui</code> file is in XML format. To use our UI from Python we have two alternative methods available —</p> <ol><li>load into into a class using the <code>.loadUI()</code> method</li> <li>convert it to Python using the <code>pyuic5</code> tool.</li></ol> <p>These two approaches are covered below. Personally I prefer to convert the UI to a Python file to keep things similar from a programming &amp; packaging point of view.</p> <h3 id="loading-the-ui-file-directly">Loading the .ui file directly</h3> <p>To load <code>.ui</code> files we can use the <code>uic</code> module included with PyQt5, specifically the <code>uic.loadUI()</code>method. This takes the filename of a UI file and loads it creating a fully-functional PyQt5 object.</p> <div class="code-block"><span class="code-block-language code-block-python">python</span> <pre><code class="python hljs"><span class="hljs-keyword">import</span> sys
+<span class="hljs-keyword">from</span> PyQt5 <span class="hljs-keyword">import</span> QtWidgets, uic
+
+app = QtWidgets.QApplication(sys.argv)
+
+window = uic.loadUi(<span class="hljs-string">"mainwindow.ui"</span>)
+window.show()
+app.<span class="hljs-built_in">exec</span>()
+</code></pre></div> <p><img alt="A (very) simple UI designed in Qt Creator" src="./Create your first PyQt5 app in Qt Creator_files/Screenshot_2019-05-29_at_22.42.25.png"> <em>A (very) simple UI designed in Qt Creator</em></p> <p class="admonition admonition-tip"><span class="admonition-kind"><i class="fas fa-lightbulb"></i></span>  As the <code>uid.loadUI()</code> method turns an instance object you cannot attach custom <code>__init__()</code> code. You can however handle this through a custom setup function</p> <p>To load a UI from the <code>__init__</code> block of an existing widget (e.g. a <code>QMainWindow</code>) you can use <code>uic.loadUI(filename, self)</code> for PyQt5.</p> <div class="code-block"><span class="code-block-language code-block-python">python</span> <pre><code class="python hljs"><span class="hljs-keyword">import</span> sys
+<span class="hljs-keyword">from</span> PyQt5 <span class="hljs-keyword">import</span> QtCore, QtGui, QtWidgets
+<span class="hljs-keyword">from</span> PyQt5 <span class="hljs-keyword">import</span> uic
+
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MainWindow</span>(<span class="hljs-params">QtWidgets.QMainWindow</span>):</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span>(<span class="hljs-params">self, *args, **kwargs</span>):</span>
+        <span class="hljs-built_in">super</span>().__init__(*args, **kwargs)
+        uic.loadUi(<span class="hljs-string">"mainwindow.ui"</span>, self)
+
+
+app = QtWidgets.QApplication(sys.argv)
+window = MainWindow()
+window.show()
+app.exec_()
+</code></pre></div> <h3 id="converting-your-ui-file-to-python">Converting your .ui file to Python</h3> <p>To generate a Python output file run <code>pyuic5</code> from the command line, passing the <code>.ui</code> file and the target file for output, with a <code>-o</code> parameter. The following will generate a Python file named <code>MainWindow.py</code> which contains our created UI.</p> <div class="code-block"><span class="code-block-language code-block-bash">bash</span> <pre><code class="bash hljs">pyuic5 mainwindow.ui -o MainWindow.py
+</code></pre></div> <p class="admonition admonition-info"><span class="admonition-kind"><i class="fas fa-info"></i></span>  If you're using PyQt4 the tool is named `pyuic4`, but is otherwise completely identical.</p> <p>You can open the resulting <code>MainWindow.py</code> file in an editor to take a look, although you should <em>not</em> edit this file. The power of using Qt Creator is being able to edit, tweak and update your application while you develop. Any changes made to this file will be lost when you update it. However, you <em>can</em> override and tweak anything you like when you import and use the file in your applications.</p> <p>Importing the resulting Python file works as for any other. You can import your class as follows. The <code>pyuic5</code> tool appends <code>Ui_</code> to the name of the object defined in <em>Qt Creator</em>, and it is this object you want to import.</p> <div class="code-block"><span class="code-block-language code-block-python">python</span> <pre><code class="python hljs"><span class="hljs-keyword">from</span> MainWindow <span class="hljs-keyword">import</span> Ui_MainWindow
+</code></pre></div> <p>To create the main window in your application, create a class as normal but subclassing from both <code>QMainWindow</code> and your imported <code>Ui_MainWindow</code> class. Finally, call <code>self.setupUi(self)</code> from within the <code>__init__</code> to trigger the setup of the interface.</p> <div class="code-block"><span class="code-block-language code-block-python">python</span> <pre><code class="python hljs"><span class="hljs-keyword">import</span> sys
+<span class="hljs-keyword">from</span> PyQt5 <span class="hljs-keyword">import</span> QtWidgets, uic
+
+<span class="hljs-keyword">from</span> MainWindow <span class="hljs-keyword">import</span> Ui_MainWindow
+
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MainWindow</span>(<span class="hljs-params">QtWidgets.QMainWindow, Ui_MainWindow</span>):</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span>(<span class="hljs-params">self, *args, obj=<span class="hljs-literal">None</span>, **kwargs</span>):</span>
+        <span class="hljs-built_in">super</span>(MainWindow, self).__init__(*args, **kwargs)
+        self.setupUi(self)
+
+
+app = QtWidgets.QApplication(sys.argv)
+
+window = MainWindow()
+window.show()
+app.<span class="hljs-built_in">exec</span>()
+</code></pre></div> <p>This produces exactly the same result as before.</p> <p><img alt="A (very) simple UI designed in Qt Creator" src="./Create your first PyQt5 app in Qt Creator_files/Screenshot_2019-05-29_at_22.42.25.png"> <em>A (very) simple UI designed in Qt Creator</em></p> <p>That's it. Your window is now fully set up. Since the use of a .ui file abstracts out the UI-specific code, you can use this same pattern to load any interface you design.</p> <div class="product-block-container"><div class="pure-u-1-1 product-callout">1:1 Coaching &amp; Tutoring for your Python GUIs project</div> <div class="pure-g product-block"><div class="pure-u-1-1 product-banner"><a href="https://calendly.com/martinfitzpatrick/60min-python-guis-coaching"><img src="./Create your first PyQt5 app in Qt Creator_files/coaching.jpg" alt="Martin Fitzpatrick Python GUIs Coaching &amp; Training" loading="lazy" class="product-header"></a> <div class="product-block-buttons"><a href="https://calendly.com/martinfitzpatrick/60min-python-guis-coaching/" class="pure-button button-buy">60 mins ($195)</a> <a href="https://www.pythonguis.com/live/" target="_blank" class="pure-button button-info">More info</a> <p class="small center">1:1 Python GUIs Coaching &amp; Training</p></div> <p class="product-details"><strong>Comprehensive code review</strong> •
+            <strong>Bugfixes</strong> &amp; improvements •
+            <strong>Maintainability</strong> advice and <strong>architecture</strong> improvements •
+            <strong>Design and usability</strong> assessment •
+            Suggestions and tips to <strong>expand your knowledge</strong> •
+            <strong>Packaging and distribution</strong> help for Windows, Mac &amp; Linux •
+            <a href="https://www.pythonguis.com/live">Find out more.</a></p></div></div></div><h2 id="adding-application-logic">Adding application logic</h2> <p>You can interact with widgets created through Qt Creator just as you would those created with code. To make things simpler <code>uic</code> adds all child widgets to the window object by their id name as specified in Qt Creator. We'll cover how to work with these in the next part.</p></div> <div class="pure-g controls-container"><div role="group" class="pure-button-group pure-u-1-1 center"><!----> <span class="mark-complete pure-button">Mark As Complete <i class="fas fa-magic"></i></span></div> <div class="pure-u-1-1 user-stats-box"><!----> <!----></div></div> <div class="continue-controls"><p class="navigation-continue">Continue with
+            <a href="https://www.pythonguis.com/tutorials/qt-designer-gui-layout/" title="Continue to next part">
+                PyQt5 Tutorial
+                <i class="fas fa-hand-point-right"></i></a></p> <p class="navigation-continue">
+                Return to <a href="https://www.pythonguis.com/pyqt5/">Create GUI Applications with PyQt5
+                <i class="fas fa-hand-point-right"></i></a></p></div></article></div></div> <div id="container-bottom" class="pure-g"><div class="email-container pure-u-1-1"><div class="email-signup"><h4>Never miss an update</h4> <p>Enjoyed this? Subscribe to get new updates straight in your Inbox.</p> <form action="https://assets.mailerlite.com/jsonp/275474/forms/77225139706529309/subscribe" data-code="" method="post" target="_blank" class="ml-block-form"><div class="pure-g"><input aria-label="email" aria-required="true" type="email" data-inputmask="" name="fields[email]" placeholder="Email" autocomplete="email" class="form-control pure-u-2-3"> <button type="submit" class="pure-button button-subscribe pure-u-1-3">Subscribe <i class="fas fa-envelope"></i></button></div> <div class="pure-g email-interest-groups"><input type="hidden" name="groups[]" value="77224831289918706"></div> <input type="hidden" name="ml-submit" value="1"> <input type="hidden" name="anticsrf" value="true"> <p class="smallprint">You can unsubscribe anytime. Just ham, no spam.</p></form></div></div> <div class="pure-u-1-1 l-box author-block"><a href="https://www.pythonguis.com/authors/martin-fitzpatrick/"><img src="./Create your first PyQt5 app in Qt Creator_files/martin-fitzpatrick.jpg" class="author-avatar"></a> <div class="author-bio"><p><strong>First steps with Qt Designer</strong> was written by
+      <a href="https://www.pythonguis.com/authors/martin-fitzpatrick/">Martin Fitzpatrick</a>
+.
+    </p> <p>
+    Martin Fitzpatrick has been developing Python/Qt apps for 8 years. Building desktop
+applications to make data-analysis tools more user-friendly, Python was
+the obvious choice. Starting with Tk, later moving to wxWidgets and finally adopting PyQt.
+  </p></div></div> <div class="article-products"></div> <div class="pure-u-1-1 l-box"><p class="metadata"><strong>First steps with Qt Designer</strong> was published in <a href="https://www.pythonguis.com/tutorials/">tutorials</a>
+
+        on <time datetime="2019-04-15T12:04:00+00:00">April 15, 2019</time>
+        (updated <time datetime="2022-08-11T12:08:03+00:00">August 11, 2022</time>)
+    </p> <p class="metadata"><a href="https://www.pythonguis.com/topics/qt/" class="tag tag-qt">qt</a> <a href="https://www.pythonguis.com/topics/pyqt/" class="tag tag-pyqt">pyqt</a> <a href="https://www.pythonguis.com/topics/pyqt5/" class="tag tag-pyqt5"><i class="fas fa-cube"></i>&nbsp;pyqt5</a> <a href="https://www.pythonguis.com/topics/qt-designer/" class="tag tag-qt-designer"><i class="fas fa-drafting-compass"></i>&nbsp;qt-designer</a> <a href="https://www.pythonguis.com/topics/qt-creator/" class="tag tag-qt-creator">qt-creator</a> <a href="https://www.pythonguis.com/topics/pyqt5-qt-designer/" class="tag tag-pyqt5-qt-designer tag-pyqt5 tag-qt-designer"><i class="fas fa-drafting-compass"></i>&nbsp;pyqt5-qt-designer</a> <a href="https://www.pythonguis.com/topics/python/" class="tag tag-python">python</a> <a href="https://www.pythonguis.com/topics/qt5/" class="tag tag-qt5">qt5</a></p></div></div></div> <footer class="pure-g"><div class="pure-u-1-1 footer-upper"><div class="pure-g"><div class="pure-u-1-1 pure-u-sm-1-2 pure-u-md-1-3 pure-u-lg-1-4 pure-u-xl-1-5"><ul><li><b>Topics</b></li> <li><a href="https://www.pythonguis.com/topics/getting-started/">Where do I begin?</a></li> <li><a href="https://www.pythonguis.com/topics/data-science/">Data Science</a></li> <li><a href="https://www.pythonguis.com/topics/packaging/">Packaging &amp; Distribution</a></li> <li><a href="https://www.pythonguis.com/topics/databases/">Databases &amp; SQL</a></li> <li><a href="https://www.pythonguis.com/topics/qml/">QML/QtQuick</a></li> <li><a href="https://www.pythonguis.com/topics/foundation/">Learn the fundamentals</a></li> <li><a href="https://www.pythonguis.com/topics/raspberry-pi/">Raspberry Pi</a></li> <li><a href="https://www.pythonguis.com/topics/games/">Games</a></li> <li><a href="https://www.pythonguis.com/topics/intermediate/">Start</a></li></ul></div> <div class="pure-u-1-1 pure-u-sm-1-2 pure-u-md-1-3 pure-u-lg-1-4 pure-u-xl-1-5"><ul><li><a href="https://www.pythonguis.com/installation/">Installation</a></li> <li><a href="https://www.pythonguis.com/tutorials/creating-your-first-window/">First steps with PyQt5</a></li> <li><a href="https://www.pythonguis.com/examples/">Example PyQt5 Apps</a></li> <li><a href="https://www.pythonguis.com/widgets/">Widget Library</a></li> <li><a href="https://www.pythonguis.com/docs/">PyQt / PySide documentation</a></li> <li><a href="https://www.pythonguis.com/code/">Reusable code &amp; snippets</a></li> <li><a href="https://www.pythonguis.com/faq/">Frequently Asked Questions</a></li></ul></div> <div class="pure-u-1-1 pure-u-sm-1-2 pure-u-md-1-3 pure-u-lg-1-4 pure-u-xl-1-5"><ul><li><b>Tutorials</b></li> <li><a href="https://www.pythonguis.com/pyqt5-tutorial/">PyQt5 tutorial</a></li> <li><a href="https://www.pythonguis.com/pyqt6-tutorial/">PyQt6 tutorial</a></li> <li><a href="https://www.pythonguis.com/pyside2-tutorial/">PySide2 tutorial</a></li> <li><a href="https://www.pythonguis.com/pyside6-tutorial/">PySide6 tutorial</a></li> <li><a href="https://www.pythonguis.com/tkinter-tutorial/">Tkinter tutorial</a></li> <li><a href="https://www.pythonguis.com/blog/">Latest articles</a></li></ul></div> <div class="pure-u-1-1 pure-u-sm-1-2 pure-u-md-1-3 pure-u-lg-1-4 pure-u-xl-1-5"><ul><li class="important"><a href="https://account.pythonguis.com/"><i class="fas fa-download"></i> Your
+          Downloads</a></li> <li class="important"><a href="https://forum.pythonguis.com/"><i class="fas fa-comments"></i> Python GUIS Community
+            </a></li> <li><a href="https://www.pythonguis.com/pyqt5-book/">PyQt5 Book</a> / <a href="https://www.pythonguis.com/pyside2-book/">PySide2
+            Book</a></li> <li><a href="https://www.pythonguis.com/pyqt6-book/">PyQt6 Book</a> / <a href="https://www.pythonguis.com/pyside6-book/">PySide6
+          Book</a></li> <li><a href="https://www.pythonguis.com/packaging-book/">Python Packaging Book</a></li> <li><a href="https://www.pythonguis.com/books/downloads/"><i class="fas fa-code"></i> Book Source Code</a></li></ul></div> <div class="pure-u-1-1 pure-u-sm-1-2 pure-u-md-1-3 pure-u-lg-1-4 pure-u-xl-1-5 martinfitz"><ul><li><a href="https://martinfitz.dev/"><img src="./Create your first PyQt5 app in Qt Creator_files/logow.svg" height="50"></a></li> <li><a href="https://martinfitz.dev/about" target="_blank">About</a></li> <li><a href="https://www.pythonguis.com/hire/" target="_blank">Consulting</a></li> <li><a href="https://www.pythonguis.com/live/" target="_blank">Mentoring</a></li> <li><a href="https://martinfitz.dev/contact" target="_blank">Contact me</a></li> <li><a href="https://martinfitz.dev/legal" target="_blank">Licensing, Privacy &amp; Legal</a></li></ul></div></div></div> <div class="pure-u-1-1 footer-final"><div class="pure-u-1-1 social-links"><p class="social-links-notice">Follow us for new tutorials</p> <div class="subscribe-social-links"><a href="https://twitter.com/pythonguis" class="twitter"><i class="fab fa-twitter"></i></a> <a href="https://github.com/pythonguis" class="github"><i class="fab fa-github-alt"></i></a> <a href="https://www.facebook.com/pythonguis" class="facebook"><i class="fab fa-facebook"></i></a> <a href="https://www.youtube.com/channel/UCMW4KwSlygaDef0tgqPjbRQ" class="youtube"><i class="fab fa-youtube"></i></a> <a href="https://www.linkedin.com/company/pythonguis/" class="linkedin"><i class="fab fa-linkedin"></i></a></div></div> <p><a href="https://www.pythonguis.com/">Python GUIs</a>
+      Copyright ©2014-2023
+      <a href="https://martinfitz.dev/"> Martin Fitzpatrick</a></p> <p>
+      Tutorials CC-BY-NC-SA
+      <i class="fab fa-creative-commons"></i> <i class="fab fa-creative-commons-by"></i> <i class="fab fa-creative-commons-nc"></i> <i class="fab fa-creative-commons-sa"></i>
+      &nbsp;
+      <a href="https://www.pythonguis.com/sitemap/">Sitemap</a>
+      &nbsp;
+      Public code <a href="https://opensource.org/licenses/BSD-2-Clause" rel="nofollow">BSD</a> &amp; <a href="https://opensource.org/licenses/MIT" rel="nofollow">MIT</a></p></div></footer></div></div>
+
+    <script type="text/javascript" src="./Create your first PyQt5 app in Qt Creator_files/vue.min.js.download"></script>
+    <script type="text/javascript" src="./Create your first PyQt5 app in Qt Creator_files/vue2-filters.min.js.download"></script>
+    <script type="text/javascript" src="./Create your first PyQt5 app in Qt Creator_files/vue-observe-visibility.min.js.download"></script>
+        <script type="text/javascript" src="./Create your first PyQt5 app in Qt Creator_files/axios.min.js.download"></script>
+
+    <script type="text/javascript">
+
+var vm = new Vue({
+    delimiters: ['[[', ']]'],
+    el: '#app',
+    data: {
+        user: {
+            completed: [],
+            library: 'all',
+            streak: 4,
+            lastCompletedDate: false,
+        },
+        staticurl: 'https://www.pythonguis.com/',
+        siteurl: 'https://www.pythonguis.com/',
+        apiurl: 'https://api.pythonguis.com',
+        hidden: ['installation'],
+        landed: document.referrer != 'https://www.pythonguis.com/',
+        defaultLibrary: 'all', // the default library to prefer content for
+        // video
+        video: '',
+        is_video_loaded: false,
+        discount: false,
+        localizedPrices: false,
+        comments: false,
+        curriculum: [],
+        current_page_id: null,
+        query: '',
+        searchResults: [],
+        showMenu: false,
+        country: ''
+    },
+    methods: {
+        init: function () {
+            this.load_user_data();
+            this.validate_streak();
+        },
+        toggle_menu: function () {
+            this.showMenu = !this.showMenu;
+        },
+        load_user_data: function () {
+            var userdata = localStorage.getItem('user');
+            if (userdata) {
+                Object.assign(this.user, JSON.parse(userdata));
+            }
+            if (this.user.library == undefined) { this.user.library = this.defaultLibrary; }
+        },
+        maybe_play_video: function () {
+            if (this.video && !this.is_video_loaded) {
+                this.play_video();
+            }
+        },
+        localize: function () {
+            console.log("Localize.");
+            var sessiondata = sessionStorage.getItem('localization');
+
+            if (!sessiondata || sessiondata == 'undefined') {
+                // Will callback on complete of API request.
+                return this.get_localization()
+            }
+
+            sessiondata = JSON.parse(sessiondata)
+            this.discount = sessiondata.discount;
+            this.country = sessiondata.country;
+        },
+        get_localization: function () {
+            var self = this;
+            console.log("Localization API request.");
+            axios
+                .get(self.apiurl + '/api/v1/localize/')
+                .then(function (response) {
+                    if (response.data.success) {
+                        sessionStorage.setItem('localization', JSON.stringify(response.data.localization));
+                        self.localize();
+                    }
+
+                })
+        },
+        play_video: function () {
+            var url = (this.video.includes('https://') ? this.video : 'https://vimeo.com/' + this.video),
+                options = {
+                    url: url,
+                    responsive: true,
+                    dnt: true,
+                };
+            var player = new Vimeo.Player('player', options);
+            this.is_video_loaded = true;
+        },
+        is_hidden: function (id) {
+            return this.hidden.includes(id);
+        },
+        unhide: function (id) {
+            var index = this.hidden.indexOf(id);
+            if (index !== -1) {
+                this.hidden.splice(index, 1);
+            }
+        },
+        toggle_tutorial_complete: function (id) {
+            var completed = this.user.completed;
+
+            if (completed.includes(id)) {
+                var index = this.user.completed.indexOf(id);
+                if (index !== -1) {
+                    this.user.completed.splice(index, 1);
+                }
+
+            } else {
+                // Add this tutorial to the list.
+                this.user.completed.push(id);
+                this.update_streak();
+                plausible('completed');
+            }
+            //$set(this.user.completed, completed);
+            this.save_user();
+        },
+        update_streak: function () {
+            var dt = new Date(),
+                thresholdDt = new Date(),
+                lastCompletedDt = new Date(this.user.lastCompletedDate);
+            thresholdDt.setHours(0, 0, 0, 0);
+            thresholdDt.setDate(thresholdDt.getDate() - 1);
+
+            if (this.user.lastCompletedDate == false || lastCompletedDt < thresholdDt) {
+                this.user.lastCompletedDate = dt;
+                this.user.streak = 0;
+            } else {
+                lastCompletedDt.setHours(0, 0, 0, 0);
+                if (lastCompletedDt.getTime() == thresholdDt.getTime()) {
+                    this.user.lastCompletedDate = dt;
+                    this.user.streak += 1;
+                    plausible('streak');
+                }
+            }
+        },
+        validate_streak: function () {
+            // Check on login that last complete < 1 day ago.
+            // nb. not 24 hrs.
+            var thresholdDt = new Date(),
+                lastCompletedDt = new Date(this.user.lastCompletedDate);
+            thresholdDt.setHours(0, 0, 0, 0);
+            thresholdDt.setDate(thresholdDt.getDate() - 1);
+
+            if (this.user.lastCompletedDate == false || lastCompletedDt < thresholdDt) {
+                this.user.streak = 0;
+                this.save_user();
+            }
+        },
+        set_library: function (library) {
+            this.user.library = library;
+            this.save_user();
+        },
+        library_is: function (library) {
+            return library == this.user.library
+        },
+        library_is_or_all: function (library) {
+            return this.library_is(library) || this.user.library == 'all';
+        },
+        save_user: function () {
+            localStorage.setItem('user', JSON.stringify(this.user));
+        },
+        switch_tab: function (e) {
+            var clickedtab = e.target,
+                tabid = clickedtab.getAttribute('data-tab');
+
+            // Update tab display.
+            siblings = clickedtab.parentNode.querySelectorAll('li');
+            [].forEach.call(siblings, function (el) {
+                el.classList.remove("current");
+            });
+
+            clickedtab.classList.add("current");
+
+            // Change the active code block.
+            codecontainer = clickedtab.parentNode.parentNode;
+            codeblocks = codecontainer.querySelectorAll('.tab-content');
+            [].forEach.call(codeblocks, function (el) {
+                el.classList.remove("current");
+                if (el.id == tabid) { el.classList.add('current'); }
+            });
+        },
+        // Handle affiliates.
+        get_affiliate_id: function () {
+            return localStorage.getItem('affiliateId');
+        },
+        get_affiliate_link: function (url) {
+            var affiliateId = this.get_affiliate_id();
+            if (affiliateId) {
+                return url + '?af=' + affiliateId;
+            }
+            return url;
+        },
+        set_affiliate_id: function (affiliateId) {
+            if (this.landed && affiliateId && !this.get_affiliate_id()) {
+                localStorage.setItem('affiliateId', affiliateId);
+                plausible('affiliate_set',  {props: {affiliate_id: affiliateId}});
+            }
+        },
+        affiliate_landing: function () {
+            var urlParams = new URLSearchParams(window.location.search),
+                affiliateId = urlParams.get('af');
+            this.set_affiliate_id(affiliateId);
+        },
+        // End affiliates.
+    }
+});
+
+ Vue.set(vm, 'current_page_id', 'first-steps-qt-creator'); 
+vm.init();
+vm.localize();
+
+function playVideo(isVisible, entry) {
+    var video = entry.target;
+    if (isVisible) {
+        video.play();
+    } else if (video.currentTime > 0 && !video.paused && !video.ended && video.readyState > 2) {
+        video.pause();
+    }
+}
+
+
+function celebrate(event) {
+    confetti({
+        colors: ['#1A936F', '#C0D9E5', '#FFBA08', '#006494'],
+        origin: {
+            x: event.clientX / window.innerWidth,
+            y: event.clientY / window.innerHeight
+        }
+    });
+}
+
+
+
+    </script>
+
+<script type="text/javascript">
+    plausible('pageview', {props:{
+        'author': 'Martin Fitzpatrick',
+        'category': 'tutorials',
+library:'pyqt5',        course:'Creating applications with Qt Designer',
+        track:'Create Desktop GUI Applications with PyQt5',
+    }});
+</script>
+
+
+<script type="text/javascript">
+</script>
+
+    <script defer="" src="./Create your first PyQt5 app in Qt Creator_files/2.0.0" type="module" integrity="sha384-D7B5eODAUd397+f4zNFAVlnDNDtO1ppV8rPnfygILQXhqu3cUndgHvlcJR2Bhig8"></script>
+
+    <script src="./Create your first PyQt5 app in Qt Creator_files/highlight.min.js.download"></script>
+    <script>
+        window.addEventListener('load', function () {
+            hljs.highlightAll();
+        });
+    </script>
+    <script src="./Create your first PyQt5 app in Qt Creator_files/confetti.browser.min.js.download"></script>
+<!-- <script src="https://cdn.paddle.com/paddle/paddle.js"></script>
+<script type="text/javascript">
+    Paddle.Setup({ vendor: 16090 });
+</script> -->
+
+
+<script type="text/javascript" src="./Create your first PyQt5 app in Qt Creator_files/payhip.js(1).download"></script>
+
+<script>
+    function checkoutStart(){
+        plausible('checkout');
+        return true;
+    }
+    function checkoutSuccess(data){
+        plausible('checkout_success');
+
+        // PostHog conversion.
+        data.items.forEach((item, x) => {
+            plausible('purchase',{
+                props: {
+                    "product": item["productName"],
+                    "price": item["pricePaid"],
+                    "currency": "USD",
+                    "affiliateId": data['metadata'],
+            }
+        });
+        });
+        return true;
+    }
+</script>
+
+
+<iframe id="payhip-comms" style="position: absolute !important; visibility: hidden !important; display: none !important; width: 0px !important; height: 0px !important; padding: 0px !important; border: none !important;" frameborder="0" allowtransparency="true" scrolling="no" src="./Create your first PyQt5 app in Qt Creator_files/comms.html"></iframe></body></html>
