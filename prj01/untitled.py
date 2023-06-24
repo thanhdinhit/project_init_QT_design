@@ -20,9 +20,12 @@ class Ui_Dialog(object):
         self.buttonBox.setOrientation(QtCore.Qt.Horizontal)
         self.buttonBox.setStandardButtons(QtWidgets.QDialogButtonBox.Cancel|QtWidgets.QDialogButtonBox.Ok)
         self.buttonBox.setObjectName("buttonBox")
-        self.pushButton = QtWidgets.QPushButton(Dialog)
+        self.pushButton = add(Dialog)
         self.pushButton.setGeometry(QtCore.QRect(90, 140, 75, 23))
         self.pushButton.setObjectName("pushButton")
+        self.toolButton = QtWidgets.QToolButton(Dialog)
+        self.toolButton.setGeometry(QtCore.QRect(150, 210, 25, 19))
+        self.toolButton.setObjectName("toolButton")
 
         self.retranslateUi(Dialog)
         self.buttonBox.accepted.connect(Dialog.accept) # type: ignore
@@ -33,6 +36,8 @@ class Ui_Dialog(object):
         _translate = QtCore.QCoreApplication.translate
         Dialog.setWindowTitle(_translate("Dialog", "Dialog"))
         self.pushButton.setText(_translate("Dialog", "PushButton"))
+        self.toolButton.setText(_translate("Dialog", "..."))
+from add import add
 
 
 if __name__ == "__main__":
